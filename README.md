@@ -25,7 +25,7 @@ Agenda's are posted to https://github.com/tronprotocol/pm/issues. Anyone is welc
 
 Please note: 
 
-- Dapp are generally not allowed as topics. 
-- The developers meetings are not meant to decide philosophical contentious issues that should be decided by the community.
+- Dapp are generally not allowed as topics 
+- The topic should not be philosophical
 
-### Who Manages the Meetings
+The developers meetings are not meant to decide philosophical contentious issues that should be decided by the community.
