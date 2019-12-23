@@ -20,8 +20,8 @@ Sometimes a non-core java-tron developer with particular expertise on a topic is
 ### Agenda Items
 Agenda's are posted to https://github.com/tronprotocol/pm/issues. Anyone is welcome to add an item to the agenda as long as it follows these guidelines:
 
-- The topic is technical in nature.
-- The topic involves the TRON protocol.
+- The topic is technical in nature
+- The topic involves the TRON protocol
 
 Please note: 
 
