@@ -28,4 +28,4 @@ Please note:
 - Dapp are generally not allowed as topics 
 - The topic should not be philosophical
 
-The developers meetings are not meant to decide philosophical contentious issues that should be decided by the community.
+The core devs meetings are not meant to decide philosophical contentious issues that should be decided by the community.
