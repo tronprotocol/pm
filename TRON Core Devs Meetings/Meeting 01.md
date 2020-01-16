@@ -18,7 +18,6 @@
 -  current progress  
 
 2. framework specification    
-
 - framework module
 - protocol module 
 - common module
@@ -27,17 +26,14 @@
 - actuator module
 
 3. framework deployment 
-
 - demonstrate how to use and deploy a module    
 
 4. framework in the future
-  
- - what else to do    
+- what else to do    
 
- 5. q&a
-     
- - the questions during the meeting
- - the suggestions about java-tron    
+5. q&a     
+- the questions during the meeting
+- the suggestions about java-tron    
 
 **Next call**
 
