@@ -2,7 +2,7 @@
 ### Meeting Date/Time: Wed, Jan 15, 2020 07:00 UTC
 ### Meeting Duration: 1 hour
 ### [GitHub Agenda Page](https://github.com/tronprotocol/pm/issues/1)
-### [Audio/Video of the meeting](https://www.youtube.com/watch?v=TUsYTRgA0SQ)
+### [Audio/Video of the meeting](https://www.youtube.com/watch?v=-kHiycFhnf8)
 
 # Agenda
 
