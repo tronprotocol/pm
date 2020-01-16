@@ -8,45 +8,46 @@
 
 **java-tron latest updates**
 
--  MPC for shielded transactions.
+  -  MPC for shielded transactions.
 
 **java-tron framework** 
 
 1. framework introduction
 
--  why do the modularization 
--  current progress  
+    -  why do the modularization 
+    -  current progress  
 
 2. framework specification    
-- framework module
-- protocol module 
-- common module
-- chainbase module
-- consensus module
-- actuator module
+    
+    - framework module
+    - protocol module 
+    - common module 
+    - chainbase module
+    - consensus module
+    - actuator module
 
 3. framework deployment 
-- demonstrate how to use and deploy a module    
+    
+    - demonstrate how to use and deploy a module    
 
 4. framework in the future
-- what else to do    
+    
+    - what else to do    
 
 5. q&a     
-- the questions during the meeting
-- the suggestions about java-tron    
+    
+    - the questions during the meeting
+    - the suggestions about java-tron    
 
-**Next call**
-
-
-# Latest updates
+## Latest updates
 
 - Taihao
   
     - Hello, My name is Taihao, I'm from TRONZ team. 
 
-    - In future, we are planning to release Java-tron V4.0 featuring shielded transaction, which will be first applied to TRONZ, a TRC-10 token.
+    - In future, we are planning to release java-tron v4.0 featuring shielded transaction, which will be first applied to TRONZ, a TRC-10 token.
 
-    - The shielded transaction we (Team TRONZ ) created and verified is based on zk-snarks and groth 16 algorithm, and requires some common parameters to build spend proof and output proof circuits.
+    - The shielded transaction we (Team TRONZ) created and verified is based on zk-snarks and groth 16 algorithm, and requires some common parameters to build spend proof and output proof circuits.
 
     - Proof can be faked if common parameters were messed up. The process of generating common parameters, or Multi-Party Computing (MPC) protocol, cannot be done by a single person, and the more participants there are, the more secure the parameters will be.
 
@@ -64,7 +65,7 @@
 
     - We have launched the Nile test network, it is highly synchronized with the develop branch of java-tron and very stable.
 
-# java-tron framework
+## java-tron framework
 
 - Michale
    
@@ -228,7 +229,7 @@ lastly, it will check if the sender has enough balance. The execute function wil
     - We will complete the work on modularizing the code by the end of 2020.
 
 
-# Q&A
+## Q&A
 
 - Richard
 
@@ -273,7 +274,7 @@ great improvement. It's also essential to us to build light client in the future
     - yes，It does.
 
 
-# Attendees
+## Attendees
 - Bruce
 - Richard
 - Donny
