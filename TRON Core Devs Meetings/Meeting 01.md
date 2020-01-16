@@ -23,7 +23,6 @@
 - protocol module 
 - common module
 - chainbase module
-- chainbaseManage module
 - consensus module
 - actuator module
 
@@ -245,7 +244,7 @@ lastly, it will check if the sender has enough balance. The execute function wil
 
 - Doony
 
-    - Will SUN-Network and java-tron be merged into the same code base
+    - Will SUN-Network and java-tron be merged into the same code base?
 
 - Bruce
 
@@ -271,7 +270,7 @@ great improvement. It's also essential to us to build light client in the future
 
 - Bill
 
-    - Does the main / standby module support one main and multiple standby
+    - Does the main / standby module support one main and multiple standby?
 
 - Bruce
 
