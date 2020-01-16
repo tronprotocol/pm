@@ -1,7 +1,7 @@
 ## TRON Core Devs Meetings
 
 ### Purpose
-The TRON core devs meeting is a technical meeting intended to bring together all the TRON developers who play major roles in determining the direction of the TRON protocol. TRON developers provide updates to their projects, discuss various [TIPs](https://github.com/tronprotocol/tips) to improve the protocol, 
+The TRON core devs meeting is a technical meeting intended to bring together all the TRON developers who play major roles in determining the direction of the TRON protocol. TRON developers provide updates to their projects, discuss various [TIPs](https://github.com/tronprotocol/tips) to improve the protocol, and support each other.
 
 ### Previous Meetings
 
