@@ -70,7 +70,8 @@
     - It will save the newest state but not the historical vision of the state. 
     - When the new block is coming, he will update the state and save them.
     - The light mode is designed just for implementing the SPV protocol. 
-    - So it can be used by some mobile phone/pad, it just downloads the headers of blocks and checks whether the transaction is packed in the block. 
+    - So it can be used by some mobile phone/pad, 
+    - it just downloads the headers of blocks and checks whether the transaction is packed in the block. 
     - So it is usually used with the full mode node. 
     - It must send the request to the full node to fetch the Merkle path of some transactions.
     - Fast mode is the default way of starting one Ethereum full node after the Geth 1.7 version.
@@ -81,14 +82,17 @@
     
 - Michael
 
-    - full node is mainly used to store the full blockchain data available on disk and can serve the network with any data on request. 
+    - full node is mainly used to store the full blockchain data available on disk 
+    - and can serve the network with any data on request. 
     - And it receives new transactions and blocks while participating in block validation.
     - it will verify all blocks and state. Also, it stores recent state only for more efficient initial synchronization. 
     - All states can be derived from a full node.
-    - ok, A block miner can deploy the and maybe some independent organization likes the wallet, block explorer can deploy the full node.
+    - ok, A block miner can deploy the and maybe some independent organization 
+    - like the wallet, block explorer can deploy the full node.
     - An archive node is similar to the full node. But it must store everything kept in the full node. 
     - and also. Archive nodes are only necessary if you want to check the state of an account at any given block height. 
-    - For example, if you wanted to know the Ether balance an account had at block height #5,000,000, you would need to run and query an archive node.
+    - For example, if you wanted to know the Ether balance an account had at block height #5,000,000, 
+    - you would need to run and query an archive node.
     
 - Xing 
 
@@ -97,8 +101,10 @@
 - Michael
 
     - yeah, a light node just sync the block header from other nodes and it will know the transaction root of every block. 
-    - And when a transaction needs to be verified whether on the chain or not, the light node will request the Merkle path of this transaction from the full node. 
-    - It can re-calculate the transaction root using the Merkle path and this transaction hash, and then compared the new transaction root with the old one which is got from the block header. 
+    - And when a transaction needs to be verified whether on the chain or not, 
+    - the light node will request the Merkle path of this transaction from the full node. 
+    - It can re-calculate the transaction root using the Merkle path and this transaction hash, 
+    - and then compared the new transaction root with the old one which is got from the block header. 
     - It is confirmed that this transaction is on the blockchain if these two hash is equality.
     
 - Xing 
@@ -115,7 +121,8 @@
    
 - Tim
 
-    - Hi Michael, I have a question for you. May I know the query speed of fast mode? Will it be faster than full mode?
+    - Hi Michael, I have a question for you. 
+    - May I know the query speed of fast mode? Will it be faster than full mode?
     
 - Michael
 
@@ -133,10 +140,14 @@
 - Ray
 
     - hello everyone, since we know bitcoin and ethereum has done some works to solve these problems, 
-    - I have an idea and wrote it in TIP128, I 'd like to state again: we can provide a tool that can split a snapshot dataset and a history dataset from a fullnode. 
-    - The snapshot dataset is used for the fast startup of FullNode, and the history dataset is used to complete historical data later.
-    - At present, a full node needs all database data for startup except the "block", "block-index", "trans", "transactionRetStore", "transactionHistoryStore" database. 
-    - So the snapshot dataset needs to contain all databases except these 5 databases, and the history dataset is composed of the above 5 databases.
+    - I have an idea and wrote it in TIP128, I 'd like to state again: 
+    - we can provide a tool that can split a snapshot dataset and a history dataset from a fullnode. 
+    - The snapshot dataset is used for the fast startup of FullNode, 
+    - and the history dataset is used to complete historical data later.
+    - At present, a full node needs all database data for startup 
+    - except the "block", "block-index", "trans", "transactionRetStore", "transactionHistoryStore" database. 
+    - So the snapshot dataset needs to contain all databases except these 5 databases, 
+    - and the history dataset is composed of the above 5 databases.
     - At the same time, in order to ensure the transaction verification function of lite full node, the initialization logic of transactionCache needs to be reconstructed.
     
 - Xing
@@ -148,7 +159,8 @@
     - TransactionCache is mainly used for transaction deduplication. 
     - Now, transactionCache is initialized with transaction data in blocks. 
     - After the split, the snapshot dataset does not contain the block data. 
-    - Therefore, transactionCache needs to be reconstructed to ensure that transaction deduplication function on the lite fullnode based on snapshot can works well.
+    - Therefore, transactionCache needs to be reconstructed to ensure that 
+    - transaction deduplication function on the lite fullnode based on snapshot can works well.
     
 - Xing 
 
@@ -156,9 +168,11 @@
     
 - Ray
 
-    - no, java-tron will put the memory data onto disk at a definite rule, data may be lost and inconsistent if fullnode stopped accidentally, 
+    - no, java-tron will put the memory data onto disk at a definite rule, 
+    - data may be lost and inconsistent if fullnode stopped accidentally, 
     - so java-tron introduced a checkpoint mechanism to solve this problem. 
-    - checkpoint will store the memory data into another place, when the process stopped unexpected, we can replay the checkpoint to get the lost data.
+    - checkpoint will store the memory data into another place, when the process stopped unexpected, 
+    - we can replay the checkpoint to get the lost data.
     
 - Xing
 
@@ -166,7 +180,8 @@
     
 - Ray
 
-    - There are two situations, If the latest block number of a full node is more than 20 behind the latest block number of the main network, 
+    - There are two situations, 
+    - If the latest block number of a full node is more than 20 behind the latest block number of the main network, 
     - the checkpoint will be created after every 256 blocks are synchronized. 
     - Otherwise, the checkpoint will be created every time when the solidified block is updated.    
     
@@ -188,8 +203,10 @@
     
 - Ray
 
-    - yes, we should stop the full node process because now java-Tron only support leveldb and rocksdb, and these two db do not support more than one process access at the same time. 
-    - even the level and rocksdb do not have this limitation, splitting a running full node may lead to unexpected results，so we should better stop the lite fullnode.
+    - yes, we should stop the full node process because now java-Tron only support leveldb and rocksdb, 
+    - and these two db do not support more than one process access at the same time. 
+    - even the level and rocksdb do not have this limitation, 
+    - splitting a running full node may lead to unexpected results，so we should better stop the lite fullnode.
     
 - Tim 
 
@@ -205,23 +222,25 @@
     
 - Oliver
 
-    - The first thing I want to declare is that after synchronization, the light node will eventually become a fullnode with full data.
-
+    - The first thing I want to declare is that after synchronization, 
+    - the light node will eventually become a fullnode with full data.
     - That is, the amount of data will eventually increase to the same amount as fullnode.
-
     - you know, in a SPV note, there is only block headers data in there. 
     
 - Bruce 
 
     - As tron litefull node will grow into a fullnode, so eventually they will have the same amount of data, 
-    - so when a litenode starts, it needs not only to sync the lates blocks SR produces, but also to sync the history blocks, how does it do it at the same time? 
+    - so when a litenode starts, it needs not only to sync the lates blocks SR produces, 
+    - but also to sync the history blocks, how does it do it at the same time? 
     
 - Oliver
 
     - I think there is two important points here. 
     - On the one hand we need a minimum data set to reach a runnable state. 
-    - Since our initial idea was to make a node with the fastest startup, so naturally we need this data which can reach the runnable state to be as small as possible,  
-    - we need to get rid of redundant data, we must to find out which data is indispensable, which means we need this data to verify transactions or blocks. 
+    - Since our initial idea was to make a node with the fastest startup, 
+    - so naturally we need this data which can reach the runnable state to be as small as possible,  
+    - we need to get rid of redundant data, we must to find out which data is indispensable, 
+    - which means we need this data to verify transactions or blocks. 
     - This is one important work we need to do.
     - On the other hand , we need a Light node that can synchronize historical data while working normally. 
     - which means the Light node can verify transactions and blocks while synchronizing data. 
@@ -237,15 +256,18 @@
 
     - We know some APIs need historical data to return the value. 
     - Actually these APIs are unavailable when the data is not synchronized. 
-    - But we will add some extra information to the return value of these APIs or to identify the current state of this node. 
+    - But we will add some extra information to the return value of these APIs 
+    - or to identify the current state of this node. 
     - Which can remind the client that this is a node that has not been completely synchronized. 
     - In this way, the client can choose to call other nodes.
 
 - Bruce
 
-    - In the future, if more and more people choose to deploy lite node which means the amount of full node running on the chain will decrease, 
+    - In the future, if more and more people choose to deploy lite node 
+    - which means the amount of full node running on the chain will decrease, 
     - so in order to encourage people to deploy full node, should full node be rewarded?
-    - Personally, I oppose that. hard to manage, for the vote reward you can limit it to the Top 127, but how can you apply it to full node reward? 
+    - Personally, I oppose that. hard to manage, 
+    - for the vote reward you can limit it to the Top 127, but how can you apply it to full node reward? 
     - if every full node can get a reward, it may be out of control.
 
     
@@ -258,7 +280,8 @@
 
     - Don’t have to build an incentive layer for a full node in order to deal with the problem for “lite node". 
     - It’s depending on our user's business. 
-    - For exchanges, they will choose full node for assets safety concern which means they will settle their full node even without our incentive. 
+    - For exchanges, they will choose full node for assets safety concern 
+    - which means they will settle their full node even without our incentive. 
     - For common users, they might just need a lite node. 
 
 - Tim 
@@ -280,6 +303,13 @@
 - Michael 
 
     - The full-node can run with the snapshot data. And it does not need to store the history data for his running.
+    
+- Matthew 
+ 
+    - Ok, thank you!   
+   
+- Michael   
+   
     - I want to ask a question. When this feature will be released? Did the coding is beginning?
 
 - Ray
