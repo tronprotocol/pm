@@ -9,6 +9,7 @@ The TRON core devs meeting is a technical meeting intended to bring together all
 --- | -------------------------------- |:--------------:|:--------------:|:--------------------:|
  1  | Wed, 15 Jan, 2020 07:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/1) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2001.md) | [video](https://www.youtube.com/watch?v=-kHiycFhnf8) |
  2  | Mon, 17 Feb, 2020 07:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/3) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2002.md) | [video](https://www.youtube.com/watch?v=ms3D8zL9_Dk) |
+ 3  | Mon, 02 Mar, 2020 07:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/4) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2003.md) | [video](https://www.youtube.com/watch?v=aegtFI4D_c)  |
  
 ### Who Can Attend
 These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
