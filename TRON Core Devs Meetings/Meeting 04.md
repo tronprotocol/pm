@@ -557,6 +557,10 @@
     - So it is like they have one or two days to complete their their upgrade
     - It will prevent the network from breaking down.
     
+- Taihao
+
+    - It is like Bitcoin.
+    
 - Michael 
 
    - I think it is a good idea. 
