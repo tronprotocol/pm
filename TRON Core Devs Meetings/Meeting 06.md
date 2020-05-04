@@ -26,7 +26,7 @@
   
     - 
     
-## The main function of Tron DexV    
+## The main function of Tron Dex   
 
 - Wayne
   
