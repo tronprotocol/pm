@@ -4,7 +4,7 @@
 ### Meeting Date/Time: Mon, Apr 13, 2020 09:00 UTC
 ### Meeting Duration: 1 hour
 ### [GitHub Agenda Page](https://github.com/tronprotocol/pm/issues/6)
-### [Audio/Video of the meeting]()
+### [Audio/Video of the meeting](https://www.youtube.com/watch?v=GAi-I2MlGgM&t=11s)
 
 # Agenda
 
