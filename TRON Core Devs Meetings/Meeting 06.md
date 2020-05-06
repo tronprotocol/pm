@@ -96,7 +96,8 @@
     
 - Ethan
 
-    - Is the trading pair unique on the entire network? Because there are multiple identical trading pairs in bancorDEX?
+    - Is the trading pair unique on the entire network? 
+    - Because there are multiple identical trading pairs in bancorDEX?
     
 - Sean
 
@@ -136,7 +137,8 @@
     - if the price is lower than the current highest price in the buying table, 
     - no match will occur and new orders will be inserted directly into the buying table.
     - If the price is higher than the current highest price in the buying table, 
-    - but not higher than the price in the selling table, then the new order will be the first one in the buying table.
+    - but not higher than the price in the selling table, 
+    - then the new order will be the first one in the buying table.
     - The last case is that the price is higher than the lowest price in the selling table, 
     - then this new order will match the first order in the selling table. 
     - If the first order in the selling table is completely consumed, just continue to match the second one.
@@ -159,7 +161,8 @@
     - MarketSellAssetContract is used to create a new order, we need owner address, 
     - the sell_token_id and buy_token_id which are used to indicate the token pair, 
     - the sell_token_quantity and buy_token_quantity which are used to indicate how many amount you want to exchange.
-    - MarketCancelOrderContract is used to cancel an exited order, we should provide the owner address and the order id.
+    - MarketCancelOrderContract is used to cancel an exited order, 
+    - we should provide the owner address and the order id.
     
 - Cathy
 
@@ -193,9 +196,12 @@
     - If you want to get the history orders, 
     - you should sync the transactions from the fullnode and analyze it by yourself.
     - The order data has status, so you can determine if it is avaiable.
-    - Before we explain its implementation, we will introduce some basic concepts in the market, which are maker and taker.
-    - Maker - someone who creates an offer in a market for other participants to take, it could be an offer to buy or sell.
-    - Taker - someone who "takes" a previously "made" offer off the market, i.e. this is when an actual exchange takes place.
+    - Before we explain its implementation, we will introduce some basic concepts in the market, 
+    - which are maker and taker.
+    - Maker - someone who creates an offer in a market for other participants to take, 
+    - it could be an offer to buy or sell.
+    - Taker - someone who "takes" a previously "made" offer off the market, i.e. 
+    - this is when an actual exchange takes place.
     - The following two images show the orders to sell and buy.
     - When the taker order' price is higher than the maker, it will begin to match.
     - We will use the taker which has the highest price to match the maker which has the lowest price.
@@ -246,8 +252,10 @@
     - So if we want to compare prices, we can compare these two division results.
     - In order to enhance the accuracy, we will use the multiplication result instead of the division.
     - Price1 < price2, if price1 is smaller than price2
-    - price1buyQuantity / price1sellQuantity < price2buyQuantity / price2sellQuantity (then, the division result of price1buyQuantity divided by price1sellQuantity)
-    - price1BuyQuantity * price2SellQuantity < price2BuyQuantity * price1SellQuantity (after that, we will have)  
+    - price1buyQuantity / price1sellQuantity < price2buyQuantity / price2sellQuantity 
+    - then, the division result of price1buyQuantity divided by price1sellQuantity
+    - price1BuyQuantity * price2SellQuantity < price2BuyQuantity * price1SellQuantity 
+    - after that, we will have.
     
 - Ethan
 
@@ -295,7 +303,7 @@
     - MarketPairToPriceStore, One table saving the price list by one token pair, 
     - we can get the price list by one specific token.
     
-## Comparison with other implementation of Dex
+## What is the difference from other Dex in block industry
     
 - Sean
 
@@ -350,7 +358,7 @@
     
 - Sean
 
-    - It is the same as TRON-dex. 
+    - It is the same as TRON Dex. 
     
 - Benson
 
@@ -403,7 +411,8 @@
 - Sean
 
     - Finding the order needs to do a lot of comparisons, consume the corresponding gas, 
-    - so if there needs many comparisons, I guess the user will choose the other offline method that consumes less gas.
+    - so if there needs many comparisons, 
+    - I guess the user will choose the other offline method that consumes less gas.
     
 - Bruce
 
@@ -465,7 +474,8 @@
 
     - To delete an order, will simply delete the order in the database.
     - Inserting an order may perform searching for order position, 
-    - but due to the levelDB sorting method mentioned above, there will not be excessive-performance consumption.
+    - but due to the levelDB sorting method mentioned above, 
+    - there will not be excessive-performance consumption.
     - In addition, orders that cannot be matched will not cause extra calculations. 
     - Therefore, there is currently no big problem that will cause network congestion.
     
