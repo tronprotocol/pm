@@ -13,7 +13,7 @@ The TRON core devs meeting is a technical meeting intended to bring together all
  4  | Mon, 16 Mar, 2020 09:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/5) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2004.md) | [video](https://www.youtube.com/watch?v=hf_kpDRteB4)  |
  5  | Mon, 13 Apr, 2020 09:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/6) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2005.md) | [video](https://www.youtube.com/watch?v=GAi-I2MlGgM&t=11s)
  6  | Thur, 30 Apr, 2020 09:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/7) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2006.md) | [video](https://www.youtube.com/watch?v=xXY7kf4tV-Q&feature=youtu.be)
- 7  | Thu, 16 Jun, 2020 09:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/8) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2007.md) | [video](https://www.youtube.com/watch?v=fY6sG285ee4)
+ 7  | Tues, 16 Jun, 2020 09:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/8) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2007.md) | [video](https://www.youtube.com/watch?v=fY6sG285ee4)
  
 ### Who Can Attend
 These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
