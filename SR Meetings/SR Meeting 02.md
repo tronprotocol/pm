@@ -106,9 +106,9 @@
 ## Increase the Resource cost 
 
 * Sakary
-  * ![burned TRX](./burned TRX.png)
-  * ![volume](./volume.png)
-  * ![Circulation](./Circulation.png)
+  * ![burned TRX](https://github.com/Benson0224/imageonly/blob/main/burned%20TRX.png)
+  * ![volume](https://github.com/Benson0224/imageonly/blob/main/volume.png)
+  * ![Circulation](https://github.com/Benson0224/imageonly/blob/main/Circulation.png)
   * Let’s first take a look at these data, the transaction fees have been increased from 10 sun to 40 sun on 25th Nov. 2020. The TRX burning was rising, the transaction volume looks quite stable,  the circulation was also rising. So some SR suggest to double the transaction fees,  could you please share your opinions?
 * CryptoGuyinZA
   * It is good to increase the fee, but not the moment now. There are already transaction movement now, we need more uses to come to the TRON network, if we increase the fee, we will lose users. 
