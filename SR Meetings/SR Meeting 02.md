@@ -118,7 +118,7 @@
   * Please keep in mind that many other chains are already much cheaper than TRON, like Binance, increasing fee may driver users move to other chains.
 * Crypto Chain
   * Yes, compare to the Binance chain, Tron is not cheap, but compare to other mainstream chains, it is still very cheap. 
-* * We can’t just look at this topic from a cost perspective, it is not only about cost, for those chains with a lower fee, but their efficiency and stability are far behind TRON. They have many issues that impact the users. 
+  * We can’t just look at this topic from a cost perspective, it is not only about cost, for those chains with a lower fee, but their efficiency and stability are far behind TRON. They have many issues that impact the users. 
 * CryptoGuyinZA
   * what is the goal of increasing the fees?
 * Sakary
