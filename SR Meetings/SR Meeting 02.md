@@ -11,12 +11,9 @@
 # Agenda
 
 - GreatVoyage-v4.1.2 Introduction.
-
 - [TIP-196](https://github.com/tronprotocol/tips/blob/master/tip-196.md)
-
 - [TIP-205](https://github.com/tronprotocol/tips/issues/205)
--  [TIP-207](https://github.com/tronprotocol/tips/issues/207)
-
+- [TIP-207](https://github.com/tronprotocol/tips/issues/207)
 - Propose to increase the resource fee.
 
 ## Main features of GreatVoyage-v4.1.2
