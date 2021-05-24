@@ -39,7 +39,7 @@
 
 - Sakary
 
-    We added 2 TVM instructions in this TIP to support freezing related operations in TVM. The adding of the 2 instructions allows smart contracts to get resources from the staking mechanism. This means, from now on, smart contracts will be able to get and delegate resources to others.
+    TIP-157 added 2 TVM instructions to support freezing related operations in TVM. The adding of the 2 instructions allows smart contracts to get resources from the staking mechanism. This means, from now on, smart contracts will be able to get and delegate resources to others.
 
     (Sample code displaying)
 
@@ -111,7 +111,7 @@
 
 - Benson
 
-    Currently some projects freeze TRX for both energy and staking reward, later they use the reward to pay transaction fees, is that correct CryptoChain?
+    Currently some projects freeze TRX for both energy and staking reward, later they use the reward to pay transaction fees, is that your point,  CryptoChain?
 
 - CryptoChain
 
