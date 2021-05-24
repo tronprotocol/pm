@@ -167,5 +167,113 @@
 
 - CryptoGuyinZA
 
+    I've got a question. Are we getting a slot on Polkadot or TRON? I'm just curious that should there be many TRON chains or what whould they be?
+
+    Polkadot has substrate, and it allows you to connect heterogeneous chains to Polkadot.
+
+- Sakary
+
+    Currently the parallel chains should be another java-tron. You can make changes, but basically they are java-tron. The cross-chain is still on development.
+
+- CryptoChain
+
+    Right now we have a side chain, SUN network, it's basically the same thing.
+
+    Why don't we just have a slot on Polkadot, as there have already been many chains on it.
+
+- Benson
+
+    Currently, the auction only works with TRON chains. It works with huge DAPPs for now.
+
+- CryptoGuyinZA
+
+    Polkadot allows different chains, and each chain brings different functionalities. There no value being added if there are many java-trons getting connected to each other.
+
+    What is the value being added to that? 
+
+- CryptoChain
+
+    If there are just many TRON chains, we're going a different model with Polkadot. It's model of expension.
+
+- CryptoGuyinZA
+
+    I'm not going to participate this auction if the model is like this. It's no reason join in this auction and win a slot.
+
+    The main take away, you guys should think more about it, not technically, maybe the business model.
+
+- Ray
+
+    We can do customisations to the actuators to make parallel chains different from TRON's mainnet. 
+
+    For historical reason, we must be compitable with smart contracts. 
+
+    So basically we have two solutions for the cross-chain: actuator modification and smart contract cross-chain. 
+
+    As for parallel chains of Polkadot, their business logic is hard coded in Substrate, however we provide the flexibility in smart contracts.
+
+- Sakary
+
+    Our development is still ongoing. Certainly we will support heterogeneous cross-chain in the future.
+
+- CryptoGuyinZA
+
+    The degree of customization determines its value.
+
+- Sakary
+
+    We'll give details in TIPs.
+
+- Justin Kairys
+
+    I think the main purpose of the cross-chain is to connect different blockchain networks. 
+
+- CryptoGuyinZA
+
+    In Polkadot, different parallel chains will do specific functionalities, like smart contracts, DEFIs and stable coins and different chains have their own chains. That's things about value. Without value, people have no motivations to participate the slot auction.
+
+    You should think about the use cases.
+
+#### TRC-10 Transfer
+
+- Sakary
+
+    TRC-10 is the first asset can be transfered between parallel chains.
+
+    The original TRC-10 asset, I call this 'origin token', will have been mapped to a token I call that 'mirror token'. This mapping will always remain the same. The circulation of the origin token and the mirror token will be the same as the token circulation before any cross-chain transactions.
+
+- CryptoChain
+
+    The main thing is for what chain can we transfer TRC-10 tokens to? We need to think about the business model. What is the value can we add to the cross-chain ecosystem if there are just TRON chains?
+
+#### Smart Contract Cross-chain
+
+- Sakary
+
+    The smart contract cross-chain requires some preaparations:
+
+        - Firstly, the contract author(owner) deploy 2 contracts on a pair of parallel chains
+
+        - A full transaction will be taken into 2 parts. In the implementation, there should be 2 'triggersmartcontract' transactions, which are respectively responsible for the processing of the sender and the receiver.
+
+    For now, the contract caller must have enough knowledge of Solidity, to ensure whether the function logic meets the expectations.
+
+    Please refer to TIP-246.
+
+## Roadmap
+
+- Sakary
+
+    There remain several things to do this year: the cross-chain team will launch a pioneer test net, which is called Apollo. Apollo will go through the complete parallel chain linking process, including: slot auction before the cross-chain function is available on the mainnet. 
+
+    Through the operation of the test net, the team will make further optimisation in response to the problem found during the test.
+
+## Remark
+
+- Sakary
+
+    Now that we have come to the end of this conference. We've just released version 4.2.0, and simultaneously, I'm pleased to inform you that a testnet of TRON's cross-chain solution is ongoing. Cross-chain will be an excellent promotion of the entire ecosystem of TRON.
+
+    Finally, I would like to close my remarks and express my appreciation to all the participants for taking time out of your busy duties to attend this conference. Thank you and see you here next time.
+
 
 
