@@ -277,3 +277,21 @@
 
 
 
+# Attendees
+
+- Benson
+- Sakary
+- BitTorrent
+- Crypto Chain
+- CryptoGuyinZA
+- David Yang
+- Genie Kim - NEOPLY
+- Ivan
+- Jason Neely
+- justyy
+- Niioxce
+- Ray
+- Sean
+- Sean Liu
+- Tron Spark - George
+- Justin Kairys
