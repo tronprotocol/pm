@@ -1,7 +1,5 @@
 # TRON SR Meeting 02 Notes
 
-
-
 ### Meeting Date/Time: Wednesday, 20th Jan. 2021, 9:00 AM UTC
 
 ### Meeting Duration: 1 hour
