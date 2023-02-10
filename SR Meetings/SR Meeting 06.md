@@ -214,17 +214,23 @@
   At last, there are some small changes compared to the older version.
   
   * **Optimize Gradle compilation parameters**
-    The JVM minimum heap is increased to 1Gb so it is enough to compile smoothly, improving the compiling stability
+
+    The JVM minimum heap is increased to 1Gb so it is enough to compile smoothly, improving the compiling stability.
   * **Optimize node conditional stop function**
+
     Only one condition can be set and applied now for the conditional stop function so that to avoid condition conflict and make the function work.
   * **Delete code related to database v1**
+  
     Since Database v2 prevails over v1 comprehensively, there would be no need to keep v1, the code is removed from Java-tron now.
   * **Optimize Java-tron log output**
+
     LevelDB and RocksDB log is included in the TRON log node, to make it easier to maintain and troubleshoot for developers.
   * **Make snapshot flush configurable**
-Make the number of the snapshot when flush configurable, improving data query efficiency. It used to be set to 500, which consumes time when flushing, not it can be set from 1 to 500, so you may make it fit your system performance
+
+    Make the number of the snapshot when flush configurable, improving data query efficiency. It used to be set to 500, which consumes time when flushing, not it can be set from 1 to 500, so you may make it fit your system performance.
   * **Toolkit.jar Integration**
-   ‘DBConvert.jar’ and ‘LiteFullNodeTool.jar’ are integrated into the Toolkit.jar. The former is to convert LevelDB data to RocksDB format. And the latter is used to carve FullNode data into LiteFullNode data.
+
+    ‘DBConvert.jar’ and ‘LiteFullNodeTool.jar’ are integrated into the Toolkit.jar. The former is to convert LevelDB data to RocksDB format. And the latter is used to carve FullNode data into LiteFullNode data.
 
   
 ## Discussion
