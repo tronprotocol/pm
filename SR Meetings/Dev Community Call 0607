@@ -1,0 +1,40 @@
+# TRON Dev Community Call
+## Meeting Date/Time: Wednesday, 07 Jun. 2023, 9:00 UTC
+## Duration: 1 hour
+## [GitHub Agenda Page](https://github.com/tronprotocol/pm/issues/50)
+
+## Agenda
+* On-chain stats and digests
+* Upcoming release planning: GreatVoyage-v4.7.2(Periander)
+    * [TIP-541](https://github.com/tronprotocol/tips/issues/541) Add an API to cancel unstaking in Stake 2.0
+    * [TIP-542](https://github.com/tronprotocol/tips/issues/542) Modify delegating lock period from fixed value to configurable in Stake 2.0
+    * [TIP-543](https://github.com/tronprotocol/tips/issues/543) Adapt to Ethereum Shanghai Upgrade
+    * [TIP-544](https://github.com/tronprotocol/tips/issues/543) Optimize energy estimation API
+    * Upgrade Java-tron network module from libp2p-v0.1.4 to libp2p-v2.0.0
+* Workshop for all devs: How to initiate a new TIP?
+* Suggestions and brainstorm
+
+## Details
+* Jake
+ 
+  
+## Attendance
+* Jake Zhao (host)
+* Luganodes
+* CryptoChain
+* CryptoGuyinZA
+* TronSpark
+* StakeBowl
+* StakedTron
+* BlockAnalysis
+* Chain Cloud
+* MCDEX001
+* OKX Earn
+* Benson 
+* Aaron Luo
+* Blade Han 
+* Darcy Cao 
+* Jeffrey Huang
+* Lucas
+* Daniel Liu
+* rocky 
