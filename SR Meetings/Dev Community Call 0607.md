@@ -157,7 +157,12 @@
 
   The process has no time limit. Some of the TIPs could be on hold and delayed or even deprecated. For a normal TIP, fairly processed, I would say take four to eight weeks to get passed and implemented.
  
+* Jake  
+
+  Does anyone have any other topics or questions? 
   
+  Okay, thank you all for coming, that is a wrap for today. Goodbye!
+
 ## Attendance
 * Jake Zhao (host)
 * Luganodes
