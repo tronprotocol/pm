@@ -9,7 +9,7 @@
     * [TIP-541](https://github.com/tronprotocol/tips/issues/541) Add an API to cancel unstaking in Stake 2.0
     * [TIP-542](https://github.com/tronprotocol/tips/issues/542) Modify delegating lock period from fixed value to configurable in Stake 2.0
     * [TIP-543](https://github.com/tronprotocol/tips/issues/543) Adapt to Ethereum Shanghai Upgrade
-    * [TIP-544](https://github.com/tronprotocol/tips/issues/543) Optimize energy estimation API
+    * [TIP-544](https://github.com/tronprotocol/tips/issues/544) Optimize energy estimation API
     * Upgrade Java-tron network module from libp2p-v0.1.4 to libp2p-v2.0.0
 * Workshop for all devs: How to initiate a new TIP?
 * Suggestions and brainstorm
