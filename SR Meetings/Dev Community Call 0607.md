@@ -78,7 +78,7 @@
 
 * Jake  
 
-  Okay, let's continue the next one, TIP-548, he DNS-based node discovery. As we all know that the Java-tron clientl relies on the active node list to join the network, the list is pre configured in the configuration files when you start the node. It's not dynamically updated, once you have any change of the active node list, you have to restart your node.
+  Okay, let's continue the next one, TIP-548, the DNS-based node discovery. As we all know that the Java-tron clientl relies on the active node list to join the network, the list is pre configured in the configuration files when you start the node. It's not dynamically updated, once you have any change of the active node list, you have to restart your node.
   
   Libp2p-v2.0.0 DNS-based discovery mechanism is introduced to use trusted public DNS serves to maintain the active node lists. So that shares the workload of the the active nodes pre-configured and make a better accessibility of the network, let the new added nodes to join the network easier.
   
