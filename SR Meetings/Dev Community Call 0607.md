@@ -7,7 +7,7 @@
 * On-chain stats and digests
 * Upcoming release planning: GreatVoyage-v4.7.2(Periander)
     * [TIP-541](https://github.com/tronprotocol/tips/issues/541) Add an API to cancel unstaking in Stake 2.0
-    * [TIP-542](https://github.com/tronprotocol/tips/issues/542) Modify delegating lock period from fixed value to configurable in Stake 2.0
+    * [TIP-542](https://github.com/tronprotocol/tips/issues/542) Modify delegating lock period from a fixed value to configurable in Stake 2.0
     * [TIP-543](https://github.com/tronprotocol/tips/issues/543) Adapt to Ethereum Shanghai Upgrade
     * [TIP-544](https://github.com/tronprotocol/tips/issues/544) Optimize energy estimation API
     * Upgrade Java-tron network module from libp2p-v0.1.4 to libp2p-v2.0.0
@@ -41,7 +41,7 @@
 
   The next is the optimization of the resource delegate API. When delegating resources, there is an optional parameter `lock` that can be passed to determine if this delegating is locked or not, depending on the negotiation between the energy owner and the recipient. But the lock period is a fixed three days.  This limits the scenario of delegating resources. So the author of this TIP proposed to add a parameter named `lock period` and it would work only if the existing parameter `lock` is set to true.  So this brand new added parameter offers you the customizable lengths of time for locking the delegating so that meets more recipients' will and ensures their interests in more scenarios.  There are three things and we have to know that optimization of this API will be enabled by a proposal. I think the proposal is number 78 or whatever, has not been finalized yet. The proposal is about defining the maximum value of the lock period. So once a value is defined for the proposal, and lock period feature will be enabled in this API. 
   
-  Added`lock period` is an int64 parameter and the unit is three seconds. So if your input is '1', it means three seconds. For example, if you want to lock the delegating for about one day, you have to calculate 24 hours, multiply by 3,600 seconds and then divide it by 3 and that's the value you should enter. When not passing or passing zero. It means a lock for three days for compatibility reasons. And the last thing to remember is that the `lock period` refreshes the existing delegating between the owner and the recipient for the same type of resource. So once you make a new delegating with a `lock period`, all the lock time of delegatings for the same type of resource will be allied with this new lock period. But certain rules for the lock period that is cannot be less than the older existing time I think.
+  Added`lock period` is an int64 parameter and the unit is three seconds. So if your input is '1', it means three seconds. For example, if you want to lock the delegating for about one day, you have to calculate 24 hours, multiply by 3,600 seconds and then divide it by 3 and that's the value you should enter. When not passing or passing zero. It means a lock for three days for compatibility reasons. And the last thing to remember is that the `lock period` refreshes the existing delegating between the owner and the recipient for the same type of resource. So once you make a new delegating with a `lock period`, all the lock time of delegatings for the same type of resource will be allied with this new lock period. But certain rules for the lock period that it cannot be less than the older existing time I think.
   
 * Chain Cloud  
 
@@ -58,13 +58,13 @@
   
 * Jake  
 
-  No problem, let's go to TIP-544, I think the author Eric is not here so I am going to cover this content. Yeah, at present for the `triggerconstantcontract` API, it is impossible to call it to estimate the energy consumption of deploying a contract. It can estimate the consumption of calling a contract. It is because that since the contract is not deployed yet, there is no function can be selected, therefore, the calling will failed. So that this proposal that Eric made, acquires to add a new optional parameter called the `call data` here. And also modify `function selector` as an optional as well. It is not optional now, but it will be once this tip is passed. So in this case, the API can be called by just a passing `call data` so that the `function selector` is bypassed, and therefore, then we can use this API to estimate the energy consumption of deploying a contract. 
+  No problem, let's go to TIP-544, I think the author Eric is not here so I am going to cover this content. Yeah, at present for the `triggerconstantcontract` API, it is impossible to call it to estimate the energy consumption of deploying a contract. It can estimate the consumption of calling a contract. It is because that since the contract is not deployed yet, there is no function can be selected, therefore, the calling will fail. So that this proposal that Eric made, acquires adding a new optional parameter called the `call data` here. And also modify `function selector` as an optional as well. It is not optional now, but it will be once this tip is passed. So in this case, the API can be called by just passing `call data` so that the `function selector` is bypassed, and therefore, then we can use this API to estimate the energy consumption of deploying a contract. 
   
-  I think we have example for this one next page here. So once this TIP is passed, we can either call the API by specifying the `function selector` and the `parameter` or just passing the`call data` to replace it the combination of the above two as we can see here, so either way works fine. And for the estimating the consumption of deploying a contract, here is an example. So once your smart contracts have been compiled, you get the bytecode here and you're just input in `call data` as value. In this way, It is possible to call the API and estimate the energy consumption of deploying the contract.
+  I think we have an example for this one next page here. So once this TIP is passed, we can either call the API by specifying the `function selector` and the `parameter` or just passing the `call data` to replace it with the combination of the above two as we can see here, so either way works fine. And for estimating the consumption of deploying a contract, here is an example. So once your smart contracts have been compiled, you get the bytecode here and you're just input in `call data` as value. In this way, It is possible to call the API and estimate the energy consumption of deploying the contract.
   
 * Jake  
 
-  TIP-543 is about the adaption to Ethereum the Shanghai upgrade. In the Shanghai upgrade and `PUSH0` instruction is introduced to Ethereum virtual machine so this instruction allows the smart contract to push a zero value to the stack. This cost two gas and it's single byte long. This makes the development of contract more convenient saves the resource of the network. Before `PUSH0`, developers have other methods to to push a zero value to the stack, but it is at least two bytes long and cost of more than two gas, depends on the content. To maintain the compatibility of Ethereum, TRON should also make=e the adaption to the Shanghai upgrade and added a `PUSH0` instruction in TVM.
+  TIP-543 is about the adaption to Ethereum the Shanghai upgrade. In the Shanghai upgrade and `PUSH0` instruction is introduced to Ethereum virtual machine so this instruction allows the smart contract to push a zero value to the stack. This cost two gas and it's a single byte long. This makes the development of contracts more convenient and saves the resource of the network. Before `PUSH0`, developers have other methods to push a zero value to the stack, but it is at least two bytes long and costs more than two gas, depending on the content. To maintain the compatibility of Ethereum, TRON should also make the adaption to the Shanghai upgrade and added a `PUSH0` instruction in TVM.
 
 * Jake  
 
@@ -72,19 +72,19 @@
   
 * Jake  
 
-  Okay, the first one is TIP-547 Node detection function. For the current version of libp2p, At present, a node select a peer to connect by the order of time only, regardless of node connection capacity, leading to a rather high connection rejection rate. In libp2p-v2.0.0, a pre-connection will be established first to check the current connection capacity of the target node to determine if a formal connection should be established then. This process will greatly promote the efficiency of connection establishment, save time and network resources.
+  Okay, the first one is TIP-547 Node detection function. For the current version of libp2p, At present, a node selects a peer to connect by the order of time only, regardless of node connection capacity, leading to a rather high connection rejection rate. In libp2p-v2.0.0, a pre-connection will be established first to check the current connection capacity of the target node to determine if a formal connection should be established then. This process will greatly promote the efficiency of connection establishment, save time and network resources.
   
   It will greatly promote the efficiency of connection establishment and save time and workload of the network.
 
 * Jake  
 
-  Okay, let's continue the next one, TIP-548, the DNS-based node discovery. As we all know that the Java-tron clientl relies on the active node list to join the network, the list is pre configured in the configuration files when you start the node. It's not dynamically updated, once you have any change of the active node list, you have to restart your node.
+  Okay, let's continue to the next one, TIP-548, the DNS-based node discovery. As we all know that the Java-tron client relies on the active node list to join the network, the list is pre-configured in the configuration files when you start the node. It's not dynamically updated, once you have any change of the active node list, you have to restart your node.
   
-  Libp2p-v2.0.0 DNS-based discovery mechanism is introduced to use trusted public DNS serves to maintain the active node lists. So that shares the workload of the the active nodes pre-configured and make a better accessibility of the network, let the new added nodes to join the network easier.
+  Libp2p-v2.0.0 DNS-based discovery mechanism is introduced to use trusted public DNS serves to maintain the active node lists. So that shares the workload of the active nodes pre-configured and makes better accessibility of the network, letting the newly added nodes join the network easier.
   
 * Jake  
 
-  Next, libp2p-v2.0.0 also supported IPv6, and here is a table of the nodes supporting either IPv4 or IPv6, or both. We can see for the best compatibility is to support both of them. Once Java-tron supports IPv6, it improves the compatibility and connectivity of the whole network, not speaking of the IPv6 advantages and even better scalability for future upgrades for the TRON network. 
+  Next, libp2p-v2.0.0 also supported IPv6, and here is a table of the nodes supporting either IPv4 or IPv6, or both. We can see for the best compatibility is to support both of them. Once Java-tron supports IPv6, it improves the compatibility and connectivity of the whole network, not to speak of the IPv6 advantages and even better scalability for future upgrades for the TRON network. 
 
 * Jake  
 
@@ -116,7 +116,7 @@
   
 * Jake  
 
-  The first step, draft a tip issues. You have to go with the markdown format that GitHub accepted and make the draft consistent with the template. The template will be shown shortly in the next pages. And step two is actually the most important step, to promote your TIP in the forum, Telegram group, discord channel or any other community discussion places. You can gather the comments and suggestions, then build a consensus with all the developers with the feedback collected and then have the community editors to check the TIP format and assign the status the TIP to push it. Once the consensus are built, the community editors will have a developer call like what we have now today and have the last discussion of topics and then assign the 'accepted' status to the TIP and the author refines it and submit to GitHub and finally it will be included in the new version.
+  The first step, draft a tip issue. You have to go with the markdown format that GitHub accepted and make the draft consistent with the template. The template will be shown shortly on the next pages. And step two is actually the most important step, to promote your TIP in the forum, Telegram group, discord channel or any other community discussion places. You can gather the comments and suggestions, then build a consensus with all the developers with the feedback collected and then have the community editors check the TIP format and assign the status to the TIP to push it. Once the consensus is built, the community editors will have a developer call like what we have now today and have the last discussion of topics and then assign the 'accepted' status to the TIP and the author refines it and submit it to GitHub and finally, it will be included in the new version.
   
 * Jake  
 
@@ -138,24 +138,24 @@
   
 * Jake  
 
-  When the TIP is assigned with final status, the author can add it into next version planning. The Steps to add a TIP in version planning are,
+  When the TIP is assigned the final status, the author can add it to the next version of planning. The Steps to add a TIP in a version of planning are,
     1. Open https://github.com/tronprotocol/pm/issues.
-    2. Add your proposal to include TIP in next version. 
+    2. Add your proposal to include TIP in the next version. 
     3. The editor will review the issue and finalize the planning.
 
   Then the whole process is done, and the TIP is going to be achieved by the devs team.
 
 * Jake  
 
-  That is all for today. Any questions? Okay then, let's have a frees discussion and brainstorm session. Any topics can be carried out and discussion by anyone.
+  That is all for today. Any questions? Okay then, let's have a free discussion and brainstorming session. Any topic can be carried out and discussed by anyone.
   
 * Ejaz  
 
-  Hi Jake, I got a question. How long usuallt does a TIP pass and become achieved?
+  Hi Jake, I got a question. How long usually does a TIP pass and become achieved?
 
 * Jake  
 
-  There process has no time limited. Some of the TIPs could be on hold and delayed or even deprecated. For a normal TIP, fairly processed, I would say take four to eight weeks to get passed and implemented.
+  The process has no time limit. Some of the TIPs could be on hold and delayed or even deprecated. For a normal TIP, fairly processed, I would say take four to eight weeks to get passed and implemented.
  
   
 ## Attendance
