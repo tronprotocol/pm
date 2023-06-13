@@ -7,7 +7,7 @@
 * On-chain stats and digests
 * Upcoming release planning: GreatVoyage-v4.7.2(Periander)
     * [TIP-541](https://github.com/tronprotocol/tips/issues/541) Support canceling unstaking in Stake 2.0
-    * [TIP-542](https://github.com/tronprotocol/tips/issues/542) Optimize the resource delegating mechanism
+    * [TIP-542](https://github.com/tronprotocol/tips/issues/542) Resource delegating supports lock period customizing
     * [TIP-543](https://github.com/tronprotocol/tips/issues/543) Adapt to Ethereum Shanghai Upgrade
     * [TIP-544](https://github.com/tronprotocol/tips/issues/544) Optimize energy estimation API
     * Upgrade Java-tron network module from libp2p-v0.1.4 to libp2p-v2.0.0
