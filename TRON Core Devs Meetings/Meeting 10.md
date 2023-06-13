@@ -44,7 +44,7 @@ Okay, first we have the function digest or the recent three months. The first on
   
   OK, let's continue.
 
-#### TIP-542 Optimize the resource delegating mechanism
+#### TIP-542 Resource delegating supports lock period customizing
 * Jake  
 
   The next is the optimization of the resource delegate API. When delegating resources, there is an optional parameter `lock` that can be passed to determine if this delegating is locked or not, depending on the negotiation between the energy owner and the recipient. But the lock period is a fixed three days.  This limits the scenario of delegating resources. So the author of this TIP proposed to add a parameter named `lock period` and it would work only if the existing parameter `lock` is set to true.  So this brand new added parameter offers you the customizable lengths of time for locking the delegating so that meets more recipients' will and ensures their interests in more scenarios.  There are three things and we have to know that optimization of this API will be enabled by a proposal. I think the proposal is number 78 or whatever, has not been finalized yet. The proposal is about defining the maximum value of the lock period. So once a value is defined for the proposal, and lock period feature will be enabled in this API. 
