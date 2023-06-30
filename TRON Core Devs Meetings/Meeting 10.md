@@ -7,9 +7,9 @@
 * On-chain stats and digests
 * Upcoming release planning: GreatVoyage-v4.7.2(Periander)
     * [TIP-541](https://github.com/tronprotocol/tips/issues/541) Support canceling unstaking in Stake 2.0
-    * [TIP-542](https://github.com/tronprotocol/tips/issues/542) Resource delegating supports lock period customizing
-    * [TIP-543](https://github.com/tronprotocol/tips/issues/543) Adapt to Ethereum Shanghai Upgrade
-    * [TIP-544](https://github.com/tronprotocol/tips/issues/544) Optimize energy estimation API
+    * [TIP-542](https://github.com/tronprotocol/tips/issues/542) Resource delegating supports customizable lock period
+    * [TIP-543](https://github.com/tronprotocol/tips/issues/543) Implement EIP-3855 PUSH0 Instruction
+    * [TIP-544](https://github.com/tronprotocol/tips/issues/544) Add call_data to the HTTP interfaces interacting with smart contract
     * Upgrade Java-tron network module from libp2p-v0.1.4 to libp2p-v2.0.0
 * Workshop for all devs: How to initiate a new TIP?
 * Suggestions and brainstorm
@@ -44,7 +44,7 @@ Okay, first we have the function digest or the recent three months. The first on
   
   OK, let's continue.
 
-#### TIP-542 Resource delegating supports lock period customizing
+#### TIP-542 Resource delegating supports customizable lock period
 * Jake  
 
   The next is the optimization of the resource delegate API. When delegating resources, there is an optional parameter `lock` that can be passed to determine if this delegating is locked or not, depending on the negotiation between the energy owner and the recipient. But the lock period is a fixed three days.  This limits the scenario of delegating resources. So the author of this TIP proposed to add a parameter named `lock period` and it would work only if the existing parameter `lock` is set to true.  So this brand new added parameter offers you the customizable lengths of time for locking the delegating so that meets more recipients' will and ensures their interests in more scenarios.  There are three things and we have to know that optimization of this API will be enabled by a proposal. I think the proposal is number 78 or whatever, has not been finalized yet. The proposal is about defining the maximum value of the lock period. So once a value is defined for the proposal, and lock period feature will be enabled in this API. 
@@ -64,19 +64,19 @@ Okay, first we have the function digest or the recent three months. The first on
 
   Alright, I see, thanks.
 
-#### TIP-544 Friendly energy estimation API
+#### TIP-544 Add call_data to the HTTP interfaces interacting with smart contract
 * Jake  
 
   No problem, let's go to TIP-544, I think the author Eric is not here so I am going to cover this content. Yeah, at present for the `triggerconstantcontract` API, it is impossible to call it to estimate the energy consumption of deploying a contract. It can estimate the consumption of calling a contract. It is because that since the contract is not deployed yet, there is no function can be selected, therefore, the calling will fail. So that this proposal that Eric made, acquires adding a new optional parameter called the `call data` here. And also modify `function selector` as an optional as well. It is not optional now, but it will be once this tip is passed. So in this case, the API can be called by just passing `call data` so that the `function selector` is bypassed, and therefore, then we can use this API to estimate the energy consumption of deploying a contract. 
   
   I think we have an example for this one next page here. So once this TIP is passed, we can either call the API by specifying the `function selector` and the `parameter` or just passing the `call data` to replace it with the combination of the above two as we can see here, so either way works fine. And for estimating the consumption of deploying a contract, here is an example. So once your smart contracts have been compiled, you get the bytecode here and you're just input in `call data` as value. In this way, It is possible to call the API and estimate the energy consumption of deploying the contract.
 
-#### TIP-543 Adaption to Ethereum Shanghai Upgrade
+#### TIP-543 Implement EIP-3855 PUSH0 Instruction
 * Jake  
 
   TIP-543 is about the adaption to Ethereum the Shanghai upgrade. In the Shanghai upgrade and `PUSH0` instruction is introduced to Ethereum virtual machine so this instruction allows the smart contract to push a zero value to the stack. This cost two gas and it's a single byte long. This makes the development of contracts more convenient and saves the resource of the network. Before `PUSH0`, developers have other methods to push a zero value to the stack, but it is at least two bytes long and costs more than two gas, depending on the content. To maintain the compatibility of Ethereum, TRON should also make the adaption to the Shanghai upgrade and added a `PUSH0` instruction in TVM.
 
-#### TIP-547 Node detection function
+#### TIP-547 Connection precheck before P2P communication
 * Jake  
 
   Next, we're going to talk about the network upgrade for Java-tron. As we all know libp2p is the network stack of Java-tron. Recently, it has made an upgrade from 0.1.4 to v2.0.0. So Java-tron is planning to include this upgrade in 4.7.2 later. The libp2p upgrade also has four features. And we're going to cover the content one by one of course. 
@@ -87,19 +87,19 @@ Okay, first we have the function digest or the recent three months. The first on
   
   It will greatly promote the efficiency of connection establishment and save time and workload of the network.
 
-#### TIP-548 DNS-based node discovery
+#### TIP-548 Node Discovery via DNS
 * Jake  
 
   Okay, let's continue to the next one, TIP-548, the DNS-based node discovery. As we all know that the Java-tron client relies on the active node list to join the network, the list is pre-configured in the configuration files when you start the node. It's not dynamically updated, once you have any change of the active node list, you have to restart your node.
   
   Libp2p-v2.0.0 DNS-based discovery mechanism is introduced to use trusted public DNS serves to maintain the active node lists. So that shares the workload of the active nodes pre-configured and makes better accessibility of the network, letting the newly added nodes join the network easier.
   
-#### TIP-549 IPv6 added to libp2p-v2.0.0
+#### TIP-549 P2P support IPv6 protocol
 * Jake  
 
   Next, libp2p-v2.0.0 also supported IPv6, and here is a table of the nodes supporting either IPv4 or IPv6, or both. We can see for the best compatibility is to support both of them. Once Java-tron supports IPv6, it improves the compatibility and connectivity of the whole network, not to speak of the IPv6 advantages and even better scalability for future upgrades for the TRON network. 
 
-#### TIP-550 Snappy compression
+#### TIP-550 P2P message Snappy compression
 * Jake  
 
   And the last one is that Snappy compression is introduced. At present, the block size is about 80k and is expected to grow accordingly with the development of the network. So, once the Snappy compression is introduced, all the TCP connection messages will be compressed except the handshake messages, shaving 40% out of the block size as test stats in the TIP and eventually reducing the bandwidth possession of the payload.
