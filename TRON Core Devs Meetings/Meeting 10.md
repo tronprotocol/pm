@@ -22,7 +22,7 @@
 ### On-chain Stats and Digests
 * Jake
 
-Okay, first we have the function digest or the recent three months. The first one is about staking. Starting from April 7, the time where when stake 2.0 is enabled, the TRX stakes under stake gradually increase increased about 10% of the total staking amount and the total amount of maintaining the scale of 42 Billion and staking rate of TRX is maintaining the level around 48%.
+  Okay, first we have the function digest or the recent three months. The first one is about staking. Starting from April 7, the time where when stake 2.0 is enabled, the TRX stakes under stake gradually increase increased about 10% of the total staking amount and the total amount of maintaining the scale of 42 Billion and staking rate of TRX is maintaining the level around 48%.
   
 * Jake  
 
