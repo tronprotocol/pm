@@ -6,7 +6,6 @@
 ## Agenda
 * TRON WalletConnect protocol
 * TronWeb Updates
-* Discussion and Suggestion
 
 ## Details
 
