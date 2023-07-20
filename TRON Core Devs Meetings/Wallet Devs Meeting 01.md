@@ -127,8 +127,7 @@
 ## Attendance
 * Jake Zhao (host)
 * Murphy Zhang
-* Token Pocket
-* Now Wallet
-* KuCoin Wallet
-* BitPie Wallet
-* Huobi Wallet
+* Token Pocket (Marcus)
+* Now Wallet (Paul)
+* BitPie Wallet (Joseph Johnson)
+* Huobi Wallet (Vic Cui)
