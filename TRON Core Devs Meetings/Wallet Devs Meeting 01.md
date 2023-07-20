@@ -1,4 +1,4 @@
-# Wallet Dev Community Call
+# Wallet Devs Community Call
 ## Meeting Date/Time: Wednesday, 19 Jul. 2023, 9:00 UTC
 ## Duration: 1 hour
 ## [GitHub Agenda Page](https://github.com/tronprotocol/pm/issues/60)
