@@ -39,7 +39,7 @@
   
 * Jake 
 
-  So to integrate with WalletConnect, here we have an official example on their page, which will be sent later along with the .ppt file. First, you need to go to cloud.walletconnect.com to obtain a project ID. And then, developers should add their project details in the WalletConnect utility files on their GitHub repositories.
+  So to integrate with WalletConnect, here we have [an official example](https://github.com/WalletConnect/web-examples/tree/main/wallets/react-wallet-v2) on their page, which will be sent later along with the .ppt file. First, you need to go to cloud.walletconnect.com to obtain a project ID. And then, developers should add their project details in the WalletConnect utility files on their GitHub repositories.
 
 * Jake
  
@@ -53,7 +53,7 @@
 
 * Jake
 
-  The latest versions of TronWeb supporting Stake 2.0 full functions are version 5.1.1 and 5.3.0, and here are the two main features implemented in those two versions, [TIP-541](https://github.com/tronprotocol/tips/issues/541) and [TIP-542](https://github.com/tronprotocol/tips/issues/542). Developers may pick either one to integrate with your wallet, it depends on your preference.
+  The latest versions of TronWeb supporting Stake 2.0 full functions are version [5.1.1](https://tronweb.network/docu/docs/5.1.1/intro) and [5.3.0](https://tronweb.network/docu/docs/Release%20Note), and here are the two main features implemented in those two versions, [TIP-541](https://github.com/tronprotocol/tips/issues/541) and [TIP-542](https://github.com/tronprotocol/tips/issues/542). Developers may pick either one to integrate with your wallet, it depends on your preference.
   
   The difference between version 5.1.1 and version 5.3.0 is shown in this table. 5.1.1 uses Webpack 4 compared to version 5.3.0 uses Webpack 5, which is more secure and compact in size after building and packing. One more thing to know, Webpack 5 does not contain some dependencies by default, like the 'Crypto' library used by TronWeb, so in order to make it work properly, the dependencies should be installed and required manually.
   
@@ -126,9 +126,9 @@
 
 ## Attendance
 * Jake Zhao (host)
-* Murphy
+* Murphy Zhang
 * Token Pocket
-* NowWallet
+* Now Wallet
 * KuCoin Wallet
 * BitPie Wallet
 * Huobi Wallet
