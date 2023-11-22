@@ -28,7 +28,7 @@ TIP            | [TIP-621](https://github.com/tronprotocol/tips/issues/621)     
 
 
  - [ ] Deploy Clients
-   - [ ]  Java-tron [v4.7.4]()
+   - [ ]  Java-tron v4.7.4
  - [ ] SDK & Tools
      - [ ] Tronweb
      - [ ] Trident
