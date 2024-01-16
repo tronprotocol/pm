@@ -5,12 +5,13 @@ Changes included in the Network Upgrade.
 
 * [TIP-621: Add code version column to HelloMessage](https://github.com/tronprotocol/tips/issues/621)
 
+
 ### Upgrade Schedule
 
-| Network | Timestamp  | Date & Time (UTC+8)  |    
-|---------|------------|---------------|
-| Nile |  | 01/25/2024, 20:00:00 PM | 
-| Shasta  |  |   
+| Network |   Date  |    
+|---------|------------|
+| Nile |  01/25/2024 | 
+| Shasta  |  |
 | Mainnet |  |   
 
 ### Implementation Progresss
