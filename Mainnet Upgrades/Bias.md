@@ -1,4 +1,4 @@
-## Solon Network Upgrade Specification
+## Bias Network Upgrade Specification
 
 ### Included TIPs
 Changes included in the Network Upgrade.
