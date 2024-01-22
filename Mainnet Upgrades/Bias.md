@@ -4,6 +4,7 @@
 Changes included in the Network Upgrade.
 
 * [TIP-621: Add code version column to HelloMessage](https://github.com/tronprotocol/tips/issues/621)
+* [TIP-635: Optimize reward withdrawal to improve TPS](https://github.com/tronprotocol/tips/issues/635)
 
 
 ### Upgrade Schedule
@@ -18,9 +19,9 @@ Changes included in the Network Upgrade.
 
 Implementation status of Included TIPs in java-tron.
 
-TIP            | [TIP-621](https://github.com/tronprotocol/tips/issues/621)                   |                   |                   |                                                                      |
+TIP            | [TIP-621](https://github.com/tronprotocol/tips/issues/621) | [TIP-635](https://github.com/tronprotocol/tips/issues/635)   |             |                   |                                                                      |
 |----------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| **Java-tron**       |   Unmerged   |          |      |     |
+| **Java-tron**       |   Unmerged   |  Unmerged        |      |     |
 
 ### Readiness Checklist
 
