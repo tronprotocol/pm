@@ -19,7 +19,7 @@ Changes included in the Network Upgrade.
 
 Implementation status of Included TIPs in java-tron.
 
-TIP            | [TIP-621](https://github.com/tronprotocol/tips/issues/621) | [TIP-635](https://github.com/tronprotocol/tips/issues/635)   |             |                   |                                                                      |
+| TIP            | [TIP-621](https://github.com/tronprotocol/tips/issues/621) | [TIP-635](https://github.com/tronprotocol/tips/issues/635) |     |        |
 |----------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | **Java-tron**       |   Unmerged   |  Unmerged        |      |     |
 
