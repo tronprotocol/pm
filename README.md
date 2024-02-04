@@ -23,6 +23,7 @@ The TRON core devs meeting is a technical meeting intended to bring together all
  14 | Wed, 08 Feb. 2023 09:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/37) | [notes](https://github.com/tronprotocol/pm/blob/master/SR%20Meetings/SR%20Meeting%2006.md) | NA
  15 | Wed, 07 Jun. 2023 09:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/50) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2010.md) | NA
  16 | Wed, 19 Jul. 2023 09:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/60) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Wallet%20Devs%20Meeting%2001.md) | NA
+ 17 | Fri, 02 Feb. 2024 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/72) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2011.md) | NA
 
 ### Who Can Attend
 These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
