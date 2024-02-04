@@ -539,7 +539,7 @@
 
   Okay, the discussion for today's meeting is almost complete. If there are no further questions, let's end it here for today.
   
-### Attendence
+### Attendance
 
 * Ray
 * Lucas
@@ -552,4 +552,4 @@
 * Kayle
 * Kiven
 * Murphy
-* Jake
+* Jake (host)
