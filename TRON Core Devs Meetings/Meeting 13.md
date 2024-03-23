@@ -1,5 +1,5 @@
 # Core Devs Community Call 13
-### Meeting Date/Time: Mar 21, 2024, 7:00-8:00 UTC
+### Meeting Date/Time: Mar. 21, 2024, 7:00-8:00 UTC
 ### Meeting Duration: 60 Mins
 ### [GitHub Agenda Page](https://github.com/tronprotocol/pm/issues/78)
 ### Agenda
