@@ -15,7 +15,7 @@ Changes included in the Network Upgrade.
 | Network  | Date  |    
 |---------|------------|
 | Nile | 03/14/2024 | 
-| Shasta  |  |   
+| Shasta  | 03/28/2024 |   
 | Mainnet | 03/25/2024|    
 
 ### Implementation Progresss
@@ -37,8 +37,8 @@ TIP            | [TIP-621](https://github.com/tronprotocol/tips/issues/621)     
  - SDK & Tools
      - [x] Tronweb
      - [x] Trident
-     - [ ] Tron IDE
-     - [ ] TronBox
+     - [x] Tron IDE
+     - [x] TronBox
      - [x] wallet-cli
      - [x] TronScan Nile
  
