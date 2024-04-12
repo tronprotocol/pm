@@ -26,7 +26,7 @@ The TRON core devs meeting is a technical meeting intended to bring together all
  17 | Fri, 02 Feb. 2024 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/72) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2011.md) | NA
 18 | Fri, 08 Mar. 2024 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/75) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2012.md) | NA
 19 | Thu, 21 Mar. 2024 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/78) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2013.md) | NA
-
+20 | Thu, 11 Apr. 2024 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/82) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2014.md) | NA
 ### Who Can Attend
 These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
 
