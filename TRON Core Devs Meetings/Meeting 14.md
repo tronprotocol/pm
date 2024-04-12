@@ -122,7 +122,7 @@
 
   Okay, so it seems that support for this interface is still in the stage of design or discussion. Does anyone have any other questions? If not, let's move on to the next topic. Next up, we have TIP-650, 651, and 652, which correspond to the three EIPs related to the Ethereum Cancun upgrade mentioned by Ray. David, this is the topic you submitted, are you here? Could you please share your screen?
   
-**TIP-650, TIP-651 and TIP652**
+**TIP-650, TIP-651 and TIP-652**
 
 * David
   
