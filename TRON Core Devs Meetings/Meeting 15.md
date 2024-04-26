@@ -40,7 +40,7 @@
 
   Based on the current code logic, if the event service encounters a problem, the current situation is that synchronization becomes impossible, requiring a restart. So, the new solution and the current code result in the same outcome—requiring a restart to synchronize blocks.
 
-* Ray:
+* Ray
 
   That's correct.
 
