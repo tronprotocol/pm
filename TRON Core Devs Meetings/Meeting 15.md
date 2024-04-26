@@ -234,7 +234,7 @@
 
   So, in the first option, is it displaying 100 or 150?
 
-* Brown:
+* Brown
 
   The code validates the value range; if it exceeds 100, it will be changed to 100. This means we won't know where the problem lies in the configuration file, nor how to fix it. Essentially, the original value hasn't been modified.
 
