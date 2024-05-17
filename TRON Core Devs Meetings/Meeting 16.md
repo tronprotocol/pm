@@ -92,12 +92,9 @@
   Can you see my screen? The first one is 5812. I found a NullPointerException when reviewing logs. This variable is inside FetchBlockService and is private, so it shouldn't be accessible from outside. From the code, we can see that the variable is assigned a value above, but it becomes an exception below. The only possibility is concurrent thread access.
 
   The scenario is as follows:
-  
-　    1. The request block thread assigns a value to the fetchBlockInfo object.
-  
-　    2. The fetchBlock thread sets the fetchBlockInfo object to null.
-  
-　    3. A null pointer exception occurs when the request block thread accesses the fetchBlockInfo object.
+    1. The request block thread assigns a value to the fetchBlockInfo object.
+    2. The fetchBlock thread sets the fetchBlockInfo object to null.
+    3. A null pointer exception occurs when the request block thread accesses the fetchBlockInfo object.
 
   Let's look at the solution at the bottom of the issue. The solution is to not access the variable when printing; instead, I changed it to access the passed parameters.
 
@@ -111,11 +108,13 @@
 
 * Lucas
 
-  This issue is about a node reporting a "Handle sync block error." The error is thrown by peer.getSyncBlockToFetch().pop(). This variable is accessed by three threads.
+  This issue is about a node reporting a "Handle sync block error." The error is thrown by peer.getSyncBlockToFetch().pop(). This variable is accessed by the three threads,
 
-  Thread 1: When the peer disconnects, the clear method of the object is called.
-  Thread 2: When processing the synchronization block, the pop method of the object is called.
-  Thread 3: When processing the chain inventory message, the pop method of the object is called.
+    Thread 1: When the peer disconnects, the clear method of the object is called.
+  
+    Thread 2: When processing the synchronization block, the pop method of the object is called.
+  
+    Thread 3: When processing the chain inventory message, the pop method of the object is called.
 
   Concurrent access by thread 1 and thread 2 may cause the exception. When thread 2 calls the peek method of the object, then thread 1 clears the data, and then an exception is thrown when thread 2 pops the data.
 
