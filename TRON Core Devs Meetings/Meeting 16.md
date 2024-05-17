@@ -92,9 +92,12 @@
   Can you see my screen? The first one is 5812. I found a NullPointerException when reviewing logs. This variable is inside FetchBlockService and is private, so it shouldn't be accessible from outside. From the code, we can see that the variable is assigned a value above, but it becomes an exception below. The only possibility is concurrent thread access.
 
   The scenario is as follows:
-　 １.　The request block thread assigns a value to the fetchBlockInfo object.
-　 ２.　The fetchBlock thread sets the fetchBlockInfo object to null.
-　 ３.　A null pointer exception occurs when the request block thread accesses the fetchBlockInfo object.
+  
+　 1. The request block thread assigns a value to the fetchBlockInfo object.
+  
+　 2. The fetchBlock thread sets the fetchBlockInfo object to null.
+  
+　 3. A null pointer exception occurs when the request block thread accesses the fetchBlockInfo object.
 
   Let's look at the solution at the bottom of the issue. The solution is to not access the variable when printing; instead, I changed it to access the passed parameters.
 
