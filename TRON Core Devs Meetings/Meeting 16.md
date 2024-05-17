@@ -93,11 +93,11 @@
 
   The scenario is as follows:
   
-　  1. The request block thread assigns a value to the fetchBlockInfo object.
+　    1. The request block thread assigns a value to the fetchBlockInfo object.
   
-　  2. The fetchBlock thread sets the fetchBlockInfo object to null.
+　    2. The fetchBlock thread sets the fetchBlockInfo object to null.
   
-　  3. A null pointer exception occurs when the request block thread accesses the fetchBlockInfo object.
+　    3. A null pointer exception occurs when the request block thread accesses the fetchBlockInfo object.
 
   Let's look at the solution at the bottom of the issue. The solution is to not access the variable when printing; instead, I changed it to access the passed parameters.
 
