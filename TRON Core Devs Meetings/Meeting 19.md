@@ -55,7 +55,7 @@
 
 * Murphy
 
-  Thank you very much for this share just that we can see from your slides. You showed us the background and the necessity that we could integrate TRON into Metamask. Just that during this meeting, we should more focus on the technical part. Before we have it do some homework that we know. Previously we wanted to integrate a trial with the Metamask, but we can see the JSON-RPC interface is different, its not possible。
+  Thank you very much for this share just that we can see from your slides. You showed us the background and the necessity that we could integrate TRON into Metamask. Just that during this meeting, we should more focus on the technical part. Before we have it do some homework that we know. Previously we wanted to integrate a trial with the Metamask, but we can see the JSON-RPC interface is different, its not possible.
 
 * Zach
 
@@ -96,7 +96,7 @@
 
 * Zach
 
-  All right, you do that, like they see, for the end of today, I don't know what the time is there or here. So I would do a screen recording before the day runs. Sure. I don't think I have any other questions for you guys. I think we can further have more conversations after I show you guys did them. All right。
+  All right, you do that, like they see, for the end of today, I don't know what the time is there or here. So I would do a screen recording before the day runs. Sure. I don't think I have any other questions for you guys. I think we can further have more conversations after I show you guys did them. All right.
 
 * Jake
 
