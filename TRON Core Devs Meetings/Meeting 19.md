@@ -1,4 +1,3 @@
----
 
 # Core Devs Community Call 19
 ### Meeting Date/Time: July 4, 2024, 7:00-8:30 UTC
