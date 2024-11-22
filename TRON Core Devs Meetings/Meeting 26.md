@@ -1,5 +1,5 @@
 # Core Devs Community Call 26
-### Meeting Date/Time: November 24th, 2024, 6:00-7:00 UTC
+### Meeting Date/Time: November 7th, 2024, 6:00-7:00 UTC
 ### Meeting Duration: 55 Mins
 ### [GitHub Agenda Page](https://github.com/tronprotocol/pm/issues/104)
 ### Agenda
