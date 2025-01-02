@@ -27,14 +27,7 @@ The TRON core devs meeting is a technical meeting intended to bring together all
 18 | Fri, 08 Mar. 2024 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/75) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2012.md) | NA
 19 | Thu, 21 Mar. 2024 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/78) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2013.md) | NA
 20 | Thu, 11 Apr. 2024 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/82) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2014.md) | NA
-### Who Can Attend
-These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
-
-- core java-tron developers 
-- client developers
-- core TRON researchers  
-
-Sometimes a non-core java-tron developer with particular expertise on a topic is invited on to discuss a specific agenda item. If you feel you would contribute to the meetings please contact coredevs@tron.network.
+21 | Thu, 09 Jan. 2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/90) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2030.md) | NA
 
 ### Agenda Items
 Agenda's are posted to https://github.com/tronprotocol/pm/issues. Anyone is welcome to add an item to the agenda as long as it follows these guidelines:
@@ -48,3 +41,9 @@ Please note:
 - The topic should not be philosophical
 
 The core devs meetings are not meant to decide philosophical contentious issues that should be decided by the community.
+
+### Core Devs Community Call 30 Agenda Items
+* TIP-700: New consensus mechanism proposal
+* TIP-701: Smart contract optimization
+* TIP-702: Network security enhancements
+* Open discussion on future development plans
