@@ -47,3 +47,11 @@ The core devs meetings are not meant to decide philosophical contentious issues 
 * TIP-701: Smart contract optimization
 * TIP-702: Network security enhancements
 * Open discussion on future development plans
+
+### Who Can Attend
+These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
+- core java-tron developers 
+- client developers
+- core TRON researchers  
+
+Sometimes a non-core java-tron developer with particular expertise on a topic is invited on to discuss a specific agenda item. If you feel you would contribute to the meetings please contact coredevs@tron.network.
