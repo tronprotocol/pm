@@ -49,7 +49,9 @@
 | [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | later than 04/25/2025 (TBD) | GreatVoyage-v4.7.7(Epicurus) | - |  
 | [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | later than 04/22/2025 (TBD) | GreatVoyage-v4.7.7(Epicurus) | - |   
 
-Upgrade Instruction： https://tronprotocol.github.io/documentation-en/releases/upgrade-instruction
+Nile Upgrade Instruction: https://nileex.io/run/getRunPage
+
+Mainnet/Shasta Upgrade Instruction： https://tronprotocol.github.io/documentation-en/releases/upgrade-instruction
 
 ### Implementation Progresss
 
