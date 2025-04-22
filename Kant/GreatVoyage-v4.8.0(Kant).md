@@ -1,6 +1,23 @@
-## GreatVoyage-v4.8.0(Kant) Network Upgrade Specification
+# GreatVoyage-v4.8.0(Kant) Network Upgrade Specification
 
-### Release included in the Network Upgrade.
+This document outlines the tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated April 22, 2025.**
+
+
+## Table of contents
+
+- [The main content of the release](#Release-included-in-the-Network-Upgrade.)
+- [Network Status](#Network-Status)
+- [Implementation Progresss](#Implementation-Progresss)
+
+
+
+## The main content of the release
+
+This section summarizes all the details of Kant's releases. and all the content was disccussed in the [No.35 core devs meeting](https://github.com/tronprotocol/pm/issues/121), check detail meeting notes [here](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2035.md).
+
+Note: The following tags are used to indicate the status of each item.
+- [x] Indicates that the tiem has been developed and is in the final state.
+- [ ] Indicates that the implementation work is ongoing. 
 
 #### New Features
 
@@ -17,7 +34,7 @@
    - [x] Optimized Super Representative Election Ranking Algorithm, see [PR#6173](https://github.com/tronprotocol/java-tron/pull/6173 )
 
 #### Net
-  - [x] **Optimized Block Synchronization Logic**
+- [x] **Optimized Block Synchronization Logic**
     - [x] Optimized P2P Protocol: Discarding Solidified Block Lists to Conserve Network Bandwidth, see [PR#6184](https://github.com/tronprotocol/java-tron/pull/6184 )
     - [x] Faster Block Synchronization Task Scheduling for Enhanced Efficiency, see [PR#6183](https://github.com/tronprotocol/java-tron/pull/6183)
     
@@ -41,19 +58,19 @@
     - [x] Optimized eth_getLogs to Resolve Data Retrieval Issue in Rare Hash Collisions, see [PR#6203](https://github.com/tronprotocol/java-tron/pull/6203)
   - [x] **Non-Null Payment Address Validation in Shielded Transaction Creation API**, see [PR#6174](https://github.com/tronprotocol/java-tron/pull/6174)
 
-### Network Status
+## Network Status
 
 | Network  | Github | Kant Upgrade Date  |  Latest Status | Fork |  
 |---------|------------|-----|-----|-----|
 | [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | 03/17/2025 | GreatVoyage-v4.8.0.2 （Kant） | Forked (Enabled No.83, No.88, No.89 Network Parameters)|
-| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | later than 04/25/2025 (TBD) | GreatVoyage-v4.7.7(Epicurus) | - |  
-| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | later than 04/22/2025 (TBD) | GreatVoyage-v4.7.7(Epicurus) | - |   
+| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | End of April (TBD) | GreatVoyage-v4.7.7(Epicurus) | - |  
+| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | End of April (TBD) | GreatVoyage-v4.7.7(Epicurus) | - |   
 
 Nile Upgrade Instruction: https://nileex.io/run/getRunPage
 
 Mainnet/Shasta Upgrade Instruction： https://tronprotocol.github.io/documentation-en/releases/upgrade-instruction
 
-### Implementation Progresss
+## Implementation Progresss
 
 Implementation status of Included TIPs in java-tron.
 
