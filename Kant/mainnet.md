@@ -1,6 +1,8 @@
-# GreatVoyage-v4.8.0(Kant) Network Upgrade Specification
+# Mainnet Tasks
 
-This document outlines the tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated April 22, 2025.**
+This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated April 22, 2025.**
+
+Note: The target version number of Kant is v4.8.0(TBD).
 
 
 ## Table of contents
