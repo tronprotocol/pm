@@ -1,8 +1,8 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated April 22, 2025.**
+This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated April 24, 2025.**
 
-Note: The target version number of Kant is v4.8.0(TBD).
+Note: The target version number of Kant is v4.8.0 .
 
 
 ## Table of contents
@@ -62,11 +62,11 @@ Note: The following tags are used to indicate the status of each item.
 
 ## Network Status
 
-| Network  | Github | Kant Upgrade Date  |  Latest Status | Fork |  
+| Network  | Github | Kant Release Date  |  Latest Status | Fork |  
 |---------|------------|-----|-----|-----|
 | [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | 03/17/2025 | GreatVoyage-v4.8.0.2 （Kant） | Forked (Enabled No.83, No.88, No.89 Network Parameters)|
-| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | End of April (TBD) | GreatVoyage-v4.7.7(Epicurus) | - |  
-| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | End of April (TBD) | GreatVoyage-v4.7.7(Epicurus) | - |   
+| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | 04/29/2025 | GreatVoyage-v4.7.7(Epicurus) | - |  
+| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | 04/29/2025| GreatVoyage-v4.7.7(Epicurus) | - |   
 
 Nile Upgrade Instruction: https://nileex.io/run/getRunPage
 
