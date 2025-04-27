@@ -10,6 +10,7 @@ Note: The target version number of Kant is v4.8.0 .
 - [The main content of the release](#Release-included-in-the-Network-Upgrade.)
 - [Network Status](#Network-Status)
 - [Implementation Progresss](#Implementation-Progresss)
+- [Mainnet Upgrade Plan](#Mainnet-Upgrade-Plan)
 
 
 
@@ -88,5 +89,15 @@ TIP            | [TIP-650](https://github.com/tronprotocol/tips/blob/master/tip-
 
  - Deploy Clients
    - [x]  Java-tron v4.8.0
+
+## Mainnet Upgrade Plan
+
+Estimated upgrade time: about 30 days (2025.04.29 ~ 2025.05.31)
+
+- Notify the community, SRs, CEX, Wallets, DEX, etc.to upgrade (2025.05.01 ~ 2025.05.02)
+- Follow up the upgrade status and progress closely (Contact project team every week, record the upgrade progress) 
+- Ensure the SRs, CEX, Wallets to complete before 2025.05.31 (Give feedbacks in time)
+
+
 
  
