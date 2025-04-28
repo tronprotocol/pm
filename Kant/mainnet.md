@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated April 24, 2025.**
+This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated April 28, 2025.**
 
 Note: The target version number of Kant is v4.8.0 .
 
@@ -8,9 +8,8 @@ Note: The target version number of Kant is v4.8.0 .
 ## Table of contents
 
 - [The main content of the release](#Release-included-in-the-Network-Upgrade.)
-- [Network Status](#Network-Status)
 - [Implementation Progresss](#Implementation-Progresss)
-- [Mainnet Upgrade Plan](#Mainnet-Upgrade-Plan)
+- [Network Status](#Network-Status)
 
 
 
@@ -61,18 +60,6 @@ Note: The following tags are used to indicate the status of each item.
     - [x] Optimized eth_getLogs to Resolve Data Retrieval Issue in Rare Hash Collisions, see [PR#6203](https://github.com/tronprotocol/java-tron/pull/6203)
   - [x] **Non-Null Payment Address Validation in Shielded Transaction Creation API**, see [PR#6174](https://github.com/tronprotocol/java-tron/pull/6174)
 
-## Network Status
-
-| Network  | Github | Kant Release Date  |  Latest Status | Fork |  
-|---------|------------|-----|-----|-----|
-| [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | 03/17/2025 | GreatVoyage-v4.8.0.2 （Kant） | Forked (Enabled No.83, No.88, No.89 Network Parameters)|
-| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | 04/29/2025 | GreatVoyage-v4.7.7(Epicurus) | - |  
-| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | 04/29/2025| GreatVoyage-v4.7.7(Epicurus) | - |   
-
-Nile Upgrade Instruction: https://nileex.io/run/getRunPage
-
-Mainnet/Shasta Upgrade Instruction： https://tronprotocol.github.io/documentation-en/releases/upgrade-instruction
-
 ## Implementation Progresss
 
 Implementation status of Included TIPs in java-tron.
@@ -90,14 +77,37 @@ TIP            | [TIP-650](https://github.com/tronprotocol/tips/blob/master/tip-
  - Deploy Clients
    - [x]  Java-tron v4.8.0
 
-## Mainnet Upgrade Plan
 
-Estimated upgrade time: about 30 days (2025.04.29 ~ 2025.05.31)
+## Network Status
+
+### Network Upgrade Plan
+
+Estimated Nile upgrade time: about 15 days (2025.03.14 ~ 2025.03.31)
+
+- [x] Notify the community to upgrade (2025.03.15)
+- [x] Follow up to remind the community to complete the upgrade (2025.03.17)
+
+Estimated mainnet upgrade time: about 30 days (2025.04.29 ~ 2025.05.31)
 
 - [ ] Notify the community, SRs, CEX, Wallets, DEX, etc.to upgrade (2025.05.01 ~ 2025.05.02)
 - [ ] Follow up the upgrade status and progress closely (Contact project team every week, record the upgrade progress) 
 - [ ] Ensure the SRs, CEX, Wallets to complete before 2025.05.31 (Give feedbacks in time)
 
+Estimated Shasta upgrade time: about 7 days (2025.06.03 ~ 2025.06.10)
 
+- [ ] Notify the community to upgrade (2025.06.03 ~ 2025.06.10)
+
+
+### Network Upgrade and Fork Status
+
+| Network  | Github | Kant Release Date  |  Latest Status | Fork |  
+|---------|------------|-----|-----|-----|
+| [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | 03/17/2025 | GreatVoyage-v4.8.0.2 （Kant） | Forked (Enabled No.83, No.88, No.89 Network Parameters)|
+| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | 04/29/2025| GreatVoyage-v4.7.7(Epicurus) | - |   
+| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | 04/29/2025 | GreatVoyage-v4.7.7(Epicurus) | - |  
+
+Nile Upgrade Instruction: https://nileex.io/run/getRunPage
+
+Mainnet/Shasta Upgrade Instruction： https://tronprotocol.github.io/documentation-en/releases/upgrade-instruction
 
  
