@@ -97,6 +97,17 @@ Estimated Shasta upgrade time: about 7 days (2025.06.03 ~ 2025.06.10)
 
 - [ ] Notify the community to upgrade (2025.06.03 ~ 2025.06.10)
 
+### Proposals Plan(Fork Plan)
+
+The Kant version has introduced 3 network parameters:
+- No.83 network parameter to enable the `TLOAD` `TSTORE` and `MCOPY` instructions, aligning with the Ethereum Cancun upgrade ([TIP-650](https://github.com/tronprotocol/tips/blob/master/tip-650.md ), and [TIP-651](https://github.com/tronprotocol/tips/blob/master/tip-651.md)).
+- No.88 network parameter to enable the verification of transaction limitations at consensus layer ([TIP-694](https://github.com/tronprotocol/tips/blob/master/tip-694.md )).
+- No.89 network parameter to enable the introduction of `BLOBHASH` and `BLOBBASEFEE` introductions to support the Ethereum Cancun upgrade ([TIP-745](https://github.com/tronprotocol/tips/blob/master/tip-745.md )).
+
+A draft plan is listed here, and it will be updated after the mainnet upgrade status is reviewed around 2025.05.31:
+- [ ] Start proposals discussing on GitHub (around 2025.06.01 ~ 06.05)
+- [ ] Invite community devs and projects participate (2025.06.07 ~ 06.28)
+- [ ] Community and SRs review and decide the voting date according to the progress (around 2025.06.14 ~ 06.21)
 
 ### Network Upgrade and Fork Status
 
