@@ -97,6 +97,12 @@ Estimated Shasta upgrade time: about 7 days (2025.06.03 ~ 2025.06.10)
 
 - [ ] Notify the community to upgrade (2025.06.03 ~ 2025.06.10)
 
+### Proposals Plan
+
+- [ ] Create proposals for discussing around 2025.06.01 ~ 06.05
+- [ ] Invite community devs and projects participate 2025.06.07 ~ 06.28 
+- [ ] Decide the voting date according to the progress around 2025.06.14 ~ 06.21 during the Core Devs Community Call
+
 
 ### Network Upgrade and Fork Status
 
