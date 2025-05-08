@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated April 28, 2025.**
+This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated May 8, 2025.**
 
 Note: The target version number of Kant is v4.8.0 .
 
@@ -89,8 +89,8 @@ Estimated Nile upgrade time: about 15 days (2025.03.14 ~ 2025.03.31)
 
 Estimated mainnet upgrade time: about 30 days (2025.04.29 ~ 2025.05.31)
 
-- [ ] Notify the community, SRs, CEX, Wallets, DEX, etc.to upgrade (2025.05.01 ~ 2025.05.02)
-- [ ] Follow up the upgrade status and progress closely (Contact project team every week, record the upgrade progress) 
+- [x] Notify the community, SRs, CEX, Wallets, DEX, etc.to upgrade (2025.05.01 ~ 2025.05.02)
+- [x] Follow up the upgrade status and progress closely (Contact project team every week, record the upgrade progress) 
 - [ ] Ensure the SRs, CEX, Wallets to complete before 2025.05.31 (Give feedbacks in time)
 
 Estimated Shasta upgrade time: about 7 days (2025.06.03 ~ 2025.06.10)
