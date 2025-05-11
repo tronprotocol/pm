@@ -48,7 +48,8 @@ The TRON core devs meeting is a technical meeting intended to bring together all
  39 | Wed, 02 Apr. 2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/116) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2033.md) | NA 
  40 | Wed, 16 Apr. 2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/120) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2034.md) | NA 
  41 | Fri, 18 Apr. 2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/121) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2035.md) | NA 
- 42 | Thu, 24 Apr. 2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/122) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2036.md) | NA 
+ 42 | Thu, 24 Apr. 2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/122) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2036.md) | NA
+ 43 | Thu, 08 May  2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/129) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Wallet%20Devs%20Meeting%2002.md) | NA 
 
 ### Who Can Attend
 These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
