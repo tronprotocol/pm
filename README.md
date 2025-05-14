@@ -30,7 +30,7 @@ The core devs meetings are not meant to decide philosophical contentious issues 
 ### Who Can Attend
 These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
 
-- core Java-tron developers 
+- TRON core developers 
 - client developers
 - core TRON researchers  
 
