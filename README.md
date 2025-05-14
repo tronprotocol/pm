@@ -12,7 +12,7 @@ Agendas for these meetings can be found on the [Issues](https://github.com/tronp
 ## TRON Core Devs Meetings and SR Meetings Overview
 
 ### Purpose
-The TRON core devs meeting is a technical meeting intended to bring together all the TRON developers who play major roles in determining the direction of the TRON protocol. TRON developers provide updates to their projects, discuss various [TIPs](https://github.com/tronprotocol/tips) to improve the protocol, and support each other.
+The TRON core devs meeting is a technical gathering for developers shaping the TRON protocol. They share project updates, discuss [TIPs](https://github.com/tronprotocol/tips) for protocol improvements, and collaborate. Conversely, the SR meeting centers on community governance and ecosystem health. Elected SRs deliberate on boosting community engagement, crafting growth policies, and addressing issues threatening community well-being. This distinction ensures both technical progress and community-led development of the TRON network receive strategic attention.
 
 ### Agenda Items
 Agendas are posted to https://github.com/tronprotocol/pm/issues. Anyone is welcome to add an item to the agenda as long as it follows these guidelines:
@@ -30,7 +30,7 @@ The core devs meetings are not meant to decide philosophical contentious issues 
 ### Who Can Attend
 These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
 
-- core Java-tron developers 
+- TRON core developers 
 - client developers
 - core TRON researchers  
 
