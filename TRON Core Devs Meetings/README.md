@@ -3,7 +3,7 @@
 ### Purpose
 The TRON core devs meeting is a technical meeting intended to bring together all the TRON developers who play major roles in determining the direction of the TRON protocol. TRON developers provide updates to their projects, discuss various [TIPs](https://github.com/tronprotocol/tips) to improve the protocol, and support each other.
 
-### [Previous Meetings](https://github.com/tronprotocol/pm/blob/master/README.md)
+### [Previous Meetings](https://github.com/tronprotocol/pm?tab=readme-ov-file#previous-meetings)
 
 ### Who Can Attend
 These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
