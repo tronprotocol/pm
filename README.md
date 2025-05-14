@@ -1,9 +1,45 @@
-## TRON Core Devs Meetings and SR Meetings
+# TRON Project Management Repository
+
+This repository is used for project management for various discussions and initiatives affecting the TRON protocol.
+This repository is for:
+
+- [TRON Core Devs Meetings](https://github.com/tronprotocol/pm/tree/master/TRON%20Core%20Devs%20Meetings)
+- [SR Meetings](https://github.com/tronprotocol/pm/tree/master/SR%20Meetings)
+- [Mainnet Upgrade](https://github.com/tronprotocol/pm/tree/master/Mainnet%20Upgrade%20Archive) Specifications
+
+Agendas for these meetings can be found on the [Issues](https://github.com/tronprotocol/pm/issues) tab. 
+
+## TRON Core Devs Meetings and SR Meetings Overview
 
 ### Purpose
 The TRON core devs meeting is a technical meeting intended to bring together all the TRON developers who play major roles in determining the direction of the TRON protocol. TRON developers provide updates to their projects, discuss various [TIPs](https://github.com/tronprotocol/tips) to improve the protocol, and support each other.
 
+### Agenda Items
+Agendas are posted to https://github.com/tronprotocol/pm/issues. Anyone is welcome to add an item to the agenda as long as it follows these guidelines:
+
+- The topic is technical in nature
+- The topic involves the TRON protocol
+
+Please note: 
+
+- Dapps are generally not allowed as topics 
+- The topic should not be philosophical
+
+The core devs meetings are not meant to decide philosophical contentious issues that should be decided by the community.
+
+### Who Can Attend
+These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
+
+- core Java-tron developers 
+- client developers
+- core TRON researchers  
+
+Sometimes, a non-core java-tron developer with particular expertise on a topic is invited on to discuss a specific agenda item. If you feel you would contribute to the meetings please contact coredevs@tron.network.
+
 ### Previous Meetings
+
+<details>
+<summary> TRON Core Devs Meetings </summary>
 
  №  | Date                             | Adgenda        |Notes          | Recording            |
 --- | -------------------------------- |:--------------:|:--------------:|:--------------------:|
@@ -52,24 +88,17 @@ The TRON core devs meeting is a technical meeting intended to bring together all
  43 | Thu, 08 May  2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/129) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Wallet%20Devs%20Meeting%2002.md) | NA 
  44 | Tue, 13 May  2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/127) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2037.md) | NA
 
-### Who Can Attend
-These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
+</details>
 
-- core Java-tron developers 
-- client developers
-- core TRON researchers  
+<details>
+<summary> SR Meetings </summary>
 
-Sometimes, a non-core java-tron developer with particular expertise on a topic is invited on to discuss a specific agenda item. If you feel you would contribute to the meetings please contact coredevs@tron.network.
+ №  | Date                             | Adgenda        |Notes          | Recording            |
+--- | -------------------------------- |:--------------:|:--------------:|:--------------------:|
+ 2  | Wed, 20 Jan, 2021 09:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/15) | [notes](https://github.com/tronprotocol/pm/blob/master/SR%20Meetings/SR%20Meeting%2002.md) | NA |
+ 3  | Thur, 20 May, 2021 09:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/17) | [notes](https://github.com/tronprotocol/pm/blob/master/SR%20Meetings/SR%20Meeting%2003.md) | NA |
+ 4  | Wed, 11 Aug, 2021 09:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/19) | [notes](https://github.com/tronprotocol/pm/blob/master/SR%20Meetings/SR%20Meeting%2004.md) | NA |
+ 5  | Wed, 26 Oct, 2022 09:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/30) | [notes](https://github.com/tronprotocol/pm/blob/master/SR%20Meetings/SR%20Meeting%2005.md) | NA |
+ 6  | Wed, 08 Feb, 2023 09:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/6) | [notes](https://github.com/tronprotocol/pm/blob/master/SR%20Meetings/SR%20Meeting%2006.md) | NA |
 
-### Agenda Items
-Agendas are posted to https://github.com/tronprotocol/pm/issues. Anyone is welcome to add an item to the agenda as long as it follows these guidelines:
-
-- The topic is technical in nature
-- The topic involves the TRON protocol
-
-Please note: 
-
-- Dapps are generally not allowed as topics 
-- The topic should not be philosophical
-
-The core devs meetings are not meant to decide philosophical contentious issues that should be decided by the community.
+</details>
