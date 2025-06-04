@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated May 8, 2025.**
+This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated Jun 4, 2025.**
 
 Note: The target version number of Kant is v4.8.0 .
 
@@ -18,7 +18,7 @@ Note: The target version number of Kant is v4.8.0 .
 This section summarizes all the details of Kant's releases. and all the content was disccussed in the [No.35 core devs meeting](https://github.com/tronprotocol/pm/issues/121), check detail meeting notes [here](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2035.md).
 
 Note: The following tags are used to indicate the status of each item.
-- [x] Indicates that the tiem has been developed and is in the final state.
+- [x] Indicates that the item has been developed and is in the final state.
 - [ ] Indicates that the implementation work is ongoing. 
 
 #### New Features
@@ -91,7 +91,7 @@ Estimated mainnet upgrade time: about 30 days (2025.04.29 ~ 2025.05.31)
 
 - [x] Notify the community, SRs, CEX, Wallets, DEX, etc.to upgrade (2025.05.01 ~ 2025.05.02)
 - [x] Follow up the upgrade status and progress closely (Contact project team every week, record the upgrade progress) 
-- [ ] Ensure the SRs, CEX, Wallets to complete before 2025.05.31 (Give feedbacks in time)
+- [x] Ensure the SRs, CEX, Wallets to complete before 2025.05.31 (Give feedbacks in time)
 
 Estimated Shasta upgrade time: about 7 days (2025.06.03 ~ 2025.06.10)
 
@@ -105,7 +105,7 @@ The Kant version has introduced 3 network parameters:
 - No.89 network parameter to enable the introduction of `BLOBHASH` and `BLOBBASEFEE` introductions to support the Ethereum Cancun upgrade ([TIP-745](https://github.com/tronprotocol/tips/blob/master/tip-745.md )).
 
 A draft plan is listed here, and it will be updated after the mainnet upgrade status is reviewed around 2025.05.31:
-- [ ] Start proposals discussing on GitHub (around 2025.06.01 ~ 06.05)
+- [x] Start proposals discussing on GitHub (around 2025.06.01 ~ 06.05)
 - [ ] Invite community devs and projects participate (2025.06.07 ~ 06.28)
 - [ ] Community and SRs review and decide the voting date according to the progress (around 2025.06.14 ~ 06.21)
 
