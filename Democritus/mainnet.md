@@ -15,7 +15,7 @@ Note: The target version number of Democritus is v4.8.1 .
 
 ## The main content of the release
 
-This section summarizes all the details of Kant's releases. and all the content was disccussed in the [No.35 core devs meeting](https://github.com/tronprotocol/pm/issues/121), check detail meeting notes [here](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2035.md).
+This section summarizes all the details of Democritus's releases. and all the content will be disccussed in the core devs meeting.
 
 Note: The following tags are used to indicate the status of each item.
 - [x] Indicates that the tiem has been developed and is in the final state.
