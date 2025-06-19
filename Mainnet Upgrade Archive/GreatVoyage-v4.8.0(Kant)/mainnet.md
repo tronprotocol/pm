@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated Jun 4, 2025.**
+This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated Jun 19, 2025.**
 
 Note: The target version number of Kant is v4.8.0 .
 
@@ -105,9 +105,9 @@ The Kant version has introduced 3 network parameters:
 - No.89 network parameter to enable the introduction of `BLOBHASH` and `BLOBBASEFEE` introductions to support the Ethereum Cancun upgrade ([TIP-745](https://github.com/tronprotocol/tips/blob/master/tip-745.md )).
 
 A draft plan is listed here, and it will be updated after the mainnet upgrade status is reviewed around 2025.05.31:
-- [x] Start proposals discussing on GitHub (around 2025.06.01 ~ 06.05)
-- [ ] Invite community devs and projects participate (2025.06.07 ~ 06.28)
-- [ ] Community and SRs review and decide the voting date according to the progress (around 2025.06.14 ~ 06.21)
+- [x] Start proposals discussing on GitHub on 2025.05.14
+- [x] Invite community devs and projects participate on 2025.05.15
+- [x] Community and SRs review it during the [core devs community call #40](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2040.md) and initially decide to open the voting process on 2025.06.23
 
 ### Network Upgrade and Fork Status
 
