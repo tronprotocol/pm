@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated Jun 4, 2025.**
+This document outlines the mainnet tasks that need to be completed to make Kant ready for Mainnet launch. **Last updated Jun 23, 2025.**
 
 Note: The target version number of Kant is v4.8.0 .
 
@@ -89,13 +89,13 @@ Estimated Nile upgrade time: about 15 days (2025.03.14 ~ 2025.03.31)
 
 Estimated mainnet upgrade time: about 30 days (2025.04.29 ~ 2025.05.31)
 
-- [x] Notify the community, SRs, CEX, Wallets, DEX, etc.to upgrade (2025.05.01 ~ 2025.05.02)
+- [x] Notify the community, SRs, CEX, Wallets, DEX, etc.to upgrade (2025.05.01 ~ 2025.05.02), done on 2025.04.30.
 - [x] Follow up the upgrade status and progress closely (Contact project team every week, record the upgrade progress) 
-- [x] Ensure the SRs, CEX, Wallets to complete before 2025.05.31 (Give feedbacks in time)
+- [x] Ensure the SRs, CEX, Wallets to complete before 2025.05.31 (Give feedbacks in time), all the SRs have completed 4.8.0 upgrade.
 
 Estimated Shasta upgrade time: about 7 days (2025.06.03 ~ 2025.06.10)
 
-- [ ] Notify the community to upgrade (2025.06.03 ~ 2025.06.10)
+- [x] Notify the community to upgrade (2025.06.03 ~ 2025.06.10),the Shasta has completed 4.8.0 upgrade.
 
 ### Proposals Plan(Fork Plan)
 
@@ -105,9 +105,9 @@ The Kant version has introduced 3 network parameters:
 - No.89 network parameter to enable the introduction of `BLOBHASH` and `BLOBBASEFEE` introductions to support the Ethereum Cancun upgrade ([TIP-745](https://github.com/tronprotocol/tips/blob/master/tip-745.md )).
 
 A draft plan is listed here, and it will be updated after the mainnet upgrade status is reviewed around 2025.05.31:
-- [x] Start proposals discussing on GitHub (around 2025.06.01 ~ 06.05)
-- [ ] Invite community devs and projects participate (2025.06.07 ~ 06.28)
-- [ ] Community and SRs review and decide the voting date according to the progress (around 2025.06.14 ~ 06.21)
+- [x] Start proposals discussing on GitHub (around 2025.06.01 ~ 06.05), it has been discussed since 2025.5.15.
+- [x] Invite community devs and projects participate (2025.06.07 ~ 06.28)
+- [x] Community and SRs review and decide the voting date according to the progress (around 2025.06.14 ~ 06.21), decided to vote on 2025.06.23 during the [core devs community call #40](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2040.md) .
 
 ### Network Upgrade and Fork Status
 
