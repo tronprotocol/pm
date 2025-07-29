@@ -92,7 +92,7 @@ Sometimes, a non-core java-tron developer with particular expertise on a topic i
  47 | Wed, 18 Jun.  2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/142) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2040.md) | NA
  48 | Wed, 02 Jul.  2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/145) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2041.md) | NA
  49 | Wed, 16 Jul.  2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/148) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2042.md) | NA
- 
+ 50 | Tue, 29 Jul.  2025 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/153) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Wallet%20Devs%20Meeting%2003.md) | NA
 
 
 </details>
