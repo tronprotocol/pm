@@ -1,8 +1,3 @@
----
-title: Wallet Devs Community Call 3
-
----
-
 # Wallet Devs Community Call 3
 ### Meeting Date/Time: July 29th, 2025, 7:00-8:00 UTC
 ### Meeting Duration: 60 Mins
