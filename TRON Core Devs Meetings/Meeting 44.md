@@ -87,7 +87,7 @@
 
 * Aiden
 
-  We conducted a statistical analysis to assess the scope of the impact, including a review of current contracts and the distribution of certain assets within them. While over 5,000 contracts currently use the SELFDESTRUCT instruction, only four of these have executed more than 100,000 transactions involving it. Based on this analysis, the overall impact on existing contracts is expected to be minimal.
+  We conducted a statistical analysis to assess the scope of the impact, including a review of current contracts and the distribution of certain assets within them. While over 5,000 contracts currently use the SELFDESTRUCT instruction, only four of these have balance more than 100,000 TRX involving it. Based on this analysis, the overall impact on existing contracts is expected to be minimal.
 
 * Murphy
 
