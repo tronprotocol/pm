@@ -1,6 +1,6 @@
 # TRON Project Management Repository
 
-This repository is used for project management for various discussions and initiatives affecting the TRON protocol.
+This repository is used for project management, including various discussions and initiatives that affect the TRON protocol.
 This repository is for:
 
 - [TRON Core Devs Meetings](https://github.com/tronprotocol/pm/tree/master/TRON%20Core%20Devs%20Meetings)
@@ -25,7 +25,7 @@ Please note:
 - Dapps are generally not allowed as topics 
 - The topic should not be philosophical
 
-The core devs meetings are not meant to decide philosophical contentious issues that should be decided by the community.
+The core devs meetings are not meant to decide philosophical contentious issues that the community should decide.
 
 ### Who Can Attend
 These meetings are held by TRON core devs. The following groups are invited to attend the meetings:
@@ -34,7 +34,7 @@ These meetings are held by TRON core devs. The following groups are invited to a
 - client developers
 - core TRON researchers  
 
-Sometimes, a non-core java-tron developer with particular expertise on a topic is invited on to discuss a specific agenda item. If you feel you would contribute to the meetings please contact coredevs@tron.network.
+Sometimes, a non-core Java-tron developer with particular expertise on a topic is invited on to discuss a specific agenda item. If you feel you would contribute to the meetings please contact coredevs@tron.network.
 
 ### Previous Meetings
 
@@ -96,6 +96,7 @@ Sometimes, a non-core java-tron developer with particular expertise on a topic i
  51 | Wed, 30 Jul.  2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/151) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2043.md) | NA
  52 | Wed, 13 Aug.  2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/156) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2044.md) | NA
  53 | Wed, 27 Aug.  2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/157) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2045.md) | NA
+ 54 | Wed, 10 Sep.  2025 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/160) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2046.md) | NA
 
 </details>
 
