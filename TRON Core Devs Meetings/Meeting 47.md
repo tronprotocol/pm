@@ -90,8 +90,7 @@
 
 * Murphy
 
-    Thank you all for the in-depth discussion. This is obviously a highly technical issue, so I suggest the relevant developers take this discuss offline. The issue is currently closed, but if a new conclusion is reached offline, it can be reopened, and we can sync on the progress at our next meeting. This concludes today's meeting. Thank you all for participating.
-
+    Thank you all for the in-depth discussion. This is obviously a highly technical issue, so I suggest the developers involved do a more thorough analysis, and we will continue this discussion in a future meeting. This issue is currently closed, but it can be reopened if the analysis leads to new findings. This concludes today's meeting. Thank you all for participating.
 
 
 ***
