@@ -47,7 +47,7 @@ Core Devs Community Call 48
 
     This change has two main compatibility impacts. First, the `create2` opcode can no longer recreate a contract at a self-destructed address because the account data is no longer fully deleted. Second, burning TRX by self-destructing to the same address is no longer possible, as the balance will simply remain unchanged.
 
-    Lastly, we've compiled statistics on Mainnet contracts that use the `SELFDESTRUCT` opcode. Among them, only 3 hold assets greater than 100,000 TRX, and 12 hold more than 10,000 TRX. Overall, the direct impact appears to be minimal. I will further analyze the relevant transaction data and provide a more detailed impact analysis in our next meeting.
+    Lastly, we've compiled statistics on Mainnet contracts that use the `SELFDESTRUCT` opcode. Among them, 4 hold assets greater than 100,000 TRX, and 13 hold more than 10,000 TRX ([reference](https://github.com/tronprotocol/tips/issues/765#issuecomment-3101228049)). Overall, the direct impact appears to be minimal. I will further analyze the relevant transaction data and provide a more detailed impact analysis in our next meeting.
 
 - **Blade**
 
