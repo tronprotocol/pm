@@ -1,7 +1,7 @@
 Core Devs Community Call 48
 
 
-### Meeting Date/Time: October 16th, 2025, 6:00-7:00 UTC
+### Meeting Date/Time: October 15th, 2025, 6:00-7:00 UTC
 ### Meeting Duration: 60 Mins
 ### [GitHub Agenda Page](https://github.com/tronprotocol/pm/issues/166)
 ### Agenda
