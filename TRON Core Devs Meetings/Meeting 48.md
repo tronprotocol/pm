@@ -1,4 +1,4 @@
-Core Devs Community Call 48
+# Core Devs Community Call 48
 
 
 ### Meeting Date/Time: October 15th, 2025, 6:00-7:00 UTC
