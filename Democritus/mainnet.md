@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Democritus ready for Mainnet launch. **Last updated July 20, 2025.**
+This document outlines the mainnet tasks that need to be completed to make Democritus ready for Mainnet launch. **Last updated November 5, 2025.**
 
 Note: The target version number of Democritus is v4.8.1 .
 
@@ -59,7 +59,7 @@ Doc:
 
 Network: 
 
-[Issues 6310](https://github.com/tronprotocol/java-tron/issues/6310):gt lastNum error reported when synchronizing blocks 
+[Issues 6310](https://github.com/tronprotocol/java-tron/issues/6310):gt `lastNum` error reported when synchronizing blocks 
 
 [Issues 6336](https://github.com/tronprotocol/java-tron/issues/6336):The light node incorrectly reports a FORKED disconnection 
 
@@ -69,7 +69,7 @@ Network:
 
 [Issues 6297](https://github.com/tronprotocol/java-tron/issues/6297):P2P message rate limit 
 
-[Issues 6272](https://github.com/tronprotocol/java-tron/issues/6272):gt highNoFork error reported when synchronizing blocks 
+[Issues 6272](https://github.com/tronprotocol/java-tron/issues/6272):gt `highNoFork` error reported when synchronizing blocks 
 
 [feat(net): optimize fetch inventory message processing logic #5895](https://github.com/tronprotocol/java-tron/pull/5895)
 
@@ -86,13 +86,22 @@ Deployment Optimization:
 [feat(gradle): upgrade the maven publishing #6367](https://github.com/tronprotocol/java-tron/pull/6367) 
 
 [fix(pb): protocol buffer file syntax compatibility issue #6386](https://github.com/tronprotocol/java-tron/pull/6386) 
-[fix(CheckStyle): only fix CheckStyle #6392](https://github.com/tronprotocol/java-tron/pull/6392)
 
-[feat(conf): update seed nodes #6405](https://github.com/tronprotocol/java-tron/pull/6405)
+[fix(CheckStyle): only fix CheckStyle #6392](https://github.com/tronprotocol/java-tron/pull/6392)
 
 Security: 
 
 [feat(dependencies): update dependencies for security #6400](https://github.com/tronprotocol/java-tron/pull/6400)
+
+Event Service: 
+
+[Issues 6438](https://github.com/tronprotocol/java-tron/issues/6438):Optimize event service to obtain transaction information
+
+Test Case: 
+
+[fix(test): release resource of testcases gracefully #6437](https://github.com/tronprotocol/java-tron/pull/6437) 
+
+[fix(test): remove all junit dir and add timeout for gRPC call #6441](https://github.com/tronprotocol/java-tron/pull/6441)
 
 ## Implementation Progresss
 
