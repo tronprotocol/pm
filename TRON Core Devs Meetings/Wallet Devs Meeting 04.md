@@ -21,7 +21,7 @@
 
 - **Gary**
 
-    Today we will discuss the finalization and implementation key points of TIP-6963. First, a recap of the protocol's advantages: it prevents the overwrite conflicts that historically occurred when multiple wallets injected objects into `window.tron` simultaneously. With TIP-6963, DApps can detect all wallets supporting the protocol, allowing users to discover and use them even if the wallet does not explicitly write to `window.tro`n.
+    Today we will discuss the finalization and implementation key points of TIP-6963. First, a recap of the protocol's advantages: it prevents the overwrite conflicts that historically occurred when multiple wallets injected objects into `window.tron` simultaneously. With TIP-6963, DApps can detect all wallets supporting the protocol, allowing users to discover and use them even if the wallet does not explicitly write to `window.tron`.
     
     Regarding implementation progress: The TokenPocket plugin wallet and OneKey wallet (both plugin and App) have already implemented the TIP-6963 protocol. I will now focus on four key implementation points for wallets that have not yet integrated the protocol.
 
