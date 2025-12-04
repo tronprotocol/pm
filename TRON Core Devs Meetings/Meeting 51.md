@@ -58,13 +58,13 @@
 
     Okay. Trident 0.11.0 includes two major functional updates.
     
-    First, it adds support for the new v4.8.1 RPC interfaces, specifically adding real-time voting query functionality.
+    First, it adds support for the new v4.8.1 RPC interfaces, specifically adding the interface for real-time voting queries.
             
-    Second, it optimizes the multi-signature transaction construction experience. To facilitate development, we provided new interfaces and utility classes. Specifically, we added the `getAccountPermissions` interface to query all permission information for an account (including Owner, Witness, and Active permissions) in a single call. We also encapsulated `accountPermissionUpdate`, allowing users to invoke it directly when modifying multisig permissions.
+    Second, we've streamlined the development experience by providing new interfaces and utility classes. Specifically, the new `getAccountPermissions` interface allows you to query all permission data (Owner, Witness, and Active) in a single call. We also encapsulated `accountPermissionUpdate` for direct invocation when modifying multisig permissions.
         
-    Additionally, we introduced a helper class, `ActivePermissionOperationsUtils`. This assists developers in quickly constructing Active permission groups. For example, if you want to assign `TransferAssetContract` or `TransferContract` permissions to a specific Active group, this utility class can generate the corresponding Permission fields and set them directly, which is very convenient.
+    Additionally, we introduced a helper class, `ActivePermissionOperationsUtils`. This assists developers in quickly constructing Active permission groups. For example, if you want to assign certain permissions to a specific Active group, this utility class can generate the corresponding Permission fields and set them directly, which is very convenient.
     
-    We have provided a comprehensive unit test example in `Multisigtest.java`. You can refer to it for the full workflow: Query Permissions -> Construct Owner Permissions -> Modify Corresponding Permissions -> Initiate Update Transaction.
+    We have provided a comprehensive unit test example you can refer to for the full workflow: Query Permissions -> Construct Owner Permissions -> Modify Corresponding Permissions -> Initiate Update Transaction.
         
     I want to highlight one point: **when initiating an Active multisig transaction, you must set the Permission ID**. You need to use the `setContractPermissionId` method to specify which permission authority is being used to send the transaction.
         
@@ -86,37 +86,27 @@
     
 - **Neo**
 
-    This is a legacy issue. We may consider bumping the version to 1.0 if there are significant architectural changes in the future.
+    This is a legacy issue. We may consider bumping the version to 1.0 if there are significant changes in the future.
 
 - **Murphy**
 
-    Understood. If no further questions, let's move to the next topic. Daniel will share the new features in Wallet-cli v4.9.2.
+    Understood. If there are no further questions, let's move to the next topic. Daniel will share the new features in Wallet-cli v4.9.2.
 
 
 **Introducing wallet-cli 4.9.2 features**
 
 - **Daniel**
             
-    Okay. I'll walk you through the four main updates in Wallet-cli v4.9.2, based on the Release Notes.
+    Okay. I'll walk you through the four main updates in Wallet-CLI v4.9.2 based on the Release Notes, and demonstrate how they work.
 
-    First is the new `AddressBook` function. Users can save frequently used addresses in the command line for easy access later.
+    First is the new AddressBook function. It allows users to save frequently-used addresses for easy access. As you can see here, entering `AddressBook` displays a table with three columns — Name, Address, and Note — showing your saved entries, along with options to Add, Delete, or Edit them.
 
-    Second, we optimized the USDT transfer experience. Previously, USDT transfers in Wallet-cli had to be triggered via `triggerContract`. Users reported that piecing together parameters was cumbersome compared to simple TRX transfers, so we have improved this.
+    Second, we optimized the USDT transfer experience. Previously, using the `triggerContract` command required manually assembling a lot of parameters — including the receiver address, contract address, and contract method — which was quite cumbersome. Now, with the new `TransferUSDT` command, it’s as simple as a TRX transfer: just input the receiver address and amount. The official USDT contract address is built-in, allowing you to proceed with operations directly.
 
-    Third is the Receiving QR Code. We can now generate a QR code based on the current address to facilitate mobile scanning interactions, similar to TronLink.
+    Third is the Receiving QR Code. By entering `ShowReceivingQrCode`, Wallet-cli generates a QR code based on the current address. This facilitates mobile scanning interactions, similar to the experience in TronLink.
 
-    Finally, we optimized Account Permission Updates. This addresses a historical pain point where updating permissions required constructing a massive JSON string, which was quite difficult to use. We have now switched to an interactive experience.
-
-    (Demo Session) Let me demonstrate the actual operations. 
-    
-    Starting with the `AddressBook` function: after entering `AddressBook`, the interface displays a table with three columns — Name, Address, and Note — showing the address book content. It also provides options to Add, Delete, or Edit.
-    
-    Next is the `TransferUSDT` command. Previously, using the `triggerContract` command required manually assembling a lot of parameters, including the receiver address, contract address, contract method, and so on. Now, using `TransferUSDT` is simple — just input the receiver address and amount, just like a TRX transfer. The official USDT contract address is built-in, allowing you to proceed with operations directly.
-    
-    Moving on to the Receiving QR Code: entering `ShowReceivingQrCode` will display the QR code, which can be used for interactions with mobile apps.
-
-    Finally, Update Account Permission. Previously, `UpdateAccountPermission` required a large JSON string argument, which was inconvenient to piece together manually. Now, you can simply enter the command to launch a menu with options — such as modifying Owner/Witness/Active permissions or Adding/Deleting permissions. The design adopts an interaction logic similar to TronLink, eliminating the need for manual string construction. It's much more convenient.
-
+    Finally, we optimized Account Permission Updates. This addresses the historical pain point of constructing massive JSON strings for the `UpdateAccountPermission` command. We’ve switched to an interactive experience: entering the command now launches a menu with options to modify Owner/Witness/Active permissions or Add/Delete permissions. The design adopts an interaction logic similar to TronLink, eliminating the need for manual string construction. It's much more convenient.
+  
 - **Wayne**
 
     Is the new `UpdateAccountPermission` command backward compatible?
@@ -139,11 +129,11 @@
 
 - **Daniel**
     
-    Currently, it is primarily used for address prompts during transfers. If a transfer address is not in the book, it provides a reminder. As for displaying notes during private key selection, that is not yet supported.
+    Currently, it is primarily used for address suggestions during transfers. If a transfer address is not in the book, it provides a reminder. As for displaying notes during private key selection, that is not yet supported.
 
 - **Murphy**
 
-    Wallet-cli supports generating multiple addresses. Can we choose which address to generate a QR code for, or is it strictly the login account?
+    Since Wallet-cli supports generating multiple addresses, can we choose which address to generate a QR code for, or is it strictly the login account?
     
 - **Daniel**
        
@@ -151,7 +141,7 @@
  
 - **Murphy**
 
-    Has the menu prompt seen when typing `help` in the command line been updated? Does it show the old prompts or the new usage methods?
+    Have the usage instructions displayed when typing `help` in the command line been updated? Do they show the old info or the new usage methods?
     
 - **Daniel**
     
