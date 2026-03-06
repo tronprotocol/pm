@@ -55,7 +55,7 @@
     
     Building on that, we defined the parameters to hit two main security goals. First is anti-tampering: we sign the request body so it can't be modified in transit. Second is replay protection: making sure malicious actors can't just capture and resend the exact same request.
 
-    Let me walk you through the assembly rules for the signature data, which handles the anti-tampering aspect.
+    **Let me walk you through the assembly rules for the signature data, which handles the anti-tampering aspect.**
     
     Let's look at a communication process between a client and a server. The client's HTTP header will contain two key fields: `Signature-Input` and `Signature`.
         
@@ -63,7 +63,7 @@
     
     The client uses these parameters to construct the signature. The server then rebuilds this data from the headers to verify the SHA-256 hash. If they match, it proves the request hasn't been tampered with.
 
-    For replay protection, we rely on a few key fields: `created`, `expires`, `nonce`, and `keyid`.
+    **For replay protection, we rely on a few key fields: `created`, `expires`, `nonce`, and `keyid`.**
 
     First, we have the `created` and `expires` parameters, both of which are mandatory. The server will validate that the request wasn't created in the future and hasn't passed its expiration window.
 
@@ -71,7 +71,7 @@
     
     Finally, there's the `keyid`, which acts as the identity identifier. It's constructed from three distinct parts: a hardcoded protocol prefix like `tip8128`; the Chain ID, which TRON defines by converting the last four bytes of the genesis block hash into an integer to differentiate Mainnet from testnets; and finally, the user's account address.
 
-    Lastly, here’s how the server-side verification works.
+    **Now let's look at how the server actually verifies this signature.**
     
     The `Signature` field uses a fixed prefix: `tron=:`. To generate this, the client concatenates all the request parameters and security fields into a single string, hashes it, and signs it. That final signature is then appended to this field.
 
@@ -265,7 +265,7 @@
 
     Additionally, we added a connection management page. The bottom of the home screen now displays currently authorized DApps in real-time, and users can manage their "Connected Wallets" and "Authorized DApps" from a single page.
 
-    On a more granular level, we've introduced Skeleton Screens for the "All Assets" and "Transaction Details" pages, and optimized the UI prompts for weak network environments. The Settings page and the web-based interface for Account Permission Management have also been completely revamped. 
+    On a more granular level, we've introduced Skeleton Screens for the "All Assets" and "Transaction Details" pages, and optimized the UI prompts for weak network environments. The Settings pages and the web-based interface for Account Permission Management features have also been refined. 
     
     Overall, the core functionalities remain the same; this update is all about improving operational efficiency through better UI and interaction logic. Any questions on this?
 
