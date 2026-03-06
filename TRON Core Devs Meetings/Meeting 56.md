@@ -250,8 +250,7 @@
     Alright. Any other questions on TIP-825? If not, we'll wrap this topic up. Feel free to keep the discussion going on the [GitHub issue](https://github.com/tronprotocol/tips/issues/825). Next, let's have Leon run through the UI updates in the latest TronLink extension.
 
 
-**Introduction to the New TronLink Extension UI
-**
+**Introduction to the New TronLink Extension UI**
 
 - **Leon**
 
