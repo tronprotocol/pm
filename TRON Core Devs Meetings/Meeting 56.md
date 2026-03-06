@@ -8,7 +8,7 @@
   - [Syncing the development progress of v4.8.1](https://github.com/tronprotocol/java-tron/issues/6342)
   - [TIP-6780: SELFDESTRUCT only in same transaction](https://github.com/tronprotocol/tips/issues/765)
   - [Signed HTTP Requests with TRON](https://github.com/tronprotocol/tips/issues/825)
-  - Showcasing the [New TronLink Extension](https://www.tronlink.org/dlDetails/) UI
+  - Introducing the New [TronLink Extension](https://www.tronlink.org/dlDetails/) UI
   
 ### Detail
 
@@ -39,7 +39,7 @@
     Great. Please take a look at the proposal and feel free to join the technical discussion. Moving on to our third topic: Zeus is going to walk us through a new TIP draft about using TRON accounts to authenticate HTTP requests.
 
     
-**TIP - Signed HTTP Requests using TRON**
+**TIP - Signed HTTP Requests with TRON**
 
 - **Zeus**
             
