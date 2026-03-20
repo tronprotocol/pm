@@ -60,7 +60,7 @@
     
     Let's tentatively lock in April 7th then. Once finalized, we’ll sync this on the GitHub Issue so the author can update the description, which will help us align our community outreach. 
 
-    Aiden, could you please synthesize the 20+ comments into a high-level recap and consider pinning it to the top of the Issue? Please extract the key takeaways and provide a clear milestone update(e.g., Consensus reached; targeting April 7th). This will ensure better visibility for community developers and help us synchronize the upgrade roadmap across the network.
+    Aiden, could you please synthesize the 20+ comments into a high-level recap and consider pinning it to the top of the Issue? Please extract the key takeaways and provide a clear milestone update (e.g., Consensus reached; targeting April 7th). This will ensure better visibility for community developers and help us synchronize the upgrade roadmap across the network.
   
 - **Murphy**
 
