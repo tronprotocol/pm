@@ -108,6 +108,7 @@ Sometimes, a non-core Java-tron developer with particular expertise on a topic i
  63 | Wed, 28 Jan.  2026 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/183) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2054.md) | NA
  64 | Wed, 11 Feb.  2026 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/184) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2055.md) | NA
  65 | Wed, 04 Mar.  2026 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/187) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2056.md) | NA
+ 66 | Wed, 18 Mar.  2026 06:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/189) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2057.md) | NA
 
 
 
