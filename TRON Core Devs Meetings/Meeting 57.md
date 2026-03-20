@@ -7,7 +7,7 @@
 ### Agenda
 
   - [Syncing the upgrade progress of v4.8.1](https://github.com/tronprotocol/java-tron/issues/6342)
-  - [Proposal: Enable TIP-6780: SELFDESTRUCT only in same transaction](https://github.com/tronprotocol/tips/issues/765)
+  - [Proposal: Enable TIP-6780: SELFDESTRUCT only in same transaction](https://github.com/tronprotocol/tips/issues/827)
   - [Syncing the develop progress of v4.8.2](https://github.com/tronprotocol/pm/issues/192) | [Issue](https://github.com/tronprotocol/java-tron/issues/6585)
   - [TIP-833: Harden resourceProcessor resource window calculations](https://github.com/tronprotocol/tips/issues/833)
   - [Supports dynamic loading of more configurations](https://github.com/tronprotocol/java-tron/issues/6577)
