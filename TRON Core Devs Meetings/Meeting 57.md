@@ -128,7 +128,7 @@
 
 - **Sunny**
     
-    Does this mean all arithmetic going forward will adopt this approach? Also, for non-consensus parts, certain APIs might also become inconsistent in extreme scenarios. Is the double implicit conversion issue part of the current scope?
+    Does this mean all arithmetic going forward will adopt this approach? Also, for non-consensus parts, certain APIs might also become inconsistent in extreme scenarios. Is the `double` implicit conversion issue part of the current scope?
     
 - **Boson**
         
