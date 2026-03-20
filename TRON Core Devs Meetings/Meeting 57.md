@@ -242,7 +242,7 @@
 
 - **Brown**
   
-    You can think of this logic as a control portal for node interaction, primarily handling dynamic configuration management. If you modify it via the config file to see if it takes effect, this logic will pass the test just fine.
+    You can view the dynamic config loading as an automated management layer. Since both the IPC and config file mechanisms share the same underlying update interface, if you update the parameters via the config file to test if they take effect, it will work perfectly fine.
 
 - **Blade**
 
