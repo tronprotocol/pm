@@ -42,7 +42,7 @@
 
 - **Aiden**
  
-    The community has basically reached a consensus on the core technical points, and we're ready to proceed for Mainnet. We just need to finalize the exact proposal submission time, and the community will keep following up on the progress.
+    The community has basically reached a consensus on the core technical points, and we're ready to proceed with Mainnet. We just need to finalize the exact proposal submission time, and the community will keep following up on the progress.
 
 - **Murphy**
     
@@ -128,12 +128,10 @@
 
 - **Sunny**
     
-    Does this mean all arithmetic going forward will adopt this approach? Also, for non-consensus parts, certain APIs might also become inconsistencies in extreme scenarios. Is the double implicit conversion issue part of the current scope?
+    Does this mean all arithmetic going forward will adopt this approach? Also, for non-consensus parts, certain APIs might also become inconsistent in extreme scenarios. Is the double implicit conversion issue part of the current scope?
     
 - **Boson**
-    
-    While not mandatory for non-consensus parts, standardizing on `BigInteger` is considered best practice to eliminate overflow risks in edge cases. Regarding the `double` implicit conversion, we are thinking about planning a Companion TIP specifically for the Bancor Exchange protocol to replace `double/float` types with `BigDecimal` for enhanced numerical security.
-    
+        
     It's not mandatory for non-consensus code, but it's highly recommended to standardize on `BigInteger`. Because while it won't overflow under current constraints, handling it this way completely eliminates risks in extreme edge cases. As for the `double` implicit conversion issue, we are planning a Companion TIP specifically targeting numerical safety in the Bancor protocol Exchange calculations, replacing the underlying `double/float` with BigDecimal.
 
 - **Sunny**
@@ -172,7 +170,7 @@
      
     Understood. Let's move to the next item. Lucas, please walk us through [Issue #6577](https://github.com/tronprotocol/java-tron/issues/6577) regarding the support for dynamic loading of additional node parameters.
 
-**Support on Dynamic Loading of More Configurations**
+**Support for Dynamic Loading of More Configurations**
 
 - **Lucas**
 
