@@ -6,12 +6,12 @@
 
 ### Agenda
 
-- Sync the Development Progress of v4.8.2 [[↓](#topic1)] [[Issue](https://github.com/tronprotocol/pm/issues/192)]
-- Follow Up on the Proposal to Enable TIP-6780 on Mainnet [[↓](#topic2)] [[Issue](https://github.com/tronprotocol/tips/issues/827)]
-- Optimize Wallet `frozenV2` Construction Logic [[↓](#topic3)] [[Issue](https://github.com/tronprotocol/java-tron/issues/6515)]
-- Support Parameter Passing via the `input` Field for `eth_call` [[↓](#topic4)] [[Issue](https://github.com/tronprotocol/java-tron/issues/6517)]
-- TIP-836: Harden Exchange Transaction Calculations [[↓](#topic5)] [[Issue](https://github.com/tronprotocol/tips/issues/836)]
-- Replace Fastjson with Jackson in `java-tron` [[↓](#topic6)] [[Issue](https://github.com/tronprotocol/java-tron/issues/6607)]
+- Sync the Development Progress of v4.8.2 [[Issue](https://github.com/tronprotocol/pm/issues/192)] [[↓](#topic1)] 
+- Follow Up on the Proposal to Enable TIP-6780 on Mainnet [[Issue](https://github.com/tronprotocol/tips/issues/827)] [[↓](#topic2)]
+- Optimize Wallet `frozenV2` Construction Logic [[Issue](https://github.com/tronprotocol/java-tron/issues/6515)] [[↓](#topic3)]
+- Support Parameter Passing via the `input` Field for `eth_call` [[Issue](https://github.com/tronprotocol/java-tron/issues/6517)] [[↓](#topic4)]
+- TIP-836: Harden Exchange Transaction Calculations [[Issue](https://github.com/tronprotocol/tips/issues/836)] [[↓](#topic5)]
+- Replace Fastjson with Jackson in `java-tron` [[Issue](https://github.com/tronprotocol/java-tron/issues/6607)] [[↓](#topic6)] 
 - TRC Standard Related Topics: [[↓](#topic7)]
     - [TRC-7007: Introduce ERC-7007 (Verifiable AI-Generated Content Token) for TRON](https://github.com/tronprotocol/tips/issues/829)
     - [TRC-1271: Standard Signature Validation Method for Contracts](https://github.com/tronprotocol/tips/issues/830)
