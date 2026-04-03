@@ -7,7 +7,7 @@
 ### Agenda
 
   - [Syncing the upgrade progress of v4.8.1](https://github.com/tronprotocol/java-tron/issues/6342)
-  - [Proposal: Enable TIP-6780: SELFDESTRUCT only in same transaction](https://github.com/tronprotocol/tips/issues/765)
+  - [Proposal: Enable TIP-6780: SELFDESTRUCT only in same transaction](https://github.com/tronprotocol/tips/issues/827)
   - [Syncing the develop progress of v4.8.2](https://github.com/tronprotocol/pm/issues/192) | [Issue](https://github.com/tronprotocol/java-tron/issues/6585)
   - [TIP-833: Harden resourceProcessor resource window calculations](https://github.com/tronprotocol/tips/issues/833)
   - [Supports dynamic loading of more configurations](https://github.com/tronprotocol/java-tron/issues/6577)
@@ -60,7 +60,7 @@
     
     Let's tentatively lock in April 7th then. Once finalized, we’ll sync this on the GitHub Issue so the author can update the description, which will help us align our community outreach. 
 
-    Aiden, could you please synthesize the 20+ comments into a high-level recap and consider pinning it to the top of the Issue? Please extract the key takeaways and provide a clear milestone update(e.g., Consensus reached; targeting April 7th). This will ensure better visibility for community developers and help us synchronize the upgrade roadmap across the network.
+    Aiden, could you please synthesize the 20+ comments into a high-level recap and consider pinning it to the top of the Issue? Please extract the key takeaways and provide a clear milestone update (e.g., Consensus reached; targeting April 7th). This will ensure better visibility for community developers and help us synchronize the upgrade roadmap across the network.
   
 - **Murphy**
 
@@ -242,7 +242,7 @@
 
 - **Brown**
   
-    You can think of this logic as a control portal for node interaction, primarily handling dynamic configuration management. If you modify it via the config file to see if it takes effect, this logic will pass the test just fine.
+    You can view the dynamic config loading as an automated management layer. Since both the IPC and config file mechanisms share the same underlying update interface, if you update the parameters via the config file to test if they take effect, it will work perfectly fine.
 
 - **Blade**
 
