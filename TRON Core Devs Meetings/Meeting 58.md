@@ -157,7 +157,7 @@
 
 - **Boson**
         
-    We're fixing the underlying security vulnerabilities at the technical level first. Whether the feature is ultimately kept or deprecated will be up to TRON DAO to discuss and decide.
+    We're fixing the underlying security vulnerabilities at the technical level first. Whether the feature is ultimately kept or deprecated will be up to the TRON community to discuss and decide.
     
 - **Sunny**
         
