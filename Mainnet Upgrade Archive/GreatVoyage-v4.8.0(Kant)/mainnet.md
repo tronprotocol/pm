@@ -114,8 +114,8 @@ A draft plan is listed here, and it will be updated after the mainnet upgrade st
 | Network  | Github | Kant Release Date  |  Latest Status | Fork |  
 |---------|------------|-----|-----|-----|
 | [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | 03/17/2025 | GreatVoyage-v4.8.0.2 （Kant） | Forked (Enabled No.83, No.88, No.89 Network Parameters)|
-| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | 04/29/2025| GreatVoyage-v4.7.7(Epicurus) | - |   
-| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | 04/29/2025 | GreatVoyage-v4.7.7(Epicurus) | - |  
+| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | 04/29/2025| GreatVoyage-v4.8.0.2 （Kant）| Forked (Enabled No.83, No.88, No.89 Network Parameters) |   
+| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | 04/29/2025 | GreatVoyage-v4.8.0.2 （Kant） | Forked (Enabled No.83, No.88, No.89 Network Parameters) |  
 
 Nile Upgrade Instruction: https://nileex.io/run/getRunPage
 
