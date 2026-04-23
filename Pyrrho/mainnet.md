@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated April 16, 2026.**
+This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated April 23, 2026.**
 
 Note: The target version number of Democritus is v4.8.2 .
 
@@ -41,8 +41,6 @@ TIP：
 
 API:
 
-[Issue 6288](https://github.com/tronprotocol/java-tron/issues/6288): Increase the CPU execution time limit in the TVM of the `triggerconstantcontract` API
-
 [Issue 6298](https://github.com/tronprotocol/java-tron/issues/6298): Add `block_number` Parameter for FullNode API
 
 [Issue 6363](https://github.com/tronprotocol/java-tron/issues/6363): Optimize API rate limiting with a non-blocking approach
@@ -69,11 +67,21 @@ API:
 
 [Issue 6632](https://github.com/tronprotocol/java-tron/issues/6632): Introduce resource limits for JSON-RPC (batch size, response size, address size, timeout)
 
+[Issue 6674](https://github.com/tronprotocol/java-tron/issues/6674): Add ABI semantic validation for `/wallet/deploycontract`
+
 
 
 Network:
 
 [Issue 6504](https://github.com/tronprotocol/java-tron/issues/6504): Optimize random disconnection strategy
+
+[Issue 6659](https://github.com/tronprotocol/java-tron/issues/6659): Unify and improve rate limiting for TRX and BLOCK INVENTORY Messages
+
+[Issue 6667](https://github.com/tronprotocol/java-tron/issues/6667): Add deduplication and length checks for p2p messages
+
+[Issue 6675](https://github.com/tronprotocol/java-tron/issues/6675): Add timestamp validation and deduplication to hello handshake messages
+
+[libp2p issue 129](https://github.com/tronprotocol/libp2p/issues/129): Avoid duplicate connection attempts to active nodes before handshake completion
 
 Security:
 
@@ -102,6 +110,26 @@ Others:
 [Issue 6603](https://github.com/tronprotocol/java-tron/issues/6603): Move `keystore-factory` as toolkit subcommand
 
 [Issue 6610](https://github.com/tronprotocol/java-tron/issues/6610): SolidityNode supports conditional shutdown
+
+[Issue 6665](https://github.com/tronprotocol/java-tron/issues/6665): Drop InfluxDB support for metrics storage
+
+[Issue 6666](https://github.com/tronprotocol/java-tron/issues/6666): Remove actuator.whitelist config and related logic to prevent chain fork 
+
+[Issue 6670](https://github.com/tronprotocol/java-tron/issues/6670): Correct protobuf contract types in Actuator getOwnerAddress()
+
+[Issue 6676](https://github.com/tronprotocol/java-tron/issues/6676): Standardize JSON-RPC error handling(revert codes, LiteNode pruned-history responses, request fields validation)
+
+[Issue 6678](https://github.com/tronprotocol/java-tron/issues/6678): [[Bug]Event cache not cleared on reorg causing duplicate and inconsistent event delivery
+
+[Issue 6681](https://github.com/tronprotocol/java-tron/issues/6681): Add a node-level configuration to control the TVM execution time limit for constant calls
+
+[Issue 6682](https://github.com/tronprotocol/java-tron/issues/6682): DoS Protection Strategy for Constant Call APIs
+
+[Issue 6684](https://github.com/tronprotocol/java-tron/issues/6684): Optimize `isBusy` logic by incorporating mempool transactions and enabling configurable `MAX_TRX_SIZE`
+
+[Issue 6685](https://github.com/tronprotocol/java-tron/issues/6685): Reduce memory usage in blocks sync via delayed serialization and cache limits
+
+
 
 ## Implementation Progresss
 
@@ -145,7 +173,7 @@ TBD
 
 ### Network Upgrade and Fork Status
 
-| Network  | Github | Democritus Release Date  |  Latest Status | Fork |  
+| Network  | Github | Pyrrho Release Date  |  Latest Status | Fork |  
 |---------|------------|-----|-----|-----|
 | [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | - | GreatVoyage-v4.8.1 （Democritus） | - |
 | [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | - | GreatVoyage-v4.8.1 （Democritus）| -|   
