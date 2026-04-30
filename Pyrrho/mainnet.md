@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated April 23, 2026.**
+This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated April 30, 2026.**
 
 Note: The target version number of Democritus is v4.8.2 .
 
@@ -29,8 +29,6 @@ TIP：
 
 [TIP-836](https://github.com/tronprotocol/tips/issues/836): Harden exchange transaction calculations
 
-[TIP-2537](https://github.com/tronprotocol/tips/issues/718): Precompile for BLS12-381 curve operations
-
 [TIP-2935](https://github.com/tronprotocol/tips/issues/719): Serve historical block hashes from state
 
 [TIP-7823](https://github.com/tronprotocol/tips/issues/826): Set upper bounds for MODEXP
@@ -49,13 +47,9 @@ API:
 
 [Issue 6517](https://github.com/tronprotocol/java-tron/issues/6517): Support parameter passing via the `input` field for `eth_call`
 
-[Issue 6546](https://github.com/tronprotocol/java-tron/issues/6546): Optimize broadcast API 
-
 [Issue 6547](https://github.com/tronprotocol/java-tron/issues/6547): Adjust `nonce` returned by `eth_getTransactionByHash`
 
 [Issue 6548](https://github.com/tronprotocol/java-tron/issues/6548): Deprecate http rest mappings in gRPC protos
-
-[Issue 6584](https://github.com/tronprotocol/java-tron/issues/6584): Add CIDR-based Global IP Rate Limiting for APIs
 
 [Issue 6604](https://github.com/tronprotocol/java-tron/issues/6604): Unify HTTP Request Body Size Limit
 
@@ -79,10 +73,6 @@ Network:
 
 [Issue 6667](https://github.com/tronprotocol/java-tron/issues/6667): Add deduplication and length checks for p2p messages
 
-[Issue 6675](https://github.com/tronprotocol/java-tron/issues/6675): Add timestamp validation and deduplication to hello handshake messages
-
-[libp2p issue 129](https://github.com/tronprotocol/libp2p/issues/129): Avoid duplicate connection attempts to active nodes before handshake completion
-
 Security:
 
 [Issue 6568](https://github.com/tronprotocol/java-tron/issues/6568): Add an optional query parameter that serializes all 64-bit integer types as JSON strings to prevent potential numeric overflow
@@ -92,8 +82,6 @@ Security:
 Others:
 
 [Issue 6567](https://github.com/tronprotocol/java-tron/issues/6567): CLI flags silently overridden by config file for 13 parameters
-
-[Issue 6577](https://github.com/tronprotocol/java-tron/issues/6577): Supports dynamic loading of more configurations
 
 [Issue 6583](https://github.com/tronprotocol/java-tron/issues/6583): Improve logging: : SLF4J bridge, less startup noise, fix shutdown log loss
 
@@ -117,13 +105,9 @@ Others:
 
 [Issue 6670](https://github.com/tronprotocol/java-tron/issues/6670): Correct protobuf contract types in Actuator getOwnerAddress()
 
-[Issue 6676](https://github.com/tronprotocol/java-tron/issues/6676): Standardize JSON-RPC error handling(revert codes, LiteNode pruned-history responses, request fields validation)
-
 [Issue 6678](https://github.com/tronprotocol/java-tron/issues/6678): [[Bug]Event cache not cleared on reorg causing duplicate and inconsistent event delivery
 
 [Issue 6681](https://github.com/tronprotocol/java-tron/issues/6681): Add a node-level configuration to control the TVM execution time limit for constant calls
-
-[Issue 6682](https://github.com/tronprotocol/java-tron/issues/6682): DoS Protection Strategy for Constant Call APIs
 
 [Issue 6684](https://github.com/tronprotocol/java-tron/issues/6684): Optimize `isBusy` logic by incorporating mempool transactions and enabling configurable `MAX_TRX_SIZE`
 
