@@ -57,19 +57,19 @@
 
     Second, on LiteNode, if historical data has been pruned, we currently can't tell whether the data was never there or was pruned — all queries simply return empty. Ethereum supports a dedicated error code (4444) to explicitly indicate that the data has been pruned.
 
-    On top of that, the semantics of the `earliest` tag has also changed for tag-based queries. Previously we always treated it as 0 (the genesis block), but on a LiteNode it should now refer to the lowest available block actually retained by that node. That's the second difference.
+    On top of that, the semantics of the `earliest` tag have also changed for tag-based queries. Previously we always treated it as `0` (the genesis block), but on a LiteNode it should now refer to the lowest available block actually retained by that node. That's the second difference.
 
-    The third difference: java-tron currently parses JSON-RPC via a third-party library (jsonrpc4j), which is fairly lenient. For example, the `version` field accepts `1.0` or any arbitrary string. But Ethereum went through a dedicated upgrade to add strict JSON-RPC 2.0 validation. For ID handling, our jsonrpc4j treats it as a notification by default and returns nothing; Ethereum, on the other hand, processes invalid IDs (such as a JSON char or object value) and returns null. That's another behavioral gap.
+    The third difference: java-tron currently parses JSON-RPC via a third-party library (`jsonrpc4j`), which is fairly lenient. For example, the `version` field accepts `1.0` or any arbitrary string. But Ethereum went through a dedicated upgrade to add strict JSON-RPC 2.0 validation. For ID handling, our `jsonrpc4j` treats it as a notification by default and returns nothing; Ethereum, on the other hand, processes invalid IDs and returns `null`. That's another behavioral gap.
 
     The motivation behind this issue is to align these three points with Ethereum, so that cross-client wallets, DApps, and related tooling have less compatibility work to do.
 
-    That's the main content. There's one detail still open for discussion: for the strict JSON-RPC format validation, my proposal is to introduce it as a config item that's disabled by default at launch. This avoids breaking existing non-conformant clients en masse and serves as a transition period. Ethereum, by contrast, just turned strict validation on directly when shipping it, with no transition. This part can be discussed further under the issue.
+    That's the main content. There's one detail still open for discussion: for the strict JSON-RPC format validation, my proposal is to introduce it as a config item that's disabled by default at launch. This avoids breaking lots of existing non-conformant clients at once and serves as a transition period. Ethereum, by contrast, just turned strict validation on directly when shipping it, with no transition. This part can be discussed further under the issue.
 
-    One more note: the impact of LiteNode pruning is limited to certain interfaces. For interfaces that look up data by block hash, we don't currently have a way to make this distinction, since we can't tell whether the data is missing or pruned. I checked Ethereum and they don't handle this either, so we're staying consistent for now.
+    One more note: the impact of LiteNode pruning is limited to certain interfaces. For interfaces that look up data by block hash, we don't currently have a way to make this distinction, since we can't tell whether the data is missing or pruned. Ethereum doesn't handle this either, so we're staying consistent for now.
 
 - **Murphy**
 
-    Got it. This is also the first time this issue is being discussed at a Core Devs Meeting. Tina has covered the background in detail. If anyone has thoughts or questions on the points raised, please leave a comment under the issue.
+    Got it. This is also the first time this issue has been discussed at a Core Devs Meeting. Tina has covered the background in detail. If anyone has thoughts or questions on the points raised, please leave a comment under the issue.
 
     One question from me: I see this was removed from v4.8.2 yesterday. What's the current status — still in discussion, not yet in development?
 
@@ -94,11 +94,11 @@
 
     For this kind of verification, we'd prefer to use SolidityNode for syncing. Based on the v4.8.1 experience, syncing with 8 FullNodes takes around 38 days, while SolidityNode is expected to finish in under 30 days.
 
-    Since conditional shutdown isn't supported, we currently have to operate it manually, which effectively means using SolidityNode like a FullNode and gives up the fast-sync advantage. So we're filling in this feature.
+    Since conditional shutdown isn't supported, we currently have to operate it manually, which effectively means using SolidityNode like a FullNode and giving up the fast-sync advantage. So we're filling in this feature.
 
-    On the implementation side: currently in `manager`, we push the block directly after fetching, but the push flow doesn't include a shutdown check. We're moving the push step to a different module so that `process` runs first, which gives the shutdown check a place to live. This way, in this specific scenario, the sync flow stays fully aligned with FullNode.
+    On the implementation side: currently in `Manager`, we push the block directly after fetching, but the push flow doesn't include a shutdown check. We're moving the push step to a different module so it runs through the process step first, which gives the shutdown check a place to live. This way, in this specific scenario, the sync flow stays fully aligned with FullNode.
 
-    The code change is fairly small — mainly migrating the check function from `Manager` to `TronNetDelegate`. All config items remain reusable, no new ones needed.
+    The code change is fairly small — mainly migrating the check function from `Manager` to `TronNetDelegate`. All config items remain reusable, no new ones are needed.
 
     Also, since SolidityNode only needs one peer to complete a sync, we force `p2pdisable` to `true` in the logic and don't connect to additional peers. With these two main changes, conditional shutdown is in place. The logic stays fully aligned with FullNode.
 
@@ -142,7 +142,7 @@
 
 - **Blade**
 
-    Second question. I recall the `stop` check uses an "equals" comparison — it only stops at the exact configured height. I'd suggest changing this to "greater than or equal to". That way, even if the equals condition gets skipped while still unsolidified, the node can stop at the first solidified block instead, which mitigates the hang issue mentioned earlier. Especially for the from-scratch sync case: if the configured height happens to land on a block that can't be solidified, all nodes should stop at the same following block.
+    Second question. I recall the stop check uses an "equals" comparison — it only stops at the exact configured height. I'd suggest changing this to "greater than or equal to". That way, even if the equals condition gets skipped while still unsolidified, the node can stop at the first solidified block instead, which mitigates the hang issue mentioned earlier. Especially for the from-scratch sync case: if the configured height happens to land on a block that can't be solidified, all nodes should stop at the same following block.
 
 - **Brown**
 
@@ -222,7 +222,7 @@
 
     Previously, metrics were kept in memory and periodically persisted to InfluxDB. We're removing the persistence logic, but the metrics still live in memory.
 
-    The Prometheus monitoring solution provided in tron-docker fully replaces InfluxDB, performs much better, and has more thorough documentation. InfluxDB usage is already very low, so removing this code is straightforward.
+    The Prometheus monitoring solution provided in `tron-docker` fully replaces InfluxDB, performs much better, and has more thorough documentation. InfluxDB usage is already very low, so removing this code is straightforward.
 
     The two `getStatsInfo` APIs (HTTP and gRPC) are kept for now, but may also be removed later.
 
@@ -286,7 +286,7 @@
 
     Sure. This PR has been merged. It mainly adds two Prometheus metrics: a histogram for block transaction count, and one for SR set changes. Both are merged on the code side. There are two follow-up items.
 
-    Boson raised three todos in the PR for discussion. The first is the metrics CHANGELOG — I've opened a separate PR under `docs` to add a changelog file for tracking changes to the metrics module. The second is the monitoring dashboard update — I've updated the dashboard config in the tron-docker repo. Both will continue as follow-up PRs.
+    Boson raised three todos in the PR for discussion. The first is the metrics CHANGELOG — I've opened a separate PR under `docs` to add a changelog file for tracking changes to the metrics module. The second is the monitoring dashboard update — I've updated the dashboard config in the `tron-docker` repo. Both will continue as follow-up PRs.
 
 - **Murphy**
 
@@ -307,7 +307,7 @@
 
     The core change is flipping the shielded transaction API config switch from default-on to default-off. Since v4.8.1, this flag only affects API access, not the underlying shielded transaction processing. Combined with low usage of shielded transactions and the plan to gradually phase them out, default-off is the safer option.
 
-    On impact: after upgrading to v4.8.2, the small number of nodes that genuinely need the shielded transaction API will need to explicitly set this flag to true. The vast majority of nodes are unaffected. Any objections?
+    On impact: after upgrading to v4.8.2, the small number of nodes that genuinely need the shielded transaction API will need to explicitly set this flag to `true`. The vast majority of nodes are unaffected. Any objections?
 
 - **Brown**
 
@@ -315,7 +315,7 @@
 
 - **Federico**
 
-    The API will return an explicit error indicating the shielded transaction is `is not allowed`.
+    The API will return an explicit error indicating the shielded transaction `is not allowed`.
 
 - **Brown**
 
@@ -356,7 +356,7 @@
 
     Sure, let me walk through the TIP-2935 implementation. This TIP is part of Ethereum's Pectra upgrade, and the goal is to deploy a system contract that stores a fixed window of historical block hashes.
 
-    The implementation is fairly straightforward. Ethereum's native approach uses a keyless transaction for deployment, which is tightly bound to its underlying mechanics. TRON can't issue this kind of transaction, so we adopted an alternative: when the TIP proposal takes effect (its state turns to 1), we directly write the corresponding system bytecode to the target address.
+    The implementation is fairly straightforward. Ethereum's native approach uses a keyless transaction for deployment, which is tightly bound to its underlying mechanics. TRON can't issue this kind of transaction, so we adopted an alternative: when the TIP proposal takes effect (its state turns to `1`), we directly write the corresponding system bytecode to the target address.
 
     There's a tiny chance that the target address has already been deployed as a contract by some user. But TRON's contract addresses are essentially random — unlike Ethereum where they're derived from account address and nonce — so the collision probability is extremely low.
 
@@ -383,13 +383,13 @@
 
 - **Murphy**
 
-    OK. [#2935](https://github.com/tronprotocol/tips/issues/719) we just discussed. ([#7823](https://github.com/tronprotocol/tips/issues/826)) is already submitted. David, your two — 7883 ([#7883](https://github.com/tronprotocol/tips/issues/837)) and 7939 ([#7939](https://github.com/tronprotocol/tips/issues/838)) — are at Last Call now, and the PRs are submitted, right?
+    OK. [#2935](https://github.com/tronprotocol/tips/issues/719) we just discussed. ([#7823](https://github.com/tronprotocol/tips/issues/826)) is already submitted. David, your two — 7883 ([#7883](https://github.com/tronprotocol/tips/issues/837)) and 7939 ([#7939](https://github.com/tronprotocol/tips/issues/838)) — are at `Last Call` now, and the PRs are submitted, right?
 
 - **David**
 
     Right, both PRs are in review.
 
-    One more thing: the 3 TRCs we discussed in earlier meetings are now all at Last Call. Calling this out so anyone with new feedback can leave a comment under the issues. If there's no objection, we'll move them to Final shortly.
+    One more thing: the 3 TRCs we discussed in earlier meetings are now all at `Last Call`. Calling this out so anyone with new feedback can leave a comment under the issues. If there's no objection, we'll move them to `Final` shortly.
 
 - **Murphy**
 
