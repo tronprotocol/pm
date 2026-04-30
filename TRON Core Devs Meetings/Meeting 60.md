@@ -375,7 +375,7 @@
 
 - **Murphy**
 
-    Let me take two more minutes to quickly sync the latest progress on the v4.8.2 issues. Starting with the TIPs. The first two TIPs，TIP-833 ([#833](https://github.com/tronprotocol/tips/issues/833)) and TIP-836 ([#836](https://github.com/tronprotocol/tips/issues/836)) — Boson, what's the current status?
+    Let me take two more minutes to quickly sync the latest progress on the v4.8.2 issues. Starting with the TIPs. The first two TIPs, TIP-833 ([#833](https://github.com/tronprotocol/tips/issues/833)) and TIP-836 ([#836](https://github.com/tronprotocol/tips/issues/836)) — Boson, what's the current status?
 
 - **Boson**
 
