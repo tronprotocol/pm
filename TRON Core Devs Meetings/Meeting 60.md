@@ -375,21 +375,21 @@
 
 - **Murphy**
 
-    Let me take two more minutes to quickly sync the latest progress on the v4.8.2 issues. Starting with the TIPs. The first two — TIP-833 ([#833](https://github.com/tronprotocol/tips/issues/833)) and TIP-836 ([#836](https://github.com/tronprotocol/tips/issues/836)) — are both Boson's. Boson, what's the status? PR submitted?
+    Let me take two more minutes to quickly sync the latest progress on the v4.8.2 issues. Starting with the TIPs. The first two TIPs，TIP-833 ([#833](https://github.com/tronprotocol/tips/issues/833)) and TIP-836 ([#836](https://github.com/tronprotocol/tips/issues/836)) — Boson, what's the current status?
 
 - **Boson**
 
-    Yes, both PRs are submitted.
+    Both TIPs are currently in `Last Call` status, and the PRs have been submitted. 
 
 - **Murphy**
 
-    OK. [#2935](https://github.com/tronprotocol/tips/issues/719) we just discussed. ([#7823](https://github.com/tronprotocol/tips/issues/826)) is already submitted. David, your two — 7883 ([#7883](https://github.com/tronprotocol/tips/issues/837)) and 7939 ([#7939](https://github.com/tronprotocol/tips/issues/838)) — are at `Last Call` now, and the PRs are submitted, right?
+    OK. Moving on. Issue [#2935](https://github.com/tronprotocol/tips/issues/719) was discussed today and is now in `Accepted` status. 
+    
+    For [#7823](https://github.com/tronprotocol/tips/issues/826), [#7883](https://github.com/tronprotocol/tips/issues/837), and [#7939](https://github.com/tronprotocol/tips/issues/838), David, these three TIPs are currently in `Last Call`. The PRs have been submitted as well, right?
 
 - **David**
-
-    Right, both PRs are in review.
-
-    One more thing: the 3 TRCs we discussed in earlier meetings are now all at `Last Call`. Calling this out so anyone with new feedback can leave a comment under the issues. If there's no objection, we'll move them to `Final` shortly.
+    
+    Yes. These are the three TRC-related topics we discussed in previous meetings. They are all in `Last Call`, and their PRs have been submitted and are under review. If anyone has further comments, please reply under the issue. If there are no objections, we will update their status to `Final` shortly.
 
 - **Murphy**
 
