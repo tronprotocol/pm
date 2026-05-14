@@ -278,7 +278,7 @@
     Got it. Any other questions on this TIP? If not, let me sync the progress of v4.8.2-related TIPs.
 
 <span id="topic6"></span>
-**Sync the Latest Progress of v4.8.2 Features**
+**Sync the Latest Progress of TIPs**
 
 - **Murphy**
 
