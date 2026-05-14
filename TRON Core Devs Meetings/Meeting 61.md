@@ -200,15 +200,7 @@
 
     These two TRCs are ERC standards frequently used in contract development, and we're bringing them onto TRON as well.
 
-    All four TRCs above are essentially wrapping up discussion and have broad support. After this meeting, they'll be moved to `Last Call`. If there are still questions, please continue under the issue.
-
-- **Murphy**
-
-    Got it. Just to confirm: these 4 TRCs don't track the java-tron release cycle — they follow the TIP process on their own, moving from `Last Call` to `Final` and getting merged into the TIP repository.
-
-- **David**
-
-    Right, TRC-related ones don't need to track the version.
+    All four TRCs above are essentially wrapping up discussion and have broad support. After this meeting, they'll be moved to `Last Call`. If there are still questions, please continue commenting under the issue.
 
 - **Murphy**
 
