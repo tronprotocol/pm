@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated May 8, 2026.**
+This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated May 13, 2026.**
 
 Note: The target version number of Democritus is v4.8.2 .
 
@@ -38,8 +38,6 @@ TIP：
 [TIP-7939](https://github.com/tronprotocol/tips/issues/838): Count leading zeros (CLZ) opcode
 
 API:
-
-[Issue 6298](https://github.com/tronprotocol/java-tron/issues/6298): Add `block_number` Parameter for FullNode API
 
 [Issue 6363](https://github.com/tronprotocol/java-tron/issues/6363): Optimize API rate limiting with a non-blocking approach
 
@@ -117,9 +115,9 @@ Others:
 
 Implementation status of Included TIPs in java-tron.
 
-TIP            |       [TIP-833](https://github.com/tronprotocol/tips/issues/833)       |      [TIP-836](https://github.com/tronprotocol/tips/issues/836)      |   [TIP-2537](https://github.com/tronprotocol/tips/issues/718)   | [TIP-2935](https://github.com/tronprotocol/tips/issues/719)| [TIP-7823](https://github.com/tronprotocol/tips/issues/826) | [TIP-7883](https://github.com/tronprotocol/tips/issues/837) | [TIP-7939](https://github.com/tronprotocol/tips/issues/838) |
-|----------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|--------|---|---|---|---|
-| **Java-tron**       |   -  |   -  |   -  | - | - | - | - |
+TIP            |       [TIP-833](https://github.com/tronprotocol/tips/issues/833)       |      [TIP-836](https://github.com/tronprotocol/tips/issues/836)       | [TIP-2935](https://github.com/tronprotocol/tips/issues/719)| [TIP-7823](https://github.com/tronprotocol/tips/issues/826) | [TIP-7883](https://github.com/tronprotocol/tips/issues/837) | [TIP-7939](https://github.com/tronprotocol/tips/issues/838) |
+|----------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|--------|---|---|---|
+| **Java-tron**       | Last Call|   Last Call  | Last Call | Last Call | Last Call | Last Call |
 
 ### Readiness Checklist
 
