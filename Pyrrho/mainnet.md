@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated May 13, 2026.**
+This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated May 21, 2026.**
 
 Note: The target version number of Democritus is v4.8.2 .
 
@@ -29,6 +29,8 @@ TIP：
 
 [TIP-836](https://github.com/tronprotocol/tips/issues/836): Harden exchange transaction calculations
 
+[TIP-854](https://github.com/tronprotocol/tips/issues/854)：Canonicalize calldata for signature-verification precompiles
+
 [TIP-2935](https://github.com/tronprotocol/tips/issues/719): Serve historical block hashes from state
 
 [TIP-7823](https://github.com/tronprotocol/tips/issues/826): Set upper bounds for MODEXP
@@ -36,6 +38,8 @@ TIP：
 [TIP-7883](https://github.com/tronprotocol/tips/issues/837): Increase ModExp Gas Cost 
 
 [TIP-7939](https://github.com/tronprotocol/tips/issues/838): Count leading zeros (CLZ) opcode
+
+[TIP-7951](https://github.com/tronprotocol/tips/issues/785): Precompile for secp256r1 Curve Support
 
 API:
 
@@ -115,9 +119,9 @@ Others:
 
 Implementation status of Included TIPs in java-tron.
 
-TIP            |       [TIP-833](https://github.com/tronprotocol/tips/issues/833)       |      [TIP-836](https://github.com/tronprotocol/tips/issues/836)       | [TIP-2935](https://github.com/tronprotocol/tips/issues/719)| [TIP-7823](https://github.com/tronprotocol/tips/issues/826) | [TIP-7883](https://github.com/tronprotocol/tips/issues/837) | [TIP-7939](https://github.com/tronprotocol/tips/issues/838) |
-|----------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|--------|---|---|---|
-| **Java-tron**       | Last Call|   Last Call  | Last Call | Last Call | Last Call | Last Call |
+TIP            |       [TIP-833](https://github.com/tronprotocol/tips/issues/833)       |      [TIP-836](https://github.com/tronprotocol/tips/issues/836)   |  [TIP-854](https://github.com/tronprotocol/tips/issues/854)  | [TIP-2935](https://github.com/tronprotocol/tips/issues/719)| [TIP-7823](https://github.com/tronprotocol/tips/issues/826) | [TIP-7883](https://github.com/tronprotocol/tips/issues/837) | [TIP-7939](https://github.com/tronprotocol/tips/issues/838) |  [TIP-7951](https://github.com/tronprotocol/tips/issues/785) |
+|---|------|-----------------------------------------------------------------------|--------|---|---|---|---|---|
+| **Java-tron**       | Last Call|   Last Call  | Last Call | Last Call | Last Call | Last Call | Last Call | Last Call |
 
 ### Readiness Checklist
 
