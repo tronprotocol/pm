@@ -1,8 +1,8 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated May 21, 2026.**
+This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated June 16, 2026.**
 
-Note: The target version number of Democritus is v4.8.2 .
+Note: The target version number of Pyrrho is v4.8.2 .
 
 
 ## Table of contents
@@ -15,7 +15,7 @@ Note: The target version number of Democritus is v4.8.2 .
 
 ## The main content of the release
 
-This section summarizes all the details of Democritus's releases. and all the content will be disccussed in the core devs meeting.
+This section summarizes all the details of Pyrrho's releases. and all the content will be disccussed in the core devs meeting.
 
 Note: The following tags are used to indicate the status of each item.
 - [x] Indicates that the tiem has been developed and is in the final state.
@@ -159,9 +159,9 @@ TBD
 
 | Network  | Github | Pyrrho Release Date  |  Latest Status | Fork |  
 |---------|------------|-----|-----|-----|
-| [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | - | GreatVoyage-v4.8.1 （Democritus） | - |
-| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | - | GreatVoyage-v4.8.1 （Democritus）| -|   
-| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | -  | GreatVoyage-v4.8.1 （Democritus） | - |  
+| [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | - | GreatVoyage-v4.8.2 （Pyrrho） | - |
+| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | - | GreatVoyage-v4.8.2 （Pyrrho）| -|   
+| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | -  | GreatVoyage-v4.8.2 （Pyrrho） | - |  
 
 Nile Upgrade Instruction: https://nileex.io/run/getRunPage
 
