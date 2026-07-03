@@ -5,7 +5,8 @@ This repository is for:
 
 - [TRON Core Devs Meetings](https://github.com/tronprotocol/pm/tree/master/TRON%20Core%20Devs%20Meetings)
 - [SR Meetings](https://github.com/tronprotocol/pm/tree/master/SR%20Meetings)
-- [Mainnet Upgrade](https://github.com/tronprotocol/pm/tree/master/Mainnet%20Upgrade%20Archive) Specifications
+- [Mainnet Upgrade Archive](https://github.com/tronprotocol/pm/tree/master/Mainnet%20Upgrade%20Archive)
+- [Mainnet Pyrrho Upgrade Specifications](https://github.com/tronprotocol/pm/tree/master/Pyrrho)
 
 Agendas for these meetings can be found on the [Issues](https://github.com/tronprotocol/pm/issues) tab. 
 
@@ -134,3 +135,25 @@ Sometimes, a non-core Java-tron developer with particular expertise on a topic i
  6  | Wed, 08 Feb, 2023 09:00 UTC      | [agenda](https://github.com/tronprotocol/pm/issues/6) | [notes](https://github.com/tronprotocol/pm/blob/master/SR%20Meetings/SR%20Meeting%2006.md) | NA |
 
 </details>
+
+---
+
+## TRON Mainnet Upgrade Specifications and Archive Overview
+
+### Purpose
+The Mainnet Upgrade Specifications document outlines the essential tasks, technical details, and implementation progress required to prepare for a new TRON network upgrade (such as the Pyrrho upgrade). It serves as a centralized coordination tool to ensure a smooth transition across all TRON networks. Conversely, the Mainnet Upgrade Archive acts as a historical repository, storing the finalized specifications and rollout details of previous network upgrades once they have been successfully deployed.
+
+### Specification Contents
+Upgrade specification documents are actively maintained leading up to a launch. They generally cover the following key areas:
+
+- **The main content of the release:** A comprehensive breakdown of new features, including protocol changes (TIPs), API modifications, network optimizations, and security enhancements.
+- **Implementation Progress:** A tracking matrix showing the current status of each included TIP (e.g., "Last Call") and a readiness checklist for client deployments (e.g., Java-tron releases).
+- **Network Status:** Estimated upgrade schedules, rollout timelines, and upgrade instructions across the Nile Testnet, Shasta Testnet, and Mainnet. 
+- **Coordination Checklists:** Action items for notifying and following up with the community, Super Representatives (SRs), Exchanges (CEXs), Wallets, and DEXs to ensure ecosystem-wide readiness.
+
+### Current and Archived Upgrades
+
+You can track the ongoing upgrade or review historical upgrades via the following directories:
+
+- [**Active Upgrade Specification (Pyrrho)**](https://github.com/tronprotocol/pm/tree/master/Pyrrho): Contains the live tracking document and readiness checklist for the upcoming network upgrade.
+- [**Mainnet Upgrade Archive**](https://github.com/tronprotocol/pm/tree/master/Mainnet%20Upgrade%20Archive): Contains the finalized and archived specifications of all past TRON network upgrades.
