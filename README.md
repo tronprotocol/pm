@@ -151,14 +151,6 @@ Upgrade specification documents are actively maintained leading up to a launch. 
 - **Network Status:** Estimated upgrade schedules, rollout timelines, and upgrade instructions across the Nile Testnet, Shasta Testnet, and Mainnet. 
 - **Coordination Checklists:** Action items for notifying and following up with the community, Super Representatives (SRs), Exchanges (CEXs), Wallets, and DEXs to ensure ecosystem-wide readiness.
 
-### Who Should Monitor These
-Tracking these upgrade specifications is vital for anyone running TRON infrastructure or building on the network. The following groups should actively monitor these documents:
-
-- Super Representatives (SRs) and Full Node operators
-- Technical teams at cryptocurrency exchanges (CEXs) and Wallets
-- Dapp and DEX developers adapting to new APIs or protocol rules
-- TRON core developers and nodes maintainers
-
 ### Current and Archived Upgrades
 
 You can track the ongoing upgrade or review historical upgrades via the following directories:
