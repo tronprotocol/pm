@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated June 16, 2026.**
+This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated July 3, 2026.**
 
 Note: The target version number of Pyrrho is v4.8.2 .
 
@@ -137,9 +137,9 @@ TIP            |       [TIP-833](https://github.com/tronprotocol/tips/issues/833
 
 ### Network Upgrade Plan
 
-Estimated Nile upgrade time: TBD
-- [ ] Notify the community to upgrade TBD
-- [ ] Follow up to remind the community to complete the upgrade TBD
+Estimated Nile upgrade time: about 30 days (2026.06.01 ~ 2026.06.30)
+- [x] Notify the community to upgrade (2026.06.17)
+- [x] Follow up to remind the community to complete the upgrade (2026.06.22)
 
 Estimated mainnet upgrade time: TBD
 
@@ -159,9 +159,9 @@ TBD
 
 | Network  | Github | Pyrrho Release Date  |  Latest Status | Fork |  
 |---------|------------|-----|-----|-----|
-| [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | - | GreatVoyage-v4.8.2 （Pyrrho） | - |
-| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | - | GreatVoyage-v4.8.2 （Pyrrho）| -|   
-| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | -  | GreatVoyage-v4.8.2 （Pyrrho） | - |  
+| [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | 06/17/2026 | GreatVoyage-v4.8.2 （Pyrrho） | - |
+| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | - | GreatVoyage-v4.8.1 （Democritus）| -|   
+| [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | -  | GreatVoyage-v4.8.1 （Democritus） | - |  
 
 Nile Upgrade Instruction: https://nileex.io/run/getRunPage
 
