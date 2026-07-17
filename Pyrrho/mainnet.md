@@ -1,6 +1,6 @@
 # Mainnet Tasks
 
-This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated July 3, 2026.**
+This document outlines the mainnet tasks that need to be completed to make Pyrrho ready for Mainnet launch. **Last updated July 17, 2026.**
 
 Note: The target version number of Pyrrho is v4.8.2 .
 
@@ -29,7 +29,9 @@ TIP：
 
 [TIP-836](https://github.com/tronprotocol/tips/issues/836): Harden exchange transaction calculations
 
-[TIP-854](https://github.com/tronprotocol/tips/issues/854)：Canonicalize calldata for signature-verification precompiles
+[TIP-854](https://github.com/tronprotocol/tips/issues/854): Canonicalize calldata for signature-verification precompiles
+
+[TIP-871](https://github.com/tronprotocol/tips/issues/871): Canonicalize MODEXP output length when modulus is zero
 
 [TIP-2935](https://github.com/tronprotocol/tips/issues/719): Serve historical block hashes from state
 
@@ -119,9 +121,9 @@ Others:
 
 Implementation status of Included TIPs in java-tron.
 
-TIP            |       [TIP-833](https://github.com/tronprotocol/tips/issues/833)       |      [TIP-836](https://github.com/tronprotocol/tips/issues/836)   |  [TIP-854](https://github.com/tronprotocol/tips/issues/854)  | [TIP-2935](https://github.com/tronprotocol/tips/issues/719)| [TIP-7823](https://github.com/tronprotocol/tips/issues/826) | [TIP-7883](https://github.com/tronprotocol/tips/issues/837) | [TIP-7939](https://github.com/tronprotocol/tips/issues/838) |  [TIP-7951](https://github.com/tronprotocol/tips/issues/785) |
-|---|------|-----------------------------------------------------------------------|--------|---|---|---|---|---|
-| **Java-tron**       | Last Call|   Last Call  | Last Call | Last Call | Last Call | Last Call | Last Call | Last Call |
+TIP            |       [TIP-833](https://github.com/tronprotocol/tips/blob/master/tip-833.md)       |      [TIP-836](https://github.com/tronprotocol/tips/blob/master/tip-836.md)   |  [TIP-854](https://github.com/tronprotocol/tips/blob/master/tip-854.md) |[TIP-871](https://github.com/tronprotocol/tips/blob/master/tip-871.md) | [TIP-2935](https://github.com/tronprotocol/tips/blob/master/tip-2935.md)| [TIP-7823](https://github.com/tronprotocol/tips/blob/master/tip-7823.md) | [TIP-7883](https://github.com/tronprotocol/tips/blob/master/tip-7883.md) | [TIP-7939](https://github.com/tronprotocol/tips/blob/master/tip-7939.md) |  [TIP-7951](https://github.com/tronprotocol/tips/blob/master/tip-7951.md) |
+|---|------|-----------------------------------------------------------------------|--------|---|---|---|---|---|---|
+| **Java-tron**       | Final |   Final  | Final | Final | Final | Final | Final | Final | Final|
 
 ### Readiness Checklist
 
@@ -130,7 +132,7 @@ TIP            |       [TIP-833](https://github.com/tronprotocol/tips/issues/833
 
 
  - Deploy Clients
-   - [ ]  Java-tron v4.8.2
+   - [x]  Java-tron v4.8.2
 
 
 ## Network Status
@@ -141,7 +143,7 @@ Estimated Nile upgrade time: about 30 days (2026.06.01 ~ 2026.06.30)
 - [x] Notify the community to upgrade (2026.06.17)
 - [x] Follow up to remind the community to complete the upgrade (2026.06.22)
 
-Estimated mainnet upgrade time: TBD
+Estimated mainnet upgrade time: about 30 days (2026.07.16 ~ 2026.08.16)
 
 - [ ] Notify the community, SRs, CEX, Wallets, DEX, etc.to upgrade TBD
 - [ ] Follow up the upgrade status and progress closely (Contact project team every week, record the upgrade progress) 
@@ -153,14 +155,24 @@ Estimated Shasta upgrade time: TBD
 
 ### Proposals Plan(Fork Plan)
 
-TBD
+The Pyrrho version has introduced 4 network parameters:
+- No.95 network parameter to enable serving historical block hashes from state (compatible with EIP-2935) ([TIP-2935](https://github.com/tronprotocol/tips/blob/master/tip-2935.md)).
+- No.96 network parameter to enable canonicalizing MODEXP output length when modulus is zero ([TIP-871](https://github.com/tronprotocol/tips/blob/master/tip-871.md))
+- No.97 network parameter to enable harden resourceProcessor resource window calculations ([TIP-833](https://github.com/tronprotocol/tips/blob/master/tip-833.md))
+- No.98 network parameter to enable harden exchange transaction calculations ([TIP-836](https://github.com/tronprotocol/tips/blob/master/tip-836.md))
+
+A draft plan is listed here, and it will be updated after the mainnet upgrade status is reviewed around 2026.08.16:
+- [ ] Start proposals discussing on GitHub (TBD)
+- [ ] Invite community devs and projects participate (TBD)
+- [ ] Community and SRs review and decide the voting date according to the progress (TBD)
+
 
 ### Network Upgrade and Fork Status
 
 | Network  | Github | Pyrrho Release Date  |  Latest Status | Fork |  
 |---------|------------|-----|-----|-----|
 | [Nile](https://nileex.io/) | https://github.com/tron-nile-testnet/nile-testnet | 06/17/2026 | GreatVoyage-v4.8.2 （Pyrrho） | - |
-| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | - | GreatVoyage-v4.8.1 （Democritus）| -|   
+| [Mainnet](https://tron.network/) |https://github.com/tronprotocol/java-tron | 07/15/2026 | GreatVoyage-v4.8.2 （Pyrrho）| -|   
 | [Shasta](https://www.trongrid.io/shasta)  | https://github.com/tronprotocol/java-tron | -  | GreatVoyage-v4.8.1 （Democritus） | - |  
 
 Nile Upgrade Instruction: https://nileex.io/run/getRunPage
