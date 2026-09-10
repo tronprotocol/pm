@@ -50,21 +50,21 @@
 
     There are a few principles for this task. First, after cleanup or consolidation, behavior should stay unchanged — essentially the same before and after. Where behavior does have to change, the changes should be kept to a minimum and called out explicitly. If there are too many to handle that way, the work has to be phased rather than landing in a single version: announce it first, mark the feature for removal, wait for integrators to stop using it, and then migrate or delete the code in a later version.
 
-    Second, each cleanup item gets its own issue and PR, spelling out which features are being removed or merged, so it can be tracked and analyzed in one place. Simple changes, such as some blank code, don't need a separate issue.
+    Second, each cleanup item gets its own issue and PR, spelling out which features are being removed or merged, so it can be tracked and analyzed in one place. Simple changes, such as removing some empty code, don't need a separate issue.
 
     Several items in v4.8.2 and earlier already fall into this category: removing the `actuator.whitelist` whitelist ([#6666](https://github.com/tronprotocol/java-tron/issues/6666)), which eliminated its fork risk; dropping InfluxDB support for metrics storage ([#6665](https://github.com/tronprotocol/java-tron/issues/6665)), with metrics now served by Prometheus only; removing the scheduled full backup of LevelDB ([#6595](https://github.com/tronprotocol/java-tron/issues/6595)), which was effectively unusable; and removing the HTTP mappings introduced in the gRPC protobuf definitions between 2018 and 2020 ([#6548](https://github.com/tronprotocol/java-tron/issues/6548)), since the HTTP API is now implemented independently and there's no reason to keep that historical mapping layer.
 
     For v4.8.3, the cleanup tasks identified so far are listed below. Each will have its own issue.
 
-    First, the HTTP API currently has three implementations: FullNode, solidity, and PBFT. The code for the three is almost identical, with the same business logic and just a very thin wrapper on each, so there's a large amount of duplicated code. The plan is to consolidate them into a single implementation and switch between them via the database cursor. java-tron is currently around 300,000+ lines in total, and this consolidation should remove around two to three thousand of them. Sunny will cover the details shortly ([#6922](https://github.com/tronprotocol/java-tron/issues/6922)).
+    First, the HTTP API currently has three implementations: FullNode, solidity, and PBFT. The code for the three is almost identical, with the same business logic and just a very thin wrapper on each, so there's a large amount of duplicated code. The plan is to consolidate them into a single implementation and switch between them via the database cursor. java-tron currently has over 300,000 lines in total, and this consolidation should remove around two to three thousand of them. Sunny will cover the details shortly ([#6922](https://github.com/tronprotocol/java-tron/issues/6922)).
 
     Second, gRPC is similar to HTTP and will also be consolidated to reduce duplicated code ([#6927](https://github.com/tronprotocol/java-tron/issues/6927)).
 
-    Third, removing the SM2 and SM3 cryptographic algorithms ([#6959](https://github.com/tronprotocol/java-tron/issues/6959)). Mainnet has never supported these algorithms — apart from private chains that might use them, none of the public networks do, so they can be cleaned up. This also reduces maintenance cost for the upcoming post-quantum signatures: like post-quantum signatures, these algorithms are a signature scheme running in parallel with ECDSA, and since they aren't supported, removing them simplifies the implementation.
+    Third, removing the SM2 and SM3 cryptographic algorithms ([#6959](https://github.com/tronprotocol/java-tron/issues/6959)). Mainnet has never supported them — apart from private chains that might use them, none of the public networks do — so they can be cleaned up. This also lowers the maintenance cost for the upcoming post-quantum signatures: like the post-quantum signatures, SM2/SM3 is a separate signature scheme that runs alongside ECDSA, and since it isn't supported anyway, removing it simplifies the implementation.
 
     Fourth, removing the `WalletExtension` APIs ([#6931](https://github.com/tronprotocol/java-tron/issues/6931)). This set has four APIs for querying the historical transactions sent from and received by an address, but they were never implemented, so they can be removed.
 
-    Fifth, removing the keystore factory from FullNode ([#6949](https://github.com/tronprotocol/java-tron/issues/6949)). This functionality was migrated to Toolkit in v4.8.2. v4.8.3 will remove the original entry point in FullNode so there's only one entry.
+    Fifth, removing the keystore factory from FullNode ([#6949](https://github.com/tronprotocol/java-tron/issues/6949)). This functionality was migrated to Toolkit in v4.8.2. v4.8.3 will remove the original entry point in FullNode so there's only a single entry point.
 
     Sixth, removing unused RLP-related code. This was ported from Ethereum early on and isn't actually used.
 
@@ -78,7 +78,7 @@
 
 - **Brown**
 
-    That principle is written in the issue: mark it in the first version, keep it partially, and remove it in the next version.
+    That principle is written in the issue: mark it in the first version while keeping it partially in place, then remove it in the next version.
 
 - **Murphy**
 
@@ -86,9 +86,9 @@
 
 - **Brown**
 
-    It depends on the case. Some APIs don't exist at all or were never implemented; those will be removed directly. Others may have a few users, just very few; those will be marked first and removed in a later version.
+    It depends on the case. Some APIs don't exist at all or were never implemented; those will be removed directly. Others may still have users, just very few; those will be marked first and removed in a later version.
 
-    For example, v4.8.2 already marked quite a few command-line parameters. They'll be removed over the next version or two, with a marking period in between. (**Murphy**: Got it.)
+    For example, v4.8.2 already marked quite a few command-line parameters. They'll be removed over the next version or two, after a period of being marked as deprecated. (**Murphy**: Got it.)
 
 - **Cathy**
 
@@ -96,7 +96,7 @@
 
 - **Brown**
 
-    Markings with real impact are usually reflected in the release notes, and may be announced ahead of time. But the vast majority of the cleanup has no impact on downstream.
+    Markings that have an impact are usually reflected in the release notes, and may also be announced ahead of time. But the vast majority of the cleanup has no impact on downstream.
 
 - **Sunny**
 
@@ -104,7 +104,7 @@
 
 - **Cathy**
 
-    Also the protobuf definitions — those can't change either, we've raised that before.
+    Also the protobuf definitions — those can't change either; we've raised that before.
 
 - **Sunny**
 
@@ -159,7 +159,7 @@
 
 - **Murphy**
 
-    Got it. Any other questions on this issue can continue under the issue. Next, Sunny will cover two topics, starting with the HTTP servlet refactor.
+    Got it. Any other questions on this can continue under the issue. Next, Sunny will cover two topics, starting with the HTTP servlet refactor.
 
 <span id="topic4"></span>
 **Deduplicate HTTP Servlet Stacks with Cursor Filters and a Declarative Endpoint Registry**
@@ -174,9 +174,9 @@
 
     The other problem is drift: one place gets changed and another is forgotten. While going through the code, I found drift already present — a few endpoints had been removed from the default and solidity services but were still reachable on PBFT. This cleanup disables those as well. It will be noted in the release notes, but since PBFT isn't enabled on Mainnet, the impact on integrators is limited.
 
-    The solution is to add an HTTP filter, `WalletCursorFilter`, with one subclass each for solidity and PBFT, attach it to the four service classes, and let the filter set the cursor uniformly. That removes the need to wrap each servlet, keeps the logic exactly equivalent to before, and means no more extra servlet classes. Another improvement is a new `@HttpApi` annotation: when adding an API, you only declare in the annotation which HTTP services it supports. Previously, without the annotation, the endpoint had to be registered explicitly with its path in all four service classes — four times — and missing one meant the API was unreachable there.
+    The solution is to add an HTTP filter, `WalletCursorFilter`, with one subclass each for solidity and PBFT, attach it to the four service classes, and have the filter set the cursor in one place. That removes the need to wrap each servlet, keeps the logic exactly equivalent to before, and means no more extra servlet classes. Another improvement is a new `@HttpApi` annotation: when adding an API, you only declare in the annotation which HTTP services it supports. Previously, without the annotation, the endpoint had to be registered explicitly with its path in all four service classes — four times — and missing one meant the API was unreachable there.
 
-    After this change, each service class is much cleaner. A new endpoint only needs to declare its supported services in one place, and the value lives in one place, so there's no more drift.
+    After this change, each service class is much cleaner. A new endpoint only needs to declare its supported services in one place, and that value is defined in one place, so there's no more drift.
 
     At the protocol level, there are two differences from before, both only affecting PBFT. First, the five shielded-transaction endpoints `GetMerkleTreeVoucherInfo`, `ScanAndMarkNoteByIvk`, `ScanNoteByIvk`, `ScanNoteByOvk`, and `IsSpend`, which were already blocked on solidity and the FullNode default service, are now removed from PBFT as well. Second, two endpoints previously available only on solidity and FullNode, `getpaginatednowwitnesslist` and `gettransactioninfobyblocknum`, will now be supported on PBFT too. Both are very general queries, and there's no reason to leave them out on PBFT specifically. This makes the code more uniform, and it also stays consistent with the gRPC approach coming up next, where these two endpoints will show up on PBFT after the change as well. The PR will be submitted next week, with the implementation details available there. Close to 100 files have been deleted so far.
 
@@ -186,7 +186,7 @@
 
 - **Sunny**
 
-    Removing PBFT is already planned, possibly in the next version. There's still quite a lot of PBFT-related content in this version, so it's scheduled for the next one.
+    Removing PBFT is already planned, possibly in the next version. There's still quite a lot of PBFT-related code in this version, so the removal is scheduled for the next one.
 
 - **Brown**
 
@@ -219,7 +219,7 @@
 
     gRPC has a similar problem, just written slightly differently. gRPC also has four services, but they map to three files: `RpcApiService` is shared by FullNode and the standalone SolidityNode, with an if-else deciding which one to start; the other two are `RpcApiServiceOnSolidity` and `RpcApiServiceOnPBFT` under FullNode.
 
-    gRPC's protocol file defines the `Wallet` API and the `WalletSolidity` API, where `WalletSolidity` is a subset of `Wallet`, plus a separate `Database` API. `RpcApiServiceOnSolidity` and `RpcApiServiceOnPBFT` each re-implement the `WalletSolidity` API and the `Database` API — `GetAccount`, for example, exists in every file. As with HTTP, the solidity and PBFT implementations just wrap the call in `walletOnSolidity.futureGet(...)`, setting the cursor before execution and restoring it afterward.
+    The gRPC protocol file defines the `Wallet` API and the `WalletSolidity` API, where `WalletSolidity` is a subset of `Wallet`, plus a separate `Database` API. `RpcApiServiceOnSolidity` and `RpcApiServiceOnPBFT` each re-implement the `WalletSolidity` API and the `Database` API — `GetAccount`, for example, exists in every file. As with HTTP, the solidity and PBFT implementations just wrap the call in `walletOnSolidity.futureGet(...)`, setting the cursor before execution and restoring it afterward.
 
     The solution is to use an interceptor — it's called an interceptor in gRPC and a filter in HTTP, and they work similarly. Once an interceptor is registered on a service, every method in the service goes through it automatically, with no explicit calls inside the service; the framework handles the interception and sets the cursor.
 
@@ -238,7 +238,7 @@
 
     I'll cover two parts: the adapter v1.3.3 update, and the CAIP-2 chainId format migration.
 
-    The adapter released v1.3.3 last week. The main update is SafePal wallet support, covering the SafePal browser extension and the Android and iOS apps. SafePal only recently started supporting TRON. It supports TRON connection, transaction signing, and message signing, and provides a simple deep link format so the adapter can open the wallet app directly from a mobile browser.
+    Adapter v1.3.3 was released last week. The main update is SafePal wallet support, covering the SafePal browser extension and the Android and iOS apps. SafePal only recently started supporting TRON. It supports TRON connection, transaction signing, and message signing, and provides a simple deep link format so the adapter can open the wallet app directly from a mobile browser.
 
     v1.3.3 also brings several improvements to the adapters for all existing wallets. The first one is fairly important: a check was added during the connect flow to prevent the connect method from being called multiple times concurrently, which could cause the extension or app to receive multiple connection requests at once and pop up two connection dialogs.
 
@@ -254,7 +254,7 @@
 
     Because the chainId format is migrating, existing tools and SDKs need corresponding changes. WalletConnect currently uses the hex chainId, and its validation is hardcoded against hex. Switching directly to decimal would cause connection failures, rejected requests, lost existing sessions, and so on. So the main thing is to update WalletConnect's chainId specification. The places that need to change together are laid out below.
 
-    First, at the spec level, WalletConnect, now called Reown, needs to change. Its existing network definitions, DApp and wallet code examples, block explorers, and so on all record the hex chainId, so the WalletConnect-related code needs to be updated to the decimal representation first, at the spec level.
+    First, at the spec level, WalletConnect, now called Reown, needs to change. Its existing network definitions, DApp and wallet code examples, block explorers, and so on all record the hex chainId, so the WalletConnect-related code needs to be updated to the decimal representation first.
 
     Second, the wallet side. WalletConnect is a general protocol implemented by many wallets. Existing wallets only validate the hex chainId, and passing a decimal chainId may fail validation, so wallets must make a compatibility change to accept both hex and decimal.
 
@@ -295,7 +295,7 @@
 
     A simple example: from the root seed to the master, then through the purpose, coin type, and other levels, ending with an ML-DSA public/private key pair. With the public key, the final TRON address is obtained the same way addresses are derived today.
 
-    On the wallet side: at initialization, the mnemonic and passphrase are entered, and the wallet generates the required key pairs along the derivation path. Unlike BIP32, normal derivation isn't possible — child public keys can't be derived from a public key alone — so the public keys have to be pre-generated in advance.
+    On the wallet side: at initialization, the mnemonic and passphrase are entered, and the wallet generates the required key pairs along the derivation path. Unlike BIP32, normal derivation isn't possible — child public keys can't be derived from a public key alone — so the public keys have to be generated in advance.
 
     That's the main idea of the scheme. The core difference from BIP32 is that normal derivation isn't supported, and the final node secret derives different keys for different post-quantum signature schemes.
 
