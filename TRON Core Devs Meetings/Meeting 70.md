@@ -258,7 +258,7 @@
 
     Second, the wallet side. WalletConnect is a general protocol implemented by many wallets. Existing wallets only validate the hex chainId, and passing a decimal chainId may fail validation, so wallets must make a compatibility change to accept both hex and decimal.
 
-    Once wallets are updated, the web SDK `walletconnect-tron` needs to be updated in sync. It could keep passing hex, but from a spec standpoint it should standardize on decimal, including the chainId passed on connect and the internally defined network map. Further downstream is TronWallet Adapter, which wraps `walletconnect-tron`; wherever the adapter defines the chainId also needs to be standardized to decimal.
+    Once wallets are updated, the web SDK `walletconnect-tron` needs to be updated in sync. It should standardize on decimal, including the chainId passed on connect and the internally defined network map. Further downstream is TronWallet Adapter, which wraps `walletconnect-tron`; wherever the adapter defines the chainId also needs to be standardized to decimal.
 
     These are the required changes. DApps change as needed: if a DApp wraps WalletConnect calls itself and hardcodes `tron:` plus the hex chainId in its code, it has to change to decimal manually, otherwise it will be inconsistent with the updated WalletConnect protocol and stop working correctly.
 
