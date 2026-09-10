@@ -155,7 +155,7 @@
 
 - **Jeremy**
 
-    There's a corresponding Grafana dashboard maintained in the tron-docker repo. After the release, the recommended Grafana dashboard in tron-docker will be updated accordingly, and everyone can use it as a reference to configure their own Grafana.
+    There's a corresponding Grafana dashboard maintained in the `tron-docker` repo. After the release, the recommended Grafana dashboard in `tron-docker` will be updated accordingly, and everyone can use it as a reference to configure their own Grafana.
 
 - **Murphy**
 
@@ -240,15 +240,15 @@
 
     Adapter v1.3.3 was released last week. The main update is SafePal wallet support, covering the SafePal browser extension and the Android and iOS apps. SafePal only recently started supporting TRON. It supports TRON connection, transaction signing, and message signing, and provides a simple deep link format so the adapter can open the wallet app directly from a mobile browser.
 
-    v1.3.3 also brings several improvements to the adapters for all existing wallets. The first one is fairly important: a check was added during the connect flow to prevent the connect method from being called multiple times concurrently, which could cause the extension or app to receive multiple connection requests at once and pop up two connection dialogs.
+    v1.3.3 also brings several improvements to the adapters for all existing wallets. The first improvement is fairly important: a check was added during the connect flow to prevent the connect method from being called multiple times concurrently, which could cause the extension or app to receive multiple connection requests at once and pop up two connection dialogs.
 
-    The second is a caching improvement after wallet detection fails. Previously, the adapter detected the wallet on page load, and if it wasn't found, marked its state as not found; even if the user installed the wallet afterwards, the DApp would still see not found. The caching of detection results is now limited, so repeated detections update according to the actual current state.
+    The second improvement is caching after wallet detection fails. Previously, the adapter detected the wallet on page load, and if it wasn't found, marked its state as not found; even if the user installed the wallet afterwards, the DApp would still see not found. The caching of detection results is now limited, so repeated detections update according to the actual current state.
 
-    The third is strict validation on wallet connection, requiring a non-empty address after connecting. In earlier testing, some wallets were found to have non-standard implementations or bugs: the connection request returned success, but the address retrieved was empty. Now, if the connect method returns success but the address is empty, the adapter throws a connection error and doesn't let the DApp proceed to the post-connection logic, since subsequent logic would break without an address.
+    The third improvement is strict validation on wallet connection, requiring a non-empty address after connecting. In earlier testing, some wallets were found to have non-standard implementations or bugs: the connection request returned success, but the address retrieved was empty. Now, if the connect method returns success but the address is empty, the adapter throws a connection error and doesn't let the DApp proceed to the post-connection logic, since subsequent logic would break without an address.
 
-    The second part is the CAIP-2 chainId migration. In the past, TRON's chainId was mostly represented in hex, taken from the last eight characters of the network's genesis block hash with a `0x` prefix. But some wallets, such as MetaMask, used a decimal chainId when implementing TRON support, so the two were inconsistent.
+    That covers the v1.3.3 update. Moving on to the second part, the CAIP-2 chainId migration. In the past, TRON's chainId was mostly represented in hex, taken from the last eight characters of the network's genesis block hash with a `0x` prefix. But some wallets, such as MetaMask, used a decimal chainId when implementing TRON support, so the two were inconsistent.
 
-    A PR was recently submitted to the ChainAgnostic namespaces repo to explicitly standardize how TRON's chainId is represented. The main change is moving the chainId from the `0x` hex representation to a decimal number. Where Mainnet used to be represented as `0x2b6653dc`, the new CAIP-2 spec requires `tron:` followed by the decimal value of that hex number. The formats for Mainnet, Nile, and Shasta have all been defined.
+    A PR was recently submitted to the ChainAgnostic/namespaces repo to explicitly standardize how TRON's chainId is represented. The main change is moving the chainId from the `0x` hex representation to a decimal number. Where Mainnet used to be represented as `0x2b6653dc`, the new CAIP-2 spec requires `tron:` followed by the decimal value of that hex number. The formats for Mainnet, Nile, and Shasta have all been defined.
 
     CAIP-2 defines how each chain's chainId is represented, and CAIP-10 defines how an address on each chain and network is represented, using CAIP-2 as the prefix. Previously an address was represented as `tron:` plus the hex chainId plus the address; now it's standardized as `tron:` plus the decimal chainId plus the address, which uniquely identifies an address on TRON.
 
@@ -268,7 +268,7 @@
 
 - **Gary**
 
-    No example for now, since this breaking change is in the abstract adapter. All TRON wallet adapters are currently implemented inside the tronwallet-adapter repo, and the places that use the package inside the repo have been updated in sync, so they aren't affected. Only projects outside the repo that build directly on the abstract adapter would run into this breaking change.
+    No example for now, since this breaking change is in the abstract adapter. All TRON wallet adapters are currently implemented inside the `tronwallet-adapter` repo, and the places that use the package inside the repo have been updated in sync, so they aren't affected. Only projects outside the repo that build directly on the abstract adapter would run into this breaking change.
 
 - **Murphy**
 
