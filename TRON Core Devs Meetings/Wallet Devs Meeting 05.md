@@ -1,6 +1,6 @@
 # Wallet Dev Community Call #5
 
-### Meeting Date/Time: August 19th, 2026, 14:00 (UTC+8)
+### Meeting Date/Time: August 19th, 2026, 7:00-8:00 UTC
 
 ### Meeting Duration: 60 Mins
 

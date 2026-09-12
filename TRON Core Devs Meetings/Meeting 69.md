@@ -1,6 +1,6 @@
 # Core Devs Community Call 69
 
-### Meeting Date/Time: August 26th, 2026, 07:00-08:00 UTC
+### Meeting Date/Time: August 26th, 2026, 7:00-8:00 UTC
 
 ### Meeting Duration: 60 Mins
 

@@ -1,6 +1,6 @@
 # Core Devs Community Call 65
 
-### Meeting Date/Time: July 1st, 2026, 6:00 AM UTC
+### Meeting Date/Time: July 1st, 2026, 6:00-7:00 UTC
 ### Meeting Duration: 60 Mins
 ### [GitHub Agenda Page](https://github.com/tronprotocol/pm/issues/216)
 
