@@ -26,15 +26,15 @@
 
 - **Sunny**
 
-    Since the last meeting, two new TIPs have been added over the past two weeks, both requiring a proposal to take effect and both planned for v4.8.3: one hardens ECDSA signature validation ([TIP-935](https://github.com/tronprotocol/tips/issues/935)), and the other retires Bancor trading ([TIP-937](https://github.com/tronprotocol/tips/issues/937)). The related issues should all be filed by now, and no further issues are expected to be added to v4.8.3. Testing is expected to start around October 15th, with the release targeted for the end of November. PRs are being submitted one after another, and everyone is welcome to review them on GitHub. Next, the others will walk through the specific issues.
+    Since the last meeting, two new TIPs have been added over the past two weeks, both requiring a proposal to take effect and both planned for v4.8.3: one hardens ECDSA signature validation ([TIP-935](https://github.com/tronprotocol/tips/issues/935)), and the other retires Bancor trading ([TIP-937](https://github.com/tronprotocol/tips/issues/937)). The related issues should all be filed by now, and no further issues are expected to be added to v4.8.3. Testing is expected to start around October 15th, with the release targeted for the end of November. PRs are coming in gradually, and everyone is welcome to review them on GitHub. The specific issues will be covered in the following topics.
 
 - **Murphy**
 
-    You mentioned two TIPs, but I only see one under the tracking issue so far.
+    One thing: of the two TIPs, only one is listed under the tracking issue so far.
 
 - **Sunny**
 
-    The issue for retiring Bancor trading will be added there in the next day or two.
+    The one for retiring Bancor trading will be linked there in the next day or two.
 
 - **Murphy**
 
@@ -45,19 +45,17 @@
 
 - **Boson**
 
-    This issue is about the error messages returned by the java-tron HTTP API. Previously, runtime exception information was exposed directly: the response has an `Error` field containing the exception class name, followed by the exception message. In effect, the API was exposing the server's runtime exception details to the outside. That information is of no practical help to developers or callers, and it also leaks internal exception details from the server. So this change splits error responses into two categories: one is a unified internal server error, `internal server error`; the other covers ordinary parameter validation errors and transaction-creation errors, which are still returned as before, just without the exception class name in front. Take the rate-limit error as an example: its type was `Error` before, but the exception class was exposed with it; it still shows up as a rate-limit error now, just without the class name. So after the change there are only two kinds of errors: the unified internal server error, and each business path's own errors.
+    This issue is about the error messages returned by the java-tron HTTP API. Previously, runtime exception information was exposed directly: the response has an `Error` field containing the exception class name, followed by the exception message. In effect, the API was exposing the server's runtime exception details to the outside. That information is of no practical help to developers or callers, and it also leaks internal exception details from the server. So this change splits error responses into two categories: one is a unified internal server error, `internal server error`; the other covers ordinary parameter validation errors and transaction-creation errors, which are still returned as before, just without the exception class name in front. Take the rate-limit error as an example: its type was `Error` before, but the exception class was exposed with it; it still shows up as a rate-limit error now, just without the class name. So after the change there are only two kinds of errors: the unified internal server error, and the errors specific to each API.
 
-    In the current design, three exception types keep their original message: first, JSON format parse errors, i.e. `JsonFormat.ParseException`; second, contract validation errors, `ContractValidateException`, which all transaction-creation endpoints use — for example, insufficient balance when creating a transaction. These are business validation and parameter validation errors, not runtime errors, so they're still returned to the client. Third, the maintenance-period unavailability exception, `MaintenanceUnavailableException`, used by endpoints that query vote-related information. That's also a business error and is returned as normal. The rate-limit error is also returned to the client unchanged. Apart from these three exception types and the rate-limit error, no other exception is exposed to the client anymore; they all become the internal server error.
+    In the current design, three exception types keep their original message: first, JSON format parse errors, i.e. `JsonFormat.ParseException`; second, contract validation errors, `ContractValidateException`, which all transaction-creation endpoints use — for example, insufficient balance when creating a transaction. These are application-level validation and parameter validation errors, not runtime errors, so they're still returned to the client. Third, the maintenance-period unavailability exception, `MaintenanceUnavailableException`, used by endpoints that query vote-related information. That's also an application-level error and is returned as normal. The rate-limit error is also returned to the client unchanged. Apart from these three exception types and the rate-limit error, no other exception is exposed to the client anymore; they all become the internal server error.
 
-    On compatibility, only error responses change; successful responses are not affected at all. Error responses used to expose more detail, and those details are no longer exposed to the client.
+    On compatibility, only error responses change; successful responses are not affected at all. Error responses used to expose more detail, and those details are no longer exposed to the client. For example, for validation errors or an insufficient-balance transfer, the response before the change reported the exception class name in the `Error` field followed by the message; after the change the message is unchanged and only the class name is dropped. For the three exception types just mentioned — JSON format parse errors, contract validation errors from transaction-creation endpoints, and the maintenance-period unavailability exception from query endpoints — the original information is still shown, only without the class name.
 
-    For example, for validation errors or an insufficient-balance transfer, the response before the change reported the exception class name in the `Error` field followed by the message; after the change the message is unchanged and only the class name is dropped. For the three exception types just mentioned — JSON format parse errors, contract validation errors from transaction-creation endpoints, and the maintenance-period unavailability exception from query endpoints — the original information is still shown, only without the class name.
-
-    Everything else falls into the generic error. Previously that might have been a null pointer or various other exceptions; now they all return the internal server error. If the exception message is empty, it also falls into the internal server error. Errors from the contract event scanning endpoints used to include the class name as well; the class name is now removed, but the "no longer supported" notice is kept, since that's business-level information. The rate-limit error likewise just loses the class name.
+    Everything else falls into the generic error. Previously that might have been a null pointer or various other exceptions; now they all return the internal server error. If the exception message is empty, it also falls into the internal server error. Errors from the contract event scanning endpoints used to include the class name as well; the class name is now removed, but the "no longer supported" notice is kept, since that's application-level information. The rate-limit error likewise just loses the class name.
 
     There are also two endpoints where the change is a breaking one: the two transaction query endpoints on the standalone SolidityNode. Their error responses were not JSON before, just a bare error message text, and they will now return standard JSON. That said, if Sunny's PR merges the SolidityNode's separate set of endpoints into the FullNode implementation, this difference goes away.
 
-    Business validation errors, such as GetBlock's parameter validation errors, are still returned as normal. In short, parameter-level errors are unchanged; what changes is runtime-level exceptions. There are also two reward-related query endpoints, `getReward` and `getBrokerage`, whose response used to be the invalid-address notice followed by detailed error information; after the change, only the invalid-address notice remains. `validateaddress` is similar: on validation failure it used to carry the last message from the exception stack, and now it returns a fixed invalid-address notice. Everything else — HTTP status codes, successful responses, parameter validation rules, and the gRPC and JSON-RPC responses — stays unchanged. Any questions?
+    Application-level validation errors, such as GetBlock's parameter validation errors, are still returned as normal. So parameter-level errors are unchanged; what changes is runtime-level exceptions. There are also two reward-related query endpoints, `getReward` and `getBrokerage`, whose response used to be the invalid-address notice followed by detailed error information; after the change, only the invalid-address notice remains. `validateaddress` is similar: on validation failure it used to carry the last message from the exception stack, and now it returns a fixed invalid-address notice. Everything else — HTTP status codes, successful responses, parameter validation rules, and the gRPC and JSON-RPC responses — stays unchanged. Any questions?
 
 - **Tina**
 
@@ -65,7 +63,7 @@
 
 - **Boson**
 
-    The unified exception handling is all in [`Util.java`](https://github.com/tronprotocol/java-tron/blob/release_v4.8.3/framework/src/main/java/org/tron/core/services/http/Util.java); the PR has been merged, so everyone can take a look. For the message returned to the client, only four cases are checked there, and only those four return the message as is. Anything new should be handled in the same place.
+    The unified exception handling is all in [`Util.java`](https://github.com/tronprotocol/java-tron/blob/release_v4.8.3/framework/src/main/java/org/tron/core/services/http/Util.java), and the PR has already been merged. For the message returned to the client, only four cases are checked there, and only those four return the message as is. Anything new should be handled in the same place.
 
 - **Tina**
 
@@ -81,7 +79,7 @@
 
 - **Boson**
 
-    You mean the runtime exception part? (**Murphy**: Right.) The current thinking is to troubleshoot on a private chain, which locates errors quickly; errors during development shouldn't need to hit a production service anyway. Also, although the client response is unified into the internal error, the server logs still record the full exception information — it's just at the debug level by default for now.
+    You mean the runtime exception part? (**Murphy**: Yes.) The current thinking is to troubleshoot on a private chain, which locates errors quickly; errors during development shouldn't need to hit a production service anyway. Also, although the client response is unified into the internal error, the server logs still record the full exception information — it's just at the debug level by default for now.
 
 - **Murphy**
 
@@ -97,24 +95,24 @@
 
 - **Boson**
 
-    Probably it will follow. This problem has been reported often in the past, and someone will likely raise it for gRPC as well.
+    Probably, yes. This has been raised often in the past, and the same concern applies to gRPC as well.
 
 - **Murphy**
 
-    OK, we'll discuss that later. Thanks Boson. Next, Tina will share the removal of the unused WalletExtension gRPC service and config.
+    OK, we'll discuss that later. Thanks Boson. Next, Tina will share the removal of the unused `WalletExtension` gRPC service and config.
 
 <span id="topic3"></span>
 **Remove the Dead WalletExtension gRPC Service and Config**
 
 - **Tina**
 
-    I have two issues, both sub-items under the overall code refactoring and cleanup tracking issue ([#6921](https://github.com/tronprotocol/java-tron/issues/6921)). The first is [#6931](https://github.com/tronprotocol/java-tron/issues/6931), which removes the proto definitions, config, and endpoints of WalletExtension. The implementation of this set of RPCs was already cleaned up in version 3.7, back in 2020, so calling them just returns an unimplemented error. The background is that these endpoints needed to maintain a fairly large in-memory index, which was too heavy to keep in FullNode, and the functionality was later moved to TronGrid. But the leftover code stayed in FullNode, so this is a cleanup.
+    I have two issues, both sub-items under the overall code refactoring and cleanup tracking issue ([#6921](https://github.com/tronprotocol/java-tron/issues/6921)). The first is [#6931](https://github.com/tronprotocol/java-tron/issues/6931), which removes the proto definitions, config, and endpoints of `WalletExtension`. The implementation of this set of RPCs was already cleaned up in version 3.7, back in 2020, so calling them just returns an unimplemented error. The background is that these endpoints needed to maintain a fairly large in-memory index, which was too heavy to keep in FullNode, and the functionality was later moved to TronGrid. But the leftover code stayed in FullNode, so this is a cleanup.
 
     The cleanup has three parts: first, delete the corresponding proto definitions; second, remove the config item `node.walletExtensionApi`, which is still in the config file and is even set to `true` by default in the config file, which is confusing and suggests it still works — it will be removed together with the proto; third, clean up the messages used only by this service and a few internal methods. What to watch for: in theory wallet-cli and Trident are not affected, but it's worth checking whether the proto change has any impact on tools or services built on them.
 
 - **Murphy**
 
-    You mentioned wallet-cli and Trident, right? (**Tina**: Right.) Does this removal count as a breaking change? For example, if someone's deployment script from before includes the related parameter, will the node fail to start?
+    You mentioned wallet-cli and Trident, right? (**Tina**: Yes.) Does this removal count as a breaking change? For example, if someone's deployment script from before includes the related parameter, will the node fail to start?
 
 - **Tina**
 
@@ -269,7 +267,6 @@
 
 ### Attendance
 
-* 0xbigapple
 * Blade
 * Boson
 * Brown
