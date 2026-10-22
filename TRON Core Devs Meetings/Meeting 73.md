@@ -12,7 +12,7 @@
 - Internalize libp2p v2.2.9 as a Local `p2p` Module [[PR](https://github.com/tronprotocol/java-tron/pull/6992)] [[↓](#topic2)]
 - TIP-935: Harden ECDSA Signature Validation [[TIP](https://github.com/tronprotocol/tips/issues/935)] [[↓](#topic3)]
 - tviem v1.0.0-beta.1 [[Release](https://walletadapter.org/tviem/announcements/v1.0.0-beta.1)] [[↓](#topic4)]
-- TronWeb: Initial Post-Quantum Signature Support on Nile Testnet [[↓](#topic5)]
+- TronWeb Branch with Post-Quantum Signature Support for Nile Testnet [[↓](#topic5)]
 
 ### Detail
 
@@ -308,17 +308,18 @@
     OK. Next, Cathy will introduce the TronWeb branch that supports post-quantum signatures on Nile.
 
 <span id="topic5"></span>
-**TronWeb: Initial Post-Quantum Signature Support on Nile Testnet**
+**TronWeb Branch with Post-Quantum Signature Support for Nile Testnet**
 
 - **Cathy**
 
-    The Nile PQ branch of TronWeb now supports post-quantum signatures with Falcon-512 and ML-DSA-44, matching the corresponding java-tron protocols on Nile. Falcon-512 is already activated on Nile. SDK validation and integration for ML-DSA-44 are complete, and it can be used once the network activates it.
+    The [`pq_sig` branch](https://github.com/tron-nile-testnet/tronweb/tree/pq_sig) is part of `tron-nile-testnet/tronweb`, a TronWeb fork for the Nile testnet. It now supports post-quantum signatures using Falcon-512 and ML-DSA-44, matching the corresponding java-tron implementation. Falcon-512 is already activated on Nile. SDK validation and integration for ML-DSA-44 are complete, and it can be used once the network activates it.
 
     The PQ module supports key generation, private-key import, and public-key derivation, as well as the existing `sign` and `multiSign` interfaces. It supports PQ signatures on their own and combinations of PQ and ECDSA signatures, using java-tron's Account Permission Management weights.
 
     It can also verify PQ transaction signatures and obtain the signer's address while checking transaction integrity. The on-chain activation status can be queried to determine whether a particular PQ algorithm is enabled.
 
-    The code is public in the [pq_sig branch of tron-nile-testnet/tronweb](https://github.com/tron-nile-testnet/tronweb/tree/pq_sig). Usage details are available in the repository's [README](https://github.com/tron-nile-testnet/tronweb/blob/310473a9d2922b509e2592e6e8a0792cf21e42a5/README.md#post-quantum-signatures-nile).
+    The code is publicly available in this branch. Usage details are available in the repository's [README](https://github.com/tron-nile-testnet/tronweb/blob/310473a9d2922b509e2592e6e8a0792cf21e42a5/README.md#post-quantum-signatures-nile).
+
 
 - **Murphy**
 
