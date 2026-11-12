@@ -24,7 +24,7 @@
 
 - **Sunny**
 
-    Testing for v4.8.3 is underway and has been going fairly smoothly. Most of the security-hardening PRs have already been tested, with a few still to work through and some additional hardening changes to include. The final batch of additional changes will be submitted for testing this Friday. If that goes well, validation on the Nile Testnet will take place next week. Assuming no issues, the plan is to enter the Mainnet testing phase on November 30th, followed by the official release once testing is complete.
+    Testing for v4.8.3 is underway and has been going fairly smoothly. Most of the security-hardening PRs have already been tested, with a few still to work through and some additional hardening changes to include. The final batch of additional changes will be submitted for testing this Friday. If that goes well, testing on the Nile Testnet will take place next week. Assuming no issues, the plan is to enter the Mainnet testing phase on November 30th, followed by the official release once testing is complete.
 
 - **Murphy**
 
@@ -60,7 +60,7 @@
 
 - **Murphy**
 
-    Any other questions on the release schedule? If not, thanks, Sunny. Next, Gary will introduce TronWallet Adapter v1.3.4.
+    Thanks, Sunny. Any other questions on the release schedule? If not, next, Gary will introduce TronWallet Adapter v1.3.4.
 
 <span id="topic2"></span>
 **TronWallet Adapter v1.3.4**
@@ -132,7 +132,7 @@
 
 - **Murphy**
 
-    Thanks, Jimmy, and thanks for the discussion. For today's final topic, Federico will introduce the leanXMSS post-quantum signature scheme.
+    Thanks, Jimmy, and everyone, for the discussion. For today's final topic, Federico will introduce the leanXMSS post-quantum signature scheme.
 
 <span id="topic4"></span>
 **leanXMSS Post-Quantum Signature Scheme**
@@ -157,7 +157,7 @@
 
     One advantage of leanXMSS is its simple Merkle-tree structure. Since Merkle trees mainly rely on hashing, aggregate proofs are relatively straightforward to construct using zero-knowledge proof systems. In Ethereum's research, leanVM is used to generate an aggregate proof for these signatures.
 
-    The benchmark presented here aggregates 1,400 signatures into a 359.5 KiB proof. Although each individual signature is over 2,000 bytes, aggregation produces a single proof for the batch. Spread across the batch, the roughly 2,400 bytes per signature become a few hundred bytes of proof per signature, about one ninth of the original size. The smallest Falcon signatures currently available on the Nile Testnet are a little over 600 bytes. In this aggregation benchmark, the average is about 263 bytes of proof per signature. Verification of the aggregate proof averages 5.32 microseconds per signature, which is also relatively low. Verification is fast because the computation mainly involves hashing.
+    The benchmark presented here aggregates 1,400 signatures into a 359.5 KiB proof. Although each individual signature is over 2,000 bytes, aggregation produces a single proof for the batch. Spread across the batch, the roughly 2,400 bytes per signature become a few hundred bytes of proof per signature, about one-ninth of the original size. The smallest Falcon signatures currently available on the Nile Testnet are a little over 600 bytes. In this aggregation benchmark, the average is about 263 bytes of proof per signature. Verification of the aggregate proof averages 5.32 microseconds per signature, which is also relatively low. Verification is fast because the computation mainly involves hashing.
 
     The main challenge is managing the indices. The lower-level Merkle trees provide a total of 2^32 usable leaves, each of which can sign only one message. Reusing a leaf for a different message could allow signatures to be forged. In Ethereum consensus research, this scheme is mainly intended for validator signatures. For block signing, a slot can be mapped to a leaf index, with the slot determining which signing key to use. This aligns leaf selection with the consensus timeline, but usage state must still be recorded to prevent the same key from signing different messages.
 
