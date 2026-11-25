@@ -1,12 +1,4 @@
----
-title: Wallet Dev Community Call 6 — 中文纪要
----
-
-# Wallet Dev Community Call 6 (English)
-
-[中文版 ↓](#zh-minutes)
-
-> [Chinese meeting transcript](https://hackmd.io/zLK1BoJQTAyOMnQ0w1D8hA)
+# Wallet Dev Community Call 6
 
 ### Meeting Date/Time: November 24th, 2026, 7:00-8:00 UTC
 ### Meeting Duration: 60 Mins
