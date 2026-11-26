@@ -129,6 +129,7 @@ Sometimes, a non-core Java-tron developer with particular expertise on a topic i
  83 | Wed, 21 Oct.  2026 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/242) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2073.md) | NA
  84 | Wed, 11 Nov.  2026 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/245) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2074.md) | NA
  85 | Tue, 24 Aug.  2026 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/248) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Wallet%20Devs%20Meeting%2006.md) | NA
+ 86 | Wed, 25 Nov.  2026 07:00 UTC     | [agenda](https://github.com/tronprotocol/pm/issues/247) | [notes](https://github.com/tronprotocol/pm/blob/master/TRON%20Core%20Devs%20Meetings/Meeting%2075.md) | NA
 
 
 </details>
