@@ -220,7 +220,7 @@
 
 - **Star**
 
-    TronWeb v6.5.2 makes only minor changes to the API. Most of the work went into stricter transaction validation and a smaller browser bundle. The minimum patch version has also changed for each of the three supported Node.js release lines, following the last Node.js security update. [TronWeb v6.5.2 release notes](https://github.com/tronprotocol/tronweb/releases/tag/v6.5.2)
+    TronWeb v6.5.2 makes only minor changes to the API. Most of the work went into stricter transaction validation and a smaller browser bundle. Following the last Node.js security update, TronWeb now requires Node.js 22.23.4 or later in the 22.x line, 24.22.1 or later in the 24.x line, or 26.12.1 and above. [TronWeb v6.5.2 release notes](https://github.com/tronprotocol/tronweb/releases/tag/v6.5.2)
 
     I'll start with transaction validation. A recent security scan flagged that a node could return a transaction that differs from the one the client requested. For example, when a contract `send` or `write` call creates a transaction through `triggerSmartContract`, TronWeb compares the transaction returned by the node with the data the client submitted to create it.
 
@@ -230,7 +230,7 @@
 
     For browsers, the main change is to `dist/TronWeb.js`. The file is about 16% smaller, or about 20% smaller with gzip compression. That's a noticeable difference if you load it directly in a browser. The savings come mainly from removing unused code through tree shaking and bundling a single copy of code that used to be included more than once.
 
-    Each of the three Node.js release lines now requires a patch version that includes the security fixes. There are also dependency updates, including axios and Vitest. I wouldn't expect much integration work for v6.5.2. The main thing is to run through your existing functionality after upgrading. Any questions?
+    The new Node.js minimums include the security fixes. There are also dependency updates, including axios and Vitest. I wouldn't expect much integration work for v6.5.2. The main thing is to run through your existing functionality after upgrading. Any questions?
 
 - **Murphy**
 
